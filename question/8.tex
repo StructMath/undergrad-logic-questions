@@ -1,0 +1,29 @@
+برای هر یک از رشته‌های زیر یا درخت تجزیه‌ی آن را رسم کنید یا از طریق تلاش برای رسم درخت تجزیه نشان بدهید آن رشته یک فرمول نیست:
+\begin{enumerate}
+\item $((((\neg p_1)\rightarrow\bot)\vee p_1)\wedge p_2)$
+\item $(((\neg (p_0\vee p_1))\wedge(p_2\rightarrow p_3)))\rightarrow (p_3\wedge p_4))$
+\item[(پ)] $(p_1\wedge\rightarrow\neg(p_2\vee p_0))$
+\end{enumerate}\quad\vspace{-9mm}
+\begin{ans}
+  \begin{enumerate}
+    \item \quad\\
+    \begin{forest}
+      [$\wedge$
+        [$\vee$
+          [$\rightarrow$
+            [$\neg$
+              [$p_1$]
+            ]
+            [$\bot$]
+          ]
+          [$p_1$]
+        ]
+        [$p_2$]
+      ]
+    \end{forest}
+
+    \item طبق الگوریتم تولید درخت تجزیه، ابتدا عمق فرمول و عمق رابط‌های منطقی را محاسبه می‌کنیم. اما عمق این عبارت $-1$ است که نشان می‌دهد این عبارت یک فرمول درست‌ساخت نیست.
+
+    \item طبق الگوریتم تولید درخت تجزیه، باید تنها رابط دارای عمق $1$ را در عبارت پیدا کنیم. اما بعد از محاسبه عمق رابط‌ها، مشاهده می‌شود که سه رابط با عمق $1$ وجود دارد.
+  \end{enumerate}
+\end{ans}
