@@ -2,4 +2,21 @@
 $\{\to\wedge,\neg\}$
 که معادل با این رابط باشد ارائه کنید.
 \begin{ans}
+تعریف جدول‌ارزشی رابط مطلوب به شکل زیر است:
+\begin{LTR}
+        \begin{tabular}{| c | c | c | c |}
+          $p$ & $q$ & $r$ & if $p$ then $q$ else $r$ \\
+          $T$ & $T$ & $T$ & $T$ \\
+          $T$ & $T$ & $F$ & $T$ \\
+          $T$ & $F$ & $T$ & $F$ \\
+          $T$ & $F$ & $F$ & $F$ \\
+          $F$ & $T$ & $T$ & $T$ \\
+          $F$ & $T$ & $F$ & $F$ \\
+          $F$ & $F$ & $T$ & $T$ \\
+          $F$ & $F$ & $F$ & $F$
+        \end{tabular}
+  \end{LTR}
+  همچنین رابط مطلوب معادل با گزارهٔ
+  $(p\to q)\wedge(\neg p\to r)$
+  است.
 \end{ans}
