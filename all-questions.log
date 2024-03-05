@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.5)  5 MAR 2024 18:42
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.5)  5 MAR 2024 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1729,23 +1729,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--75
 LaTeX Font Warning: Font shape `TU/IRBadr(0)/m/it' undefined
 (Font)              using `TU/IRBadr(0)/m/n' instead on input line 7.
 
-) (./question/8.tex [6]
+[6]) (./question/8.tex [7]
 Overfull \hbox (2.84367pt too wide) in paragraph at lines 25--26
 []\TU/IRBadr(0)/m/n/12 می‌کنیم. اما عمق این عبارت $\U/matha/m/n/12 ^^A\OT1/cmr/
 m/n/12 1$ \TU/IRBadr(0)/m/n/12 است که نشان می‌دهد این عبارت یک فرمول درست‌ساخت[
 ]
  []
 
-) (./question/9.tex [7]) (./question/10.tex [8]) (./question/11.tex)
-(./question/12.tex [9] [10]) (./question/13.tex) (./question/14.tex
+) (./question/9.tex [8]) (./question/10.tex) (./question/11.tex [9])
+(./question/12.tex [10]) (./question/13.tex [11]) (./question/14.tex
 
 LaTeX Warning: Command \textbackslash invalid in math mode on input line 3.
 
-[11] [12]
+[12] [13]
 
 LaTeX Warning: Command \textbackslash invalid in math mode on input line 52.
 
-) (./question/15.tex [13] [14]
+) (./question/15.tex [14]
 Overfull \hbox (13.90123pt too wide) detected at line 64
 \U/matha/m/n/12  p[] pp\OML/cmm/m/it/12 p[] \U/matha/m/n/12 _ \OML/cmm/m/it/12 
 p[]\U/matha/m/n/12 q _ \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q _ []q _ \OML/cmm/m
@@ -1763,7 +1763,7 @@ mm/m/it/12 p[] \U/matha/m/n/12 ^  \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q ^  \OML
 /cmm/m/it/12 p[]\U/matha/m/n/12 q ^ []q ^  \OML/cmm/m/it/12 p[]
  []
 
-
+[15]
 Overfull \hbox (13.90121pt too wide) detected at line 70
 \U/matha/m/n/12  p[] pp\OML/cmm/m/it/12 p[] \U/matha/m/n/12 _ \OML/cmm/m/it/12 
 p[]\U/matha/m/n/12 q _ \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q _ []q _ \OML/cmm/m
@@ -1772,10 +1772,10 @@ m/it/12 p[] \U/matha/m/n/12 ^  \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q ^  \OML/cm
 m/m/it/12 p[]\U/matha/m/n/12 q ^ []q ^  \OML/cmm/m/it/12 p[]
  []
 
-) (./question/16.tex [15]) (./question/17.tex [16]) (./question/18.tex [17])
-(./question/19.tex) (./question/20.tex) (./question/21.tex) [18]
-(./question/22.tex) (./question/23.tex) (./question/24.tex) (./question/25.tex)
-(./question/26.tex) (./question/27.tex
+) (./question/16.tex [16]) (./question/17.tex) [17] (./question/18.tex)
+[18] (./question/19.tex) (./question/20.tex) (./question/21.tex)
+(./question/22.tex) (./question/23.tex) [19] (./question/24.tex)
+(./question/25.tex) (./question/26.tex) (./question/27.tex
 Overfull \hbox (4.25175pt too wide) detected at line 4
 \U/matha/m/n/12 p\OML/cmm/m/it/12 p[] \U/matha/m/n/12 Ñ \OML/cmm/m/it/12 p[]\U/
 matha/m/n/12 q _ p\OML/cmm/m/it/12 p[] \U/matha/m/n/12 Ñ \OML/cmm/m/it/12 p[]\U
@@ -1787,8 +1787,8 @@ ha/m/n/12 q\OML/cmm/m/it/12 ; \U/matha/m/n/12 p\OML/cmm/m/it/12 p[] \U/matha/m/
 n/12 Ñ \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q Ñ \OML/cmm/m/it/12 p[]
  []
 
-) (./question/28.tex [19]) (./question/29.tex) (./question/30.tex)
-(./question/31.tex) (./question/32.tex) (./question/33.tex) [20]
+) (./question/28.tex [20]) (./question/29.tex) (./question/30.tex)
+(./question/31.tex) (./question/32.tex) (./question/33.tex [21]) [22]
 (./all-questions.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1802,10 +1802,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  35986 strings out of 474773
  882049 string characters out of 5733250
- 1932839 words of memory out of 5000000
+ 1931839 words of memory out of 5000000
  57451 multiletter control sequences out of 15000+600000
  573025 words of font info for 115 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  136i,9n,124p,2410b,1847s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on all-questions.pdf (20 pages).
+Output written on all-questions.pdf (22 pages).
