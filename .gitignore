@@ -33,3 +33,4 @@ nra.cache
 *.swp
 *.pdf
 *.log
+*.aux
