@@ -31,4 +31,5 @@ nlia.cache
 nra.cache
 *#
 *.swp
-
+*.pdf
+*.log
