@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.5)  5 MAR 2024 18:42
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.3.5)  5 MAR 2024 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**all-questions.tex
-(./all-questions.tex
+**homework-template.tex
+(./homework-template.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/opt/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -1637,145 +1637,67 @@ Package: versions 2005/04/28 v0.55 ignore passages optionally (UL)
 *** `comment' excluded. ***
 )
 *** `ans' excluded. ***
-)
-*** `ans' included with marks. ***
+) (./homework-template.aux)
+\openout1 = `homework-template.aux'.
 
-Package `Versions' Warning: Redefining environment `ans' on input line 5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+2.
 
-(./all-questions.aux)
-\openout1 = `all-questions.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
-.
- (/opt/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
+(/opt/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Info: Command `\dddot' is already robust on input line 7.
-LaTeX Info: Command `\ddddot' is already robust on input line 7.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Info: Command `\dddot' is already robust on input line 12.
+LaTeX Info: Command `\ddddot' is already robust on input line 12.
+\schemeFile=\read4
 LaTeX Font Info:    Font shape `TU/IRBadr(0)/m/n' will be
-(Font)              scaled to size 26.96207pt on input line 14.
+(Font)              scaled to size 26.96207pt on input line 31.
 LaTeX Font Info:    Font shape `TU/IRBadr(0)/m/n' will be
-(Font)              scaled to size 18.72003pt on input line 14.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+(Font)              scaled to size 18.72003pt on input line 31.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 31.
 
 
 (/opt/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 31.
 
 
 (/opt/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-4.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
+1.
 
 (/opt/texlive/2023/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 LaTeX Font Info:    Font shape `TU/IRBadr(0)/b/n' will be
-(Font)              scaled to size 15.60004pt on input line 24.
+(Font)              scaled to size 15.60004pt on input line 42.
  (./question/1.tex)
-(./question/2.tex
-Overfull \hbox (8.44576pt too wide) detected at line 21
-\U/matha/m/n/12 |\OML/cmm/m/it/12  \U/matha/m/n/12 | ^^P |\OML/cmm/m/it/12 ^^^\
-U/matha/m/n/12 | ^^@ |\OML/cmm/m/it/12 ^^[\U/matha/m/n/12 | ^^@ \OT1/cmr/m/n/12
- 3 \U/matha/m/n/12 ¥ p\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 o\U/matha/m/n/12 p\OML/
-cmm/m/it/12 ^^^\U/matha/m/n/12 q ^^@ \OT1/cmr/m/n/12 1\U/matha/m/n/12 q ^^@ p\O
-T1/cmr/m/n/12 3\OML/cmm/m/it/12 o\U/matha/m/n/12 p\OML/cmm/m/it/12 ^^[\U/matha/
-m/n/12 q ^^@ \OT1/cmr/m/n/12 1\U/matha/m/n/12 q ^^@ \OT1/cmr/m/n/12 3 \U/matha/
-m/n/12 ^^P \OT1/cmr/m/n/12 3\U/matha/m/n/12 p\OML/cmm/m/it/12 o\U/matha/m/n/12 
-p\OML/cmm/m/it/12 ^^^\U/matha/m/n/12 q ^^@ \OML/cmm/m/it/12 o\U/matha/m/n/12 p\
-OML/cmm/m/it/12 ^^[\U/matha/m/n/12 q ^^@ \OT1/cmr/m/n/12 1\U/matha/m/n/12 q ^^@
- \OT1/cmr/m/n/12 2 \U/matha/m/n/12 ¥ \OT1/cmr/m/n/12 3\OML/cmm/m/it/12 o\U/math
-a/m/n/12 p\OML/cmm/m/it/12  \U/matha/m/n/12 q ^^@ \OT1/cmr/m/n/12 1
+(./question/5.tex) (./question/7.tex) (./question/23.tex) (./question/24.tex)
+(./question/25.tex) (./question/26.tex) (./question/3.tex) (./question/4.tex
+Overfull \hbox (1.73868pt too wide) in paragraph at lines 1--2
+[][][][]\TU/IRBadr(0)/b/n/12 سوال ۹. [][][]\TU/IRBadr(0)/m/n/12 معمای زیر توسط 
+ریموند اسمولیان طراحی شده است. آن را در منطق گزاره‌ها صورت‌بندی[]
  []
 
 [1
 
-]) (./question/3.tex) (./question/4.tex
-Overfull \hbox (2.51564pt too wide) in paragraph at lines 1--2
-[][][][]\TU/IRBadr(0)/b/n/12 سوال ۴. [][][]\TU/IRBadr(0)/m/n/12 معمای زیر توسط 
-ریموند اسمولیان طراحی شده است. آن را در منطق گزاره‌ها صورت‌بندی[]
- []
-
-[2]) (./question/5.tex
-LaTeX Font Info:    Font shape `TU/IRBadr(0)/m/n' will be
-(Font)              scaled to size 10.40002pt on input line 12.
-LaTeX Font Info:    Font shape `TU/IRBadr(0)/m/n' will be
-(Font)              scaled to size 7.80002pt on input line 12.
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--75
-[][]
- []
-
-[3]) (./question/6.tex [4] [5]) (./question/7.tex
-
-LaTeX Font Warning: Font shape `TU/IRBadr(0)/m/it' undefined
-(Font)              using `TU/IRBadr(0)/m/n' instead on input line 7.
-
-) (./question/8.tex [6]
-Overfull \hbox (2.84367pt too wide) in paragraph at lines 25--26
-[]\TU/IRBadr(0)/m/n/12 می‌کنیم. اما عمق این عبارت $\U/matha/m/n/12 ^^A\OT1/cmr/
-m/n/12 1$ \TU/IRBadr(0)/m/n/12 است که نشان می‌دهد این عبارت یک فرمول درست‌ساخت[
-]
- []
-
-) (./question/9.tex [7]) (./question/10.tex [8]) (./question/11.tex)
-(./question/12.tex [9] [10]) (./question/13.tex) (./question/14.tex
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 3.
-
-[11] [12]
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 52.
-
-) (./question/15.tex [13] [14]
-Overfull \hbox (13.90123pt too wide) detected at line 64
-\U/matha/m/n/12  p[] pp\OML/cmm/m/it/12 p[] \U/matha/m/n/12 _ \OML/cmm/m/it/12 
-p[]\U/matha/m/n/12 q _ \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q _ []q _ \OML/cmm/m
-/it/12 p[]\U/matha/m/n/12 q )\U/msa/m/n/12 ^^O \U/matha/m/n/12 p[] pp p\OML/cmm
-/m/it/12 p[] \U/matha/m/n/12 _ \OML/cmm/m/it/12 p[]\U/matha/m/n/12 qq ^  \OML/c
-mm/m/it/12 p[]\U/matha/m/n/12 q ^ []q ^  \OML/cmm/m/it/12 p[]
- []
-
-
-Overfull \hbox (36.74283pt too wide) detected at line 68
-\U/matha/m/n/12 p[] pp p\OML/cmm/m/it/12 p[] \U/matha/m/n/12 _ \OML/cmm/m/it/12
- p[]\U/matha/m/n/12 qq ^  \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q ^ []q ^  \OML/c
-mm/m/it/12 p[] \U/matha/m/n/12 )\U/msa/m/n/12 ^^O \U/matha/m/n/12 p[] pp \OML/c
-mm/m/it/12 p[] \U/matha/m/n/12 ^  \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q ^  \OML
-/cmm/m/it/12 p[]\U/matha/m/n/12 q ^ []q ^  \OML/cmm/m/it/12 p[]
- []
-
-
-Overfull \hbox (13.90121pt too wide) detected at line 70
-\U/matha/m/n/12  p[] pp\OML/cmm/m/it/12 p[] \U/matha/m/n/12 _ \OML/cmm/m/it/12 
-p[]\U/matha/m/n/12 q _ \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q _ []q _ \OML/cmm/m
-/it/12 p[]\U/matha/m/n/12 q )\U/msa/m/n/12 ^^O \U/matha/m/n/12 p[] pp \OML/cmm/
-m/it/12 p[] \U/matha/m/n/12 ^  \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q ^  \OML/cm
-m/m/it/12 p[]\U/matha/m/n/12 q ^ []q ^  \OML/cmm/m/it/12 p[]
- []
-
-) (./question/16.tex [15]) (./question/17.tex [16]) (./question/18.tex [17])
-(./question/19.tex) (./question/20.tex) (./question/21.tex) [18]
-(./question/22.tex) (./question/23.tex) (./question/24.tex) (./question/25.tex)
-(./question/26.tex) (./question/27.tex
+]) (./question/32.tex) (./question/27.tex
 Overfull \hbox (4.25175pt too wide) detected at line 4
 \U/matha/m/n/12 p\OML/cmm/m/it/12 p[] \U/matha/m/n/12 Ñ \OML/cmm/m/it/12 p[]\U/
 matha/m/n/12 q _ p\OML/cmm/m/it/12 p[] \U/matha/m/n/12 Ñ \OML/cmm/m/it/12 p[]\U
@@ -1787,25 +1709,22 @@ ha/m/n/12 q\OML/cmm/m/it/12 ; \U/matha/m/n/12 p\OML/cmm/m/it/12 p[] \U/matha/m/
 n/12 Ñ \OML/cmm/m/it/12 p[]\U/matha/m/n/12 q Ñ \OML/cmm/m/it/12 p[]
  []
 
-) (./question/28.tex [19]) (./question/29.tex) (./question/30.tex)
-(./question/31.tex) (./question/32.tex) (./question/33.tex) [20]
-(./all-questions.aux)
+) (./question/28.tex) (./question/33.tex) (./question/29.tex)
+(./question/15.tex) (./question/16.tex [2]) (./question/17.tex)
+(./question/11.tex) (./question/10.tex) (./question/30.tex) (./question/31.tex)
+[3] (./homework-template.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
  ) 
 Here is how much of TeX's memory you used:
- 35986 strings out of 474773
- 882049 string characters out of 5733250
- 1932839 words of memory out of 5000000
- 57451 multiletter control sequences out of 15000+600000
- 573025 words of font info for 115 fonts, out of 8000000 for 9000
+ 34062 strings out of 474773
+ 847267 string characters out of 5733250
+ 1929839 words of memory out of 5000000
+ 55567 multiletter control sequences out of 15000+600000
+ 572985 words of font info for 110 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 136i,9n,124p,2410b,1847s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,6n,124p,2414b,368s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on all-questions.pdf (20 pages).
+Output written on homework-template.pdf (3 pages).
