@@ -1,6 +1,6 @@
 برای $n$ دلخواه ثابت کنید
 $$
-A\vee (B_1\wedge\ldots\wedge B_n)\Dashv\vDash(A\vee B_1)\wedge\ldots\wedge(A\vee B_n)
+A\vee (B_1\wedge\ldots\wedge B_n)\slodem\models(A\vee B_1)\wedge\ldots\wedge(A\vee B_n)
 $$
 \begin{ans}
 فرض می‌کنیم همه‌ی فرمول‌های $A$ و $B_1$ تا $B_n$ اتم‌اند. واضح است که اگر حکم را در این حالت ثابت کنیم، حکم در باقی حالت‌ها نیز ثابت شده است چرا که هر مصداق از یک توتولوژی توتولوژی است.
@@ -21,11 +21,11 @@ $F$ & $F$ & $F$ & $F$ & $F$ \\
 
 حال فرض کنید حکم برای $n=k$ ثابت شده است. این هم‌ارزی از حالت پایه‌ی استقرا نتیجه می‌شود:
 $$
-A\vee ((B_1\wedge\ldots\wedge B_k)\wedge B_{k+1})\Dashv\vDash (A\vee (B_1\wedge\ldots\wedge B_k)\wedge (A\vee B_{k+1})
+A\vee ((B_1\wedge\ldots\wedge B_k)\wedge B_{k+1})\slodem\models (A\vee (B_1\wedge\ldots\wedge B_k)\wedge (A\vee B_{k+1})
 $$
 نیز، با استفاده از قضایای ثابت‌شده در مبحث جایگزینی و مفروض بودن حکم برای $n=k$ می‌توانیم نتیجه بگیریم:
 $$
-(A\vee (B_1\wedge\ldots\wedge B_k)\wedge (A\vee B_{k+1})\Dashv\vDash(A\vee B_1)\wedge\ldots(A\vee B_k)\wedge(A\vee B_{k+1})
+(A\vee (B_1\wedge\ldots\wedge B_k)\wedge (A\vee B_{k+1})\slodem\models(A\vee B_1)\wedge\ldots(A\vee B_k)\wedge(A\vee B_{k+1})
 $$
 
 \end{ans}

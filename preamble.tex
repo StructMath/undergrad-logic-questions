@@ -1,6 +1,7 @@
 \usepackage{amsthm}
 \usepackage{amsmath, amsfonts, mathabx}
 \usepackage{mathtools,array,booktabs,mathabx,stmaryrd}
+\usepackage{graphicx}
 \usepackage{natbib}
 \usepackage[inline]{enumitem}
 \usepackage{forest}
@@ -25,7 +26,18 @@
 \usepackage{versions}
 \excludeversion{ans}
 
+\makeatletter
+\providecommand*{\slodem}{%
+  \mathrel{%
+    \mathpalette\@slodem\models
+  }%
+}
+\newcommand*{\@slodem}[2]{%
+  \reflectbox{$\m@th#1#2$}%
+}
+\makeatother
+
 \renewcommand\beginmarkversion{\\\textbf{پاسخ: }}
-\renewcommand\endmarkversion{$\qed$}
+\renewcommand\endmarkversion{}
 
 \forestset{line numbering = false, just sep = 0em, check with = {:}}
