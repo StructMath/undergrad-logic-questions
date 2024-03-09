@@ -1,15 +1,15 @@
 \begin{enumerate}[label=(\alph*)]
   \item
   ثابت کنید
-  $\neg(p_1\vee p_2)\slodem\models\neg p_1\wedge\neg p_2$.
+  $\neg(p_1\vee p_2)\sledom\models\neg p_1\wedge\neg p_2$.
   
   \item
   با استفاده از قضایای ثابت‌شده در مبحث جایگزینی ثابت کنید
-  $$\neg((p_1\vee p_2)\vee p_3)\slodem\models (\neg p_1 \wedge \neg p_2)\wedge\neg p_3$$
+  $$\neg((p_1\vee p_2)\vee p_3)\sledom\models (\neg p_1 \wedge \neg p_2)\wedge\neg p_3$$
   
   \item
   با استقرا ثابت کنید به ازای هر $n$ داریم
-  $$\neg(\ldots(p_1\vee p_2)\vee \ldots)\vee p_n)\slodem\models (\ldots(\neg p_1\wedge \neg p_2)\wedge\ldots)\wedge\neg p_n$$
+  $$\neg(\ldots(p_1\vee p_2)\vee \ldots)\vee p_n)\sledom\models (\ldots(\neg p_1\wedge \neg p_2)\wedge\ldots)\wedge\neg p_n$$
   \end{enumerate}\quad\vspace{-9mm}
   \begin{ans}
     \begin{enumerate}
@@ -27,10 +27,10 @@
   
       \item
       می‌دانیم جایگزین کردن گزاره‌های هم‌ارز به جای یک اتم در یک گزاره، تغییری در ارزش آن گزاره نمی‌دهد. به عبارت دیگر اگر
-      $A \slodem\models B$ و
-      $C \slodem\models D$
+      $A \sledom\models B$ و
+      $C \sledom\models D$
       آنگاه
-      $A[C/p_i] \slodem\models B[D/p_i]$
+      $A[C/p_i] \sledom\models B[D/p_i]$
       برای هر اتم $p_i$.
   
       هم‌ارزی اثبات‌شده در بخش قبل را در نظر بگیرید. ابتدا با جایگزینی‌های متوالی $p_2$ را به $p_3$ تغییر می‌دهیم.
@@ -39,15 +39,15 @@
       به جای
       $p_1$
       خواهیم داشت
-      $$ \neg ((p_1 \vee p_2) \vee p3) \slodem\models (\neg (p_1 \vee p_2)) \wedge \neg p_3 $$
+      $$ \neg ((p_1 \vee p_2) \vee p3) \sledom\models (\neg (p_1 \vee p_2)) \wedge \neg p_3 $$
       حال گزاره‌ی
       $p_1 \wedge \neg p_3$
       را در نظر بگیرید. با جایگزینی دو سمت هم‌ارزی اثبات‌شده در بخش قبل در این گزاره به جای
       $p_1$
       داریم
-      $$ (\neg (p_1 \vee p_2)) \wedge \neg p_3 \slodem\models (\neg p_1 \wedge \neg p_2) \wedge \neg p_3 $$
+      $$ (\neg (p_1 \vee p_2)) \wedge \neg p_3 \sledom\models (\neg p_1 \wedge \neg p_2) \wedge \neg p_3 $$
       چون هم‌ارزی تراگذری است، می‌توان نتیجه گرفت
-      $$ \neg((p_1\vee p_2)\vee p_3)\slodem\models (\neg p_1 \wedge \neg p_2)\wedge\neg p_3 $$
+      $$ \neg((p_1\vee p_2)\vee p_3)\sledom\models (\neg p_1 \wedge \neg p_2)\wedge\neg p_3 $$
   
       \item
       استقرا روی $n$:
@@ -57,17 +57,17 @@
   
       گام استقرا:
       فرض کنیم $n = m+1$ و حکم برای $m$ برقرار باشد.
-      $$\neg(\ldots(p_1\vee p_2)\vee \ldots)\vee p_m)\slodem\models (\ldots(\neg p_1\wedge \neg p_2)\wedge\ldots)\wedge\neg p_m$$
+      $$\neg(\ldots(p_1\vee p_2)\vee \ldots)\vee p_m)\sledom\models (\ldots(\neg p_1\wedge \neg p_2)\wedge\ldots)\wedge\neg p_m$$
       ابتدا با جایگزینی‌های متوالی، همه‌ی اتم‌های $p_2$ تا $p_m$ را به ترتیب با $p_3$ تا $p_{m+1}$ جایگزین می‌کنیم.
-      $$\neg(\ldots(p_1\vee p_3)\vee \ldots)\vee p_{m+1})\slodem\models (\ldots(\neg p_1\wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1}$$
+      $$\neg(\ldots(p_1\vee p_3)\vee \ldots)\vee p_{m+1})\sledom\models (\ldots(\neg p_1\wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1}$$
       ادامه‌ی کار مانند بخش قبل خواهد بود. هم‌ارزی بخش اوّل را به جای $p_1$ در هم‌ارزی بالا جایگزین می‌کنیم.
-      $$\neg(\ldots((p_1 \vee p_2) \vee p_3)\vee \ldots)\vee p_{m+1})\slodem\models (\ldots((\neg (p_1 \vee p_2))\wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1}$$
+      $$\neg(\ldots((p_1 \vee p_2) \vee p_3)\vee \ldots)\vee p_{m+1})\sledom\models (\ldots((\neg (p_1 \vee p_2))\wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1}$$
       حال گزاره‌ی زیر را در نظر بگیرید.
       $$(\ldots(p_1\wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1}$$
       اگر دو سمت هم‌ارزی بخش اوّل را در این گزاره با $p_1$ جایگزین کنیم، خواهیم داشت
-      $$ (\ldots((\neg (p_1 \vee p_2))\wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1} \slodem\models (\ldots((\neg p_1 \wedge \neg p_2) \wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1}  $$
+      $$ (\ldots((\neg (p_1 \vee p_2))\wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1} \sledom\models (\ldots((\neg p_1 \wedge \neg p_2) \wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1}  $$
       از تراگذری بودن هم‌ارزی می‌توان نتیجه گرفت
-      $$ \neg(\ldots((p_1 \vee p_2) \vee p_3)\vee \ldots)\vee p_{m+1}) \slodem\models (\ldots((\neg p_1 \wedge \neg p_2) \wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1}  $$
+      $$ \neg(\ldots((p_1 \vee p_2) \vee p_3)\vee \ldots)\vee p_{m+1}) \sledom\models (\ldots((\neg p_1 \wedge \neg p_2) \wedge \neg p_3)\wedge\ldots)\wedge\neg p_{m+1}  $$
       پس حکم برای $n = m+1$ برقرار است.
     \end{enumerate}
   \end{ans}
