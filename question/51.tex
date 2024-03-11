@@ -1,0 +1,52 @@
+فرض کنید رابط سه‌موضعی $A(X,Y,Z)$ را چنان تعریف کرده‌ایم که $A(X,Y,Z)$ صادق است اگر و فقط اگر دقیقاً یکی از $X$، $Y$ و $Z$ صادق باشد.
+
+\begin{enumerate}
+\item
+با استفاده از رابط‌های
+$\{\neg,\vee\}$
+جمله‌ای بسازید معادل با
+$A(X,Y,Z)$.
+\item
+نشان بدهید رابط دوموضعی $\square$ و $\circ$ای وجود ندارند چنانکه
+$$
+A(X,Y,Z)\Dashv\vDash(X\square Y)\circ Z
+$$
+\end{enumerate}\quad
+\begin{ans}
+\begin{enumerate}
+\item
+$$
+\neg(\neg X\vee Y\vee Z)\vee\neg(X\vee\neg Y\vee Z)\vee\neg(X\vee Y\vee\neg Z)
+$$
+\item
+فرض کنید جدول درستی ادات
+$\square$
+چنین باشد:
+
+\begin{tabular}{c|c|c}
+$X$ & $Y$ & $X\square Y$ \\
+\hline
+$T$ & $T$ & $a$ \\
+$T$ & $F$ & $b$ \\
+$F$ & $T$ & $c$ \\
+$F$ & $F$ & $d$ \\
+\end{tabular}
+
+حال باید داشته باشیم
+$$
+a\circ T = b\circ T = c\circ T = F \quad d\circ T = T
+$$
+با توجه به اینکه تنها دو ارزش صدق داریم، می‌توانیم نتیجه بگیریم
+$a=b=c$
+و
+$a\neq d$.
+اما واضح است که
+$a\circ F=F$
+در حالی که
+$b\circ F=T$
+که نتیجه می‌دهد
+$a\neq b$.
+در نتیجه چنین دو رابطی وجود ندارند.
+
+\end{enumerate}
+\end{ans}
