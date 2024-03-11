@@ -2,3 +2,35 @@
 $$
 (p_1\to p_2)\vee (p_2\to p_1),(p_1\to \neg p_1)\to \neg p_1,(p_1\to p_2)\vee (p_1\vee p_2),(p_1\to p_2)\to p_1
 $$
+\begin{ans}
+    با ترسیم جدول ارزش تعیین می‌کنیم کدام فرمول‌ها توتولوژی هستند:
+    \begin{gather*}
+        \begin{array}{cc|c@{}c@{}ccc@{}ccc@{}ccc@{}c@{}c}
+            p_1&p_2&(&(&p_1&\rightarrow&p_2&)&\lor&(&p_2&\rightarrow&p_1&)&)\\\hline
+            1&1&&&1&1&1&&\mathbf{1}&&1&1&1&&\\
+            1&0&&&1&0&0&&\mathbf{1}&&0&1&1&&\\
+            0&1&&&0&1&1&&\mathbf{1}&&1&0&0&&\\
+            0&0&&&0&1&0&&\mathbf{1}&&0&1&0&&
+        \end{array} \\
+        \begin{array}{c|c@{}c@{}ccc@{}cc@{}c@{}ccc@{}cc@{}c@{}c}
+            p_1&(&(&p_1&\rightarrow&(&\lnot&p_1&)&)&\rightarrow&(&\lnot&p_1&)&)\\\hline
+            1&&&1&0&&0&1&&&\mathbf{1}&&0&1&&\\
+            0&&&0&1&&1&0&&&\mathbf{1}&&1&0&&
+        \end{array} \\
+        \begin{array}{cc|c@{}c@{}ccc@{}ccc@{}ccc@{}c@{}c}
+            p_1&p_2&(&(&p&\rightarrow&q&)&\lor&(&p_1&\lor&p_2&)&)\\\hline
+            1&1&&&1&1&1&&\mathbf{1}&&1&1&1&&\\
+            1&0&&&1&0&0&&\mathbf{1}&&1&1&0&&\\
+            0&1&&&0&1&1&&\mathbf{1}&&0&1&1&&\\
+            0&0&&&0&1&0&&\mathbf{1}&&0&0&0&&
+        \end{array} \\
+        \begin{array}{cc|c@{}c@{}ccc@{}ccc@{}c}
+            p_1&p_2&(&(&p_1&\rightarrow&p_2&)&\rightarrow&p_1&)\\\hline
+            1&1&&&1&1&1&&\mathbf{1}&1&\\
+            1&0&&&1&0&0&&\mathbf{1}&1&\\
+            0&1&&&0&1&1&&\mathbf{0}&0&\\
+            0&0&&&0&1&0&&\mathbf{0}&0&
+        \end{array}
+    \end{gather*}
+    مشخص می‌شود تمام فرمول‌ها به جز فرمول آخر توتولوژی هستند.
+\end{ans}
