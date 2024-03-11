@@ -1,0 +1,102 @@
+استنتاج‌های زیر را در دستگاه اصل‌موضوعی هیلبرت ثابت کنید.
+
+\begin{enumerate}
+\item
+$\vdash \neg\neg A\to A$
+
+\item
+$\vdash (A\to\neg A)\to \neg A$
+\end{enumerate}\quad
+\begin{ans}
+  \begin{enumerate}
+    \item لم یک: ابتدا نشان می‌دهیم
+    $(Y \rightarrow Z) \rightarrow ((X \rightarrow Y) \rightarrow (X \rightarrow Z))$.
+    \\ برای کوتاه‌نویسی تعریف می‌کنیم\\
+    {\LTR \footnotesize
+    $\alpha = X \rightarrow (Y \rightarrow Z)$\\
+    $\beta = (X \rightarrow Y) \rightarrow (X \rightarrow Z)$\\
+
+    \begin{tabular*}{\textwidth}{l l @{\extracolsep{\fill}} r}
+      $1$ & $\alpha \rightarrow \beta$ & $A_2$ \\
+      $2$ & $(\alpha \rightarrow \beta) \rightarrow ((Y \rightarrow Z) \rightarrow (\alpha \rightarrow \beta))$ & $A_1$ \\
+      $3$ & $(Y \rightarrow Z) \rightarrow (\alpha \rightarrow \beta)$ & $MP(1, 2)$ \\
+      $4$ & $((Y \rightarrow Z) \rightarrow (\alpha \rightarrow \beta)) \rightarrow (((Y \rightarrow Z) \rightarrow \alpha) \rightarrow ((Y \rightarrow Z) \rightarrow \beta))$ & $A_2$ \\
+      $5$ & $((Y \rightarrow Z) \rightarrow \alpha) \rightarrow ((Y \rightarrow Z) \rightarrow \beta)$ & $MP(3, 4)$ \\
+      $6$ & $(Y \rightarrow Z) \rightarrow \alpha$ & $A_2$ \\
+      $7$ & $(Y \rightarrow Z) \rightarrow \beta$ & $MP(6, 5)$
+    \end{tabular*}}
+    \RTL حال اگر در لم یک جایگذاری کنیم $X = \neg \neg A$، $Y = \neg A \rightarrow A$ و $Z = A$ خواهیم داشت
+    {\LTR \footnotesize
+    \begin{tabular*}{\textwidth}{l l @{\extracolsep{\fill}} r}
+      $1$ & $((\neg A \rightarrow A) \rightarrow A) \rightarrow ((\neg \neg A \rightarrow (\neg A \rightarrow A)) \rightarrow (\neg \neg A \rightarrow A))$ & یک لم \\
+      $2$ & $(\neg A \rightarrow A) \rightarrow A$ & $A_4$ \\
+      $3$ & $(\neg \neg A \rightarrow (\neg A \rightarrow A)) \rightarrow (\neg \neg A \rightarrow A)$ & $MP(2, 1)$ \\
+      $4$ & $\neg \neg A \rightarrow (\neg A \rightarrow A)$ & $A_3$ \\
+      $5$ & $\neg \neg A \rightarrow A$ & $MP(4, 3)$ \\
+    \end{tabular*}}
+    \RTL
+    \item لم دو: ابتدا نشان می‌دهیم $(X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow (X \rightarrow Z))$.
+    برای کوتاه‌نویسی تعریف می‌کنیم
+  \end{enumerate}
+    {\LTR \footnotesize
+    $\alpha = ((X \rightarrow Y) \rightarrow (((Y \rightarrow Z) \rightarrow (X \rightarrow Y)) \rightarrow ((Y \rightarrow Z) \rightarrow (X \rightarrow Z))))$ \\
+    $\beta = ((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow ((X \rightarrow Y) \rightarrow (X \rightarrow Z))))$ \\
+    $\gamma = ((Y \rightarrow Z) \rightarrow (X \rightarrow (Y \rightarrow Z)))$ \\
+    $\delta = ((X \rightarrow Y) \rightarrow ( \gamma  \rightarrow ((Y \rightarrow Z) \rightarrow ((X \rightarrow Y) \rightarrow (X \rightarrow Z)))))$ \\
+    $\epsilon = ((X \rightarrow (Y \rightarrow Z)) \rightarrow ((X \rightarrow Y) \rightarrow (X \rightarrow Z)))$ \\
+    $\zeta = ( \epsilon  \rightarrow ((Y \rightarrow Z) \rightarrow  \epsilon ))$ \\
+    $\eta = (((Y \rightarrow Z) \rightarrow  \epsilon ) \rightarrow ( \gamma  \rightarrow ((Y \rightarrow Z) \rightarrow ((X \rightarrow Y) \rightarrow (X \rightarrow Z)))))$ \\
+    $\theta = (((Y \rightarrow Z) \rightarrow ((X \rightarrow Y) \rightarrow (X \rightarrow Z))) \rightarrow (((Y \rightarrow Z) \rightarrow (X \rightarrow Y)) \rightarrow ((Y \rightarrow Z) \rightarrow (X \rightarrow Z))))$\\
+    
+    \begin{tabular*}{\textwidth}{l l r}
+      $1$ & $( \alpha  \rightarrow (((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow (X \rightarrow Y))) \rightarrow ((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow (X \rightarrow Z)))))$ & $A_2$ \\
+      $2$ & $(((X \rightarrow Y) \rightarrow  \theta ) \rightarrow ( \beta  \rightarrow  \alpha ))$ & $A_2$ \\
+      $3$ & $( \theta  \rightarrow ((X \rightarrow Y) \rightarrow  \theta ))$ & $A_1$ \\
+      $4$ & $ \theta $ & $A_2$ \\
+      $5$ & $((X \rightarrow Y) \rightarrow  \theta )$ & $MP(3,4)$ \\
+      $6$ & $( \beta  \rightarrow  \alpha )$ & $MP(2,5)$ \\
+      $7$ & $( \delta  \rightarrow (((X \rightarrow Y) \rightarrow  \gamma ) \rightarrow  \beta ))$ & $A_2$ \\
+      $8$ & $(((X \rightarrow Y) \rightarrow  \eta ) \rightarrow (((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow  \epsilon )) \rightarrow  \delta ))$ & $A_2$ \\
+      $9$ & $( \eta  \rightarrow ((X \rightarrow Y) \rightarrow  \eta ))$ & $A_1$ \\
+      $10$ & $ \eta $ & $A_2$ \\
+      $11$ & $((X \rightarrow Y) \rightarrow  \eta )$ & $MP(9,10)$ \\
+      $12$ & $(((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow  \epsilon )) \rightarrow  \delta )$ & $MP(8,11)$ \\
+      $13$ & $(((X \rightarrow Y) \rightarrow  \zeta ) \rightarrow (((X \rightarrow Y) \rightarrow  \epsilon ) \rightarrow ((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow  \epsilon ))))$ & $A_2$ \\
+      $14$ & $( \zeta  \rightarrow ((X \rightarrow Y) \rightarrow  \zeta ))$ & $A_1$ \\
+      $15$ & $ \zeta $ & $A_1$
+    \end{tabular*}
+    \begin{tabular*}{\textwidth}{l l r}
+      $16$ & $((X \rightarrow Y) \rightarrow  \zeta )$ & $MP(14,15)$ \\
+      $17$ & $(((X \rightarrow Y) \rightarrow  \epsilon ) \rightarrow ((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow  \epsilon )))$ & $MP(13,16)$ \\
+      $18$ & $( \epsilon  \rightarrow ((X \rightarrow Y) \rightarrow  \epsilon ))$ & $A_1$ \\
+      $19$ & $ \epsilon $ & $A_2$ \\
+      $20$ & $((X \rightarrow Y) \rightarrow  \epsilon )$ & $MP(18,19)$ \\
+      $21$ & $((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow  \epsilon ))$ & $MP(17,20)$ \\
+      $22$ & $\delta $ & $MP(12,21)$ \\
+      $23$ & $(((X \rightarrow Y) \rightarrow  \gamma ) \rightarrow  \beta )$ & $MP(7,22)$ \\
+      $24$ & $( \gamma  \rightarrow ((X \rightarrow Y) \rightarrow  \gamma ))$ & $A_1$ \\
+      $25$ & $ \gamma $ & $A_1$ \\
+      $26$ & $((X \rightarrow Y) \rightarrow  \gamma )$ & $MP(24,25)$ \\
+      $27$ & $ \beta $ & $MP(23,26)$ \\
+      $28$ & $ \alpha $ &  $MP(6,27)$ \\
+      $29$ & $(((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow (X \rightarrow Y))) \rightarrow ((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow (X \rightarrow Z))))$ & $MP(1,28)$ \\
+      $30$ & $((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow (X \rightarrow Y)))$ & $A_1$ \\
+      $31$ & $((X \rightarrow Y) \rightarrow ((Y \rightarrow Z) \rightarrow (X \rightarrow Z)))$ & $MP(29,30)$
+    \end{tabular*}}
+    \RTL حال از لم یک به ازای $X = A \rightarrow \neg A$، $Y = \neg \neg A \rightarrow \neg A$ و $Z = \neg A$ استفاده می‌کنیم.
+    {\LTR \footnotesize
+    \begin{tabular*}{\textwidth}{l l r}
+      $1$ & $((\neg \neg A \rightarrow \neg A) \rightarrow \neg A) \rightarrow (((A \rightarrow \neg A) \rightarrow (\neg \neg A \rightarrow \neg A)) \rightarrow ((A \rightarrow \neg A) \rightarrow \neg A))$ & یک لم \\
+      $2$ & $(\neg \neg A \rightarrow \neg A) \rightarrow \neg A$ & $A_4$ \\
+      $3$ & $((A \rightarrow \neg A) \rightarrow (\neg \neg A \rightarrow \neg A)) \rightarrow ((A \rightarrow \neg A) \rightarrow \neg A)$ & $MP(1, 2)$
+    \end{tabular*}}
+    \RTL
+    از بخش قبل برهانی برای $\neg \neg A \rightarrow A$ داریم. همچنین اگر در لم یک جایگذاری کنیم $X = \neg \neg A$، $Y = A$ و $Z = \neg A$ خواهیم داشت
+    {\LTR \footnotesize
+    \begin{tabular*}{\textwidth}{l l @{\extracolsep{\fill}} r}
+      $4$ & $(\neg \neg A \rightarrow A) \rightarrow ((A \rightarrow \neg A) \rightarrow (\neg \neg A \rightarrow \neg A))$ & دو لم \\
+      $5$ & $\neg \neg A \rightarrow A$ & قبل بخش \\
+      $6$ & $(A \rightarrow \neg A) \rightarrow (\neg \neg A \rightarrow \neg A)$ & $MP(4, 5)$ \\
+      $7$ & $(A \rightarrow \neg A) \rightarrow \neg A$ & $MP(3, 6)$
+    \end{tabular*}}
+\end{ans}

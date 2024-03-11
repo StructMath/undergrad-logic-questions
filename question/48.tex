@@ -1,0 +1,30 @@
+فرض کنید $\Gamma$ و $\Sigma$ دو مجموعه از فرمول‌ها باشند چنانکه $\Gamma\neq\emptyset$ و
+$\Sigma\cup\{\neg A|A\in\Gamma\}$
+ناسازگار است. نشان دهید عدد طبیعی $n$ و
+$$
+A_1,\ldots,A_n\in\Gamma
+$$
+چنان موجود است که
+$\Sigma\vdash A_1\vee\ldots\vee A_n$.
+\begin{ans}
+  مطابق فشردگی
+  $\Sigma\cup\{\neg A|A\in\Gamma\}$
+  یک زیرمجموعه‌ی متناهی ناسازگار مثل
+  $\Sigma_0$
+  دارد. فرض کنید این مجموعه چنین باشد:
+  $$
+  \Sigma_0 = \{B_1,\ldots,B_m,\neg A_1,\ldots,\neg A_n\}
+  $$
+  که $B_i$ها عضو $\Sigma$ و $A_j$ها عضو $\Gamma$ هستند. حال می‌دانیم
+  $\Sigma_0\vdash\bot$
+  و بنابراین
+  $$B_1\wedge\ldots\wedge B_m\wedge \neg A_1\wedge\ldots\wedge\neg A_n\vdash\bot$$
+  و بنابراین طبق برهان خلف
+  $$B_1\wedge\ldots\wedge B_m\vdash\neg(\neg A_1\wedge\ldots\wedge\neg A_n)$$
+  اما می‌دانیم
+  $$\neg(\neg A_1\wedge\ldots\wedge \neg A_n)\vdash A_1\vee\ldots A_n$$
+  و بنابراین
+  $$B_1\wedge\ldots\wedge B_m\vdash A_1\vee\ldots A_n$$
+  و بنابراین
+  $$\Sigma\vdash A_1\vee\ldots A_n$$
+\end{ans}
