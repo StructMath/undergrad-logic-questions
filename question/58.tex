@@ -1,0 +1,70 @@
+به دستگاه استنتاج طبیعی گنتزن منهای قاعدهٔ
+\lr{RAA}
+دستگاه استنتاج طبیعی برای منطق شهودگرایانه می‌گوییم. فرض کنید به دستگاه استنتاج طبیعی برای منطق شهودگرایانه قاعدهٔ زیر را اضافه کنیم:
+\begin{prooftree}
+    \AXC{}
+    \AXC{}
+    \LeftLabel{\lr{LEM}}\RightLabel{}
+    \BIC{$\varphi\vee\neg\varphi$}
+\end{prooftree}
+این قاعده بدون استفاده از هیچ مقدمه‌ای اصل طرد شق ثالث را برای هر فرمول دلخواه به ما می‌دهد. ثابت کنید دستگاه حاصل‌شده معادل با دستگاه استنتاج طبیعی گنتزن برای منطق کلاسیک است.
+(به عبارت دیگر ثابت کنید هر استنتاج در دستگاه استنتاج طبیعی گنتزن برای منطق کلاسیک را می‌توان بدون افزایش مقدمه‌ها به استنتاجی در این دستگاه تبدیل کرد و بالعکس.)
+\begin{ans}
+    برای تبدیل هر استنتاج در دستگاه حاصل‌شده به استنتاجی در دستگاه استنتاج طبیعی گنتزن برای منطق کلاسیک کافی است هر رخداد قاعدهٔ
+    \lr{LEM}
+    برای به دست آوردن هر مصداق از
+    $\varphi\vee\neg\varphi$
+    را با استنتاجی از
+    $\varphi\vee\neg\varphi$
+    جایگزین کرد:
+    \LTR
+    \begin{prooftree}
+        \AxiomC{$[\varphi]^1$}
+        \RightLabel{$\vee$\lr{I}}\UnaryInfC{$\varphi\vee\neg\varphi$}
+                                        \AxiomC{$[\neg(\varphi\vee\neg\varphi)]^2$}
+        \RightLabel{$\bot$\lr{I}}\BinaryInfC{$\bot$}
+        \RightLabel{$\neg$\lr{I} $(1)$}\UnaryInfC{$\neg\varphi$}
+        \RightLabel{$\vee$\lr{I}}\UnaryInfC{$\varphi\vee\neg\varphi$}
+                                        \AxiomC{$[\neg(\varphi\vee\neg\varphi)]^2$}
+        \RightLabel{$\bot$\lr{I}}\BinaryInfC{$\bot$}
+        \RightLabel{RAA $(2)$}\UnaryInfC{$\varphi\vee\neg\varphi$}
+
+    \end{prooftree}
+    \RTL
+
+
+    از طرف دیگر اگر الگوریتمی برای تبدیل هر رخداد قاعدهٔ
+    RAA
+    به استنتاجی ارائه کنیم که تنها از دیگر قواعد دستگاه استنتاج طبیعی گنتزن به همراه قاعدهٔ
+    \lr{LEM}
+    استفاده می‌کند و مقدمه‌ای نیز به استنتاج نمی‌افزاید، نشان داده‌ایم هر استنتاج در دستگاه استنتاج طبیعی گنتزن را می‌توان بدون افزایش مقدمه‌ها به استنتاجی در دستگاه حاصل‌شده تبدیل کرد. هر رخداد قاعدهٔ
+    RAA
+    به شکل زیر است:
+    \LTR
+    \begin{prooftree}
+        \AxiomC{$[\neg\varphi]^1$}
+        \noLine\UnaryInfC{$\mathcal{D}$}
+        \noLine\UnaryInfC{$\bot$}
+        \RightLabel{RAA $(1)$}\UnaryInfC{$\varphi$}
+    \end{prooftree}\RTL\noindent
+    و می‌توان آن را با این استنتاج جایگزین کرد:
+    \LTR
+    \begin{prooftree}
+        \AxiomC{}
+        \RightLabel{\lr{LEM}}\UnaryInfC{$\varphi\vee\neg\varphi$}
+
+        \AxiomC{$[\varphi]^2$}
+
+        \AxiomC{$[\neg\varphi]^2$}
+        \AxiomC{$[\neg\varphi]^1$}
+        \noLine\UnaryInfC{$\mathcal{D}$}
+        \noLine\UnaryInfC{$\bot$}
+        \RightLabel{$\neg$\lr{I} $(1)$}\UnaryInfC{$\neg\neg\varphi$}
+        \RightLabel{$\bot$\lr{I}}\BinaryInfC{$\bot$}
+        \RightLabel{$\bot$\lr{E}}\UnaryInfC{$\varphi$}
+        
+        \RightLabel{$\vee$\lr{E} $(2)$}\TrinaryInfC{$\varphi$}
+    \end{prooftree}
+    \RTL\noindent
+    واضح است که این تغییر هیچ مقدمه‌ای به استنتاج اضافه نمی‌کند.
+\end{ans}
