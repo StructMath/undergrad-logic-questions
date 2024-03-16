@@ -1,9 +1,28 @@
+(\emph{قضیهٔ گلیونکو})
+اگر برهانی برای $\varphi$ بدون استفاده از قاعدهٔ \lr{RAA} وجود داشته باشد این فرمول در منطق گزاره‌ای شهودی قابل اثبات است و می‌نویسیم $\vdashIPC\varphi$. همچنین برای اثبات‌پذیری در منطق گزاره‌ای کلاسیک می‌نویسیم $\vdashCPC\varphi$.
 \begin{enumerate}[label=(\alph*)]
-    \item فرض کنید $\vdash\neg\varphi$. یک برهان برای $\neg\varphi$ بدون استفاده از قاعدهٔ \lr{RAA} ارائه کنید.
-    \item فرض کنید بدون استفاده از قاعدهٔ \lr{RAA} ثابت کرده‌ایم $\vdash\neg\neg\varphi$. ثابت کنید در این صورت با استفاده از \lr{RAA} می‌توانیم ثابت کنیم $\vdash\varphi$.
-    \item(\emph{قضیهٔ گلیونکو}) اگر برهانی برای $\varphi$ بدون استفاده از قاعدهٔ \lr{RAA} وجود داشته باشد این فرمول در منطق گزاره‌ای شهودی قابل اثبات است و می‌نویسیم $\vdash_i\varphi$. همچنین برای اثبات‌پذیری در منطق گزاره‌ای کلاسیک می‌نویسیم $\vdash_c\varphi$. ثابت کنید:
-    \begin{enumerate}[label=(\roman*)]
-        \item $\vdash_c\neg\varphi$ اگرر $\vdash_i\neg\varphi$
-        \item $\vdash_c\varphi$ اگرر $\vdash_i\neg\neg\varphi$
-    \end{enumerate}
+        \item 
+    نشان بدهید اگر
+    $\vdashIPC\neg\neg\phi$
+    آنگاه
+    $\vdashCPC\phi$.
+    \item 
+    نشان بدهید اگر
+    $\vdashCPC\phi$.
+    آنگاه
+    $\vdashIPC\neg\neg\phi$
+
+    (راهنمایی: برهان‌های حاوی
+    \lr{RAA}
+    را به برهان‌هایی تبدیل کنید که از قاعدهٔ
+    \lr{LEM}
+    استفاده می‌کنند. سپس رخدادهای
+    \lr{LEM}
+    را با رخدادهای
+    $\neg\neg(\varphi\vee\neg\neg\varphi)$
+    که در منطق گزاره‌ای شهودگرایانه قابل اثبات است جایگزین کنید و با استقرا روی تعداد رخداد قاعدهٔ
+    \lr{LEM}
+    حکم را ثابت کنید.)
+    \item نتیجه بگیرید
+    $\vdashCPC\neg\varphi$ اگرر $\vdashIPC\neg\varphi$.
 \end{enumerate}

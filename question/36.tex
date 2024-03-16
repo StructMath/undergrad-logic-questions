@@ -1,10 +1,28 @@
 (\emph{ترجمهٔ منفی گودل})
-عملگر $\mathord{-}^n$ روی گزاره‌ها را چنین تعریف می‌کنیم:
+عملگر
+$\mathord{(-)}^n\colon\prop\to\prop$
+را چنین تعریف می‌کنیم:
 \begin{gather*}
     \bot^n=\bot\\
     p_i^n=\neg\neg p_i\\
     (\varphi\wedge\psi)^n=\varphi^n\wedge\psi^n\\
     (\varphi\vee\psi)^n=\neg\neg(\varphi^n\vee\psi^n)\\
     (\varphi\to\psi)^n=\varphi^n\to\psi^n\\
-\end{gather*}
-ثابت کنید $\vdash_c\varphi$ اگرر $\vdash_i\varphi^n$.
+\end{gather*}\quad\vspace{-2cm}
+\begin{enumerate}[label=(\alph*)]
+    \item ثابت کنید برای هر فرمول
+        $\varphi$
+        داریم
+        $\neg\neg\varphi^n\vdashIPC\varphi^n$.
+    \item ثابت کنید برای هر فرمول
+        $\varphi$
+        داریم
+        $\varphi\vdashCPC\varphi^n$
+        و
+        $\varphi^n\vdashCPC\varphi$.
+    \item ثابت کنید
+        $\vdashCPC\varphi$
+        اگرر
+        $\vdashIPC\varphi^n$.    
+        (راهنمایی: از قضیهٔ گلیونکو استفاده کنید.)
+\end{enumerate}
