@@ -13,13 +13,13 @@ $(((p\to q)\to p)\to p)$
   v(\neg\varphi)&=\begin{cases*}
     1 & \lr{if \ }$v(\varphi)=0$ \\
     0 & \lr{otherwise}
-  \end{cases*}\\
-  v(\varphi\vee\psi)&=\max(v(\varphi),v(\psi)) \\
-  v(\varphi\wedge\psi)&=\min(v(\varphi),v(\psi)) \\
+  \end{cases*}&\qquad
   v(\varphi\to\psi)&=\begin{cases*}
     1 & \lr{if} \ $v(\varphi)\leq v(\psi)$ \\
     v(\psi) & \lr{otherwise}
-  \end{cases*}
+  \end{cases*}\\[0.5cm]
+  v(\varphi\vee\psi)&=\max(v(\varphi),v(\psi)) &\qquad
+  v(\varphi\wedge\psi)&=\min(v(\varphi),v(\psi))
 \end{align*}
 برای تمام ادات‌ها جدول ارزش رسم کنید.\footnote{
 این منطق توسط گودل معرفی شده و به آن منطق
