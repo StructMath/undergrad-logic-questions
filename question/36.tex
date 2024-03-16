@@ -5,10 +5,11 @@ $\mathord{(-)}^n\colon\prop\to\prop$
 \begin{gather*}
     \bot^n=\bot\\
     p_i^n=\neg\neg p_i\\
+    (\neg\varphi)^n=\neg\varphi^n\\
     (\varphi\wedge\psi)^n=\varphi^n\wedge\psi^n\\
     (\varphi\vee\psi)^n=\neg\neg(\varphi^n\vee\psi^n)\\
     (\varphi\to\psi)^n=\varphi^n\to\psi^n\\
-\end{gather*}\quad\vspace{-2cm}
+\end{gather*}\quad\vspace{-1.5cm}
 \begin{enumerate}[label=(\alph*)]
     \item ثابت کنید برای هر فرمول
         $\varphi$
@@ -20,9 +21,14 @@ $\mathord{(-)}^n\colon\prop\to\prop$
         $\varphi\vdashCPC\varphi^n$
         و
         $\varphi^n\vdashCPC\varphi$.
+        
+        (راهنمایی: از قضیهٔ جانشینی استفاده کنید.)
     \item ثابت کنید
         $\vdashCPC\varphi$
         اگرر
-        $\vdashIPC\varphi^n$.    
+        $\vdashIPC\varphi^n$.\footnote{
+            از آنجا که ترجمهٔ منفی گودل نقیض را حفظ می‌کند از قضیهٔ گلیونکو نتیجه می‌شود که منطق گزاره‌ای کلاسیک ناسازگار است اگرر منطق گزاره‌ای شهودگرایانه ناسازگار است.
+        }
+        
         (راهنمایی: از قضیهٔ گلیونکو استفاده کنید.)
 \end{enumerate}
