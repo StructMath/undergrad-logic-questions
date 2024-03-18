@@ -24,13 +24,13 @@ for fp in Q:
     Qdict[fp] = comment
 
 
-readme = "Unanswered questions:\n\n"
+readme = "Unanswered questions:<br /><br />"
 
 for qn in Q:
     if Qdict[qn] != None:
-        readme += str(qn) + Qdict[qn] + "\n"
+        readme += str(qn) + Qdict[qn] + "<br />"
 
-readme += "\n"
+readme += "<br />"
 
 H = listdir("homework")
 H.sort()
@@ -40,17 +40,17 @@ for fp in H:
 
     QsInH = [int(qn) for qn in f[2].split(',')[:-1]]
     uq = False
-    comment = fp + ":\n"
+    comment = fp + ":<br />"
     
     for qn in QsInH:
         if Qdict[qn] != None:
             uq = True
-            comment += str(qn) + Qdict[qn] + "\n"
+            comment += str(qn) + Qdict[qn] + "<br />"
 
     if not uq:
-        comment += "Congrats! No unanswered questions.\n"
+        comment += "Congrats! No unanswered questions.<br />"
     
-    readme += comment + "\n"
+    readme += comment + "<br />"
 
 Z = listdir("quiz")
 Z.sort()
@@ -60,17 +60,17 @@ for fp in Z:
 
     QsInZ = [int(qn) for qn in f[2].split(',')[:-1]]
     uq = False
-    comment = fp + ":\n"
+    comment = fp + ":<br />"
     
     for qn in QsInZ:
         if Qdict[qn] != None:
             uq = True
-            comment += str(qn) + Qdict[qn] + "\n"
+            comment += str(qn) + Qdict[qn] + "<br />"
 
     if not uq:
-        comment += "Congrats! No unanswered questions.\n"
+        comment += "Congrats! No unanswered questions.<br />"
     
-    readme += comment + "\n"
+    readme += comment + "<br />"
 
 RM = open("README.md", "w")
 RM.write(readme)
