@@ -93,3 +93,4 @@ jobs:
               RM = open("README.md", "w")
               RM.write(readme)
               RM.close()
+              print(readme)
