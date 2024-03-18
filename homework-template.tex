@@ -5,7 +5,7 @@
 % build script assumes the following lines are as they are
 % DO NOT MESS WITH THEM
 %TEMPLATE_ISANSWERED%\markversion{ans}
-\def \schemeName {H2%
+\def \schemeName {%
 	%TEMPLATE_SCHEMENAME%
 }%
 
@@ -35,6 +35,11 @@
 \begin{center}آخرین زمان تحویل: \deadline\end{center}
 
 \vspace{0.5cm}
+
+\textbf{پاسخگویی به پرسش ۹ اختیاری است.}
+
+\vspace{0.5cm}
+
 \foreach \q in \qList{%
   \IfFileExists{question/\q.tex} {%
 		\exc \input{question/\q.tex}%
