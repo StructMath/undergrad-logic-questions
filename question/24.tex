@@ -1,1 +1,64 @@
 نشان دهید عبارت‌های $((p_1p_2$ و $()p_1$ فرمول نیستند.
+
+
+\begin{ans}
+    برهان خلف: فرض کنیم که عبارت های داده شده فرمول هستند. فرض کنیم 
+    $X$
+    کوچکترین مجموعه ای است که تحت ویژگی های زیر بسته است:
+    \begin{flushleft}
+        $I) \ p_i \in X(i \in N), \bot \in X$
+        \\
+        $II) \ \phi,\psi \in X \Rightarrow (\phi \ o \ \psi) \in X ((o \in \{\rightarrow, \vee, \wedge, \leftrightarrow \}))$
+        \\
+        $III) \ \phi \in X \Rightarrow (\neg \phi \in X)$
+        
+    \end{flushleft}
+    و همچین فرض کنیم ((طبق برهان خلف)) که 
+    $()p_1, ((p_1p_2 \in X$
+    \\
+    تعریف می کنیم 
+    \begin{flushleft}
+        $Y = X - \{()p_1, \ ((p_1p_2\}$
+    \end{flushleft}
+
+    طبق تعریف 
+    $X$
+    می دانیم که به ازای هر 
+    $i \in N$
+    داریم 
+    $p_i \in Y$
+    و همچنین
+    $\bot \in Y$
+    .
+    \\
+    \\
+    از طرف دیگر به ازای هر 
+    $\phi,\psi \in Y$
+    داریم 
+    $\phi, \psi \in X$.
+    \\
+    طبق ویژگی 
+    $II$
+    برای مجموعه 
+    $X$
+    داریم:
+    \begin{flushleft}
+        $(\phi \ o \ \psi) \in Y (o \ \in \{\rightarrow, \vee, \wedge, \leftrightarrow\})$
+    \end{flushleft}
+
+    به طریق مشابه می توان نشان داد که برای هر 
+    $\phi \in Y$
+    داریم 
+    $(\neg\phi\in Y)$
+
+    در نتیجه ما مجموعه ای داریم که ویژکی های 
+    $I,II, III$
+    را دارد اما کوچکتر از 
+    $X$
+    است. که با فرض ابتدایی ما که می گوید
+    $X$
+    کوچکترین مجموعه ای است که در سه ویژگی 
+    $I,II,III$
+    صدق می کند. 
+    پس عبارت های داده شده نمی توانند فرمول درست ساخت باشند.
+\end{ans}
