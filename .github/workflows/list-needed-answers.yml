@@ -1,4 +1,4 @@
-- name: List needed answers
+name: List needed answers
 on:
   push:
     paths:
@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-      - uses: jannekem/run-python-script-action@v1
+       uses: actions/setup-python@v4
+         with:
+           python-version: '3.x'
+       uses: jannekem/run-python-script-action@v1
       with:
         script: |
           from os import listdir
