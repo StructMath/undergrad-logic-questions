@@ -90,6 +90,6 @@ jobs:
                   
                   readme += comment + "\n"
     
-            RM = open("README.md", "w")
-            RM.write(readme)
-            RM.close()
+              RM = open("README.md", "w")
+              RM.write(readme)
+              RM.close()
