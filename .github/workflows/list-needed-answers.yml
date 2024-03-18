@@ -1,4 +1,4 @@
-name: List needed answers
+name: list-needed-answers
 on:
   push:
     paths:
