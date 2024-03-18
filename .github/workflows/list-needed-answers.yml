@@ -1,0 +1,34 @@
+- name: List needed answers
+on:
+  push:
+    paths:
+    - 'question/**' |
+    - 'homework/**' |
+    - 'quiz/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+       uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - uses: jannekem/run-python-script-action@v1
+      with:
+        script: |
+          
+  
+    
+
+  # You may pin to the exact commit or the version.
+  # uses: jannekem/run-python-script-action@bbfca66c612a28f3eeca0ae40e1f810265e2ea68
+  uses: jannekem/run-python-script-action@v1.7
+  with:
+    # Python script
+    script: 
+    # Fail step if the return code from running the script is non-zero
+    fail-on-error: # optional, default is true
+    # Include utility functions
+    util: # optional, default is true
+    
