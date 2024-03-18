@@ -5,6 +5,7 @@ on:
     - 'question/**'
     - 'homework/**'
     - 'quiz/**'
+    - '.github/workflows/**'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -93,6 +94,7 @@ jobs:
                   readme += comment + "<br />"
               
               RM = open("README.md", "w")
+              print(readme)
               RM.write(readme)
               RM.close()
        - uses: stefanzweifel/git-auto-commit-action@v5
