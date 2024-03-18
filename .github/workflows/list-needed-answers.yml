@@ -95,4 +95,4 @@ jobs:
               RM = open("README.md", "w")
               RM.write(readme)
               RM.close()
-       - uses: uses: stefanzweifel/git-auto-commit-action@v5
+       - uses: stefanzweifel/git-auto-commit-action@v5
