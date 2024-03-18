@@ -2,9 +2,9 @@ name: list-needed-answers
 on:
   push:
     paths:
-    - 'question/**' |
-    - 'homework/**' |
-    - 'quiz/**'
+    'question/**' |
+    'homework/**' |
+    'quiz/**'
 
 jobs:
   build:
