@@ -36,3 +36,4 @@ nra.cache
 *.aux
 *.fdb_latexmk
 *.fls
+README.md
