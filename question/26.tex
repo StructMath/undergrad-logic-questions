@@ -4,26 +4,24 @@ $\neg p_3\vee (p_1\to p_3)$
 %ANS tree needs editing
 \begin{ans}
     دنباله ساختمان: 
-    \begin{flushleft}
-        $p_1,p_3,\neg p_3,p_1\to p_3,\neg p_3\vee (p_1\to p_3)$
-    \end{flushleft}
+        $$p_1,p_3,\neg p_3,p_1\to p_3,\neg p_3\vee (p_1\to p_3)$$
     درخت تجزیه:
-    \begin{flushleft}
-        
+    \begin{center}
         \begin{tikzpicture}
-            [level distance=10mm,
-            every node/.style={draw=black, inner sep=1pt, minimum size=5mm},
-            level 1/.style={sibling distance=30mm},
-            level 2/.style={sibling distance=15mm},
-            level 3/.style={sibling distance=8mm}]
-            \node {$\neg p_3 \vee (p_1 \to p_3)$}
-            child { node {$\neg p_3$} }
-                child{ node {$p_3$}}
-            child { node {$(p_1 \to p_3)$}
-                child { node {$p_1$} }
-                child { node {$p_3$} }
+            \tikzset{
+                solid node/.style={circle,draw,inner sep=1.2,fill=black},
+                hollow node/.style={circle,draw,inner sep=1.2},
+                level 1/.style={level distance=20mm,sibling distance=35mm}
+            }
+            \node {}node[solid node, label = left:$\vee$, label = right:$\neg p_3 \vee (p_1 \to p_3)$]{}
+            child { node[solid node, label = left:$\neg$, label = right:$\neg p_3$]{}
+                child{ node[solid node, label = left:$p_3$, label = right:$p_3$] {} }
+            }
+            child { node[solid node, label = left:$\to$, label = right:$(p_1 \to p_3)$] {}
+                child { node[solid node, label = left:$p_1$, label = right:$p_1$] {} }
+                child { node[solid node, label = left:$p_3$, label = right:$p_3$] {} }
             };
             ]
         \end{tikzpicture}
-    \end{flushleft}
+    \end{center}
 \end{ans}
