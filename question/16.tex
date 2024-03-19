@@ -1,5 +1,4 @@
 فرض کنید رابط سه‌موضعی $A(X,Y,Z)$ را چنان تعریف کرده‌ایم که $A(X,Y,Z)$ صادق است اگر و فقط اگر دقیقاً یکی از $X$، $Y$ و $Z$ صادق باشد.
-
 \begin{enumerate}[label=(\alph*)]
 \item
 با استفاده از رابط‌های
@@ -12,9 +11,8 @@ $$
 A(X,Y,Z)\sledom\models(X\square Y)\ovoid Z
 $$
 \end{enumerate}\quad\vspace{-9mm}
-%ANS needs editing
 \begin{ans}
-\begin{enumerate}
+\begin{enumerate}[label=(\alph*)]
 \item
 $$
 \neg(\neg X\vee Y\vee Z)\vee\neg(X\vee\neg Y\vee Z)\vee\neg(X\vee Y\vee\neg Z)
@@ -23,15 +21,16 @@ $$
 فرض کنید جدول درستی ادات
 $\square$
 چنین باشد:
-
-\begin{tabular}{c|c|c}
-$X$ & $Y$ & $X\square Y$ \\
-$T$ & $T$ & $a$ \\
-$T$ & $F$ & $b$ \\
-$F$ & $T$ & $c$ \\
-$F$ & $F$ & $d$ \\
-\end{tabular}
-
+\LTR\begin{center}
+    \begin{tabular}{c|c|c}
+    $X$ & $Y$ & $X\square Y$ \\
+    \hline
+    $T$ & $T$ & $a$ \\
+    $T$ & $F$ & $b$ \\
+    $F$ & $T$ & $c$ \\
+    $F$ & $F$ & $d$ \\
+    \end{tabular}
+\end{center}\RTL
 حال باید داشته باشیم
 $$
 a\ovoid T = b\ovoid T = c\ovoid T = F \quad d\ovoid T = T
