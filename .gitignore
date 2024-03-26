@@ -37,3 +37,4 @@ nra.cache
 *.fdb_latexmk
 *.fls
 README.md
+*.synctex(busy)
