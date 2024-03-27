@@ -55,7 +55,7 @@
             \RightLabel{$\bot$\lr I}\BinaryInfC{$\bot$}
             \RightLabel{$\neg$\lr I $(3)$}\UnaryInfC{$\neg\neg\psi$}
             \RightLabel{$\to$\lr I $(4)$}\UnaryInfC{$\neg\neg\varphi\to\neg\neg\psi$}
-        \end{prooftree}\center
+        \end{prooftree}
         \begin{prooftree}
             \AxiomC{$[\varphi]^4$}
 
@@ -89,13 +89,13 @@
             \veeI{$\varphi\vee\psi$}
             \AxiomC{$\neg(\varphi\vee\psi)$}
             \botI
-            \negID{1}{$\neg\varphi$}
+            \negI[1]{$\neg\varphi$}
 
             \AxiomC{$[\psi]^2$}
             \veeI{$\varphi\vee\psi$}
             \AxiomC{$\neg(\varphi\vee\psi)$}
             \botI
-            \negID{2}{$\neg\psi$}
+            \negI[2]{$\neg\psi$}
 
             \conI{$\neg\varphi\wedge\neg\psi$}
 
@@ -114,7 +114,7 @@
             \botI
 
             \veeE{1}{$\bot$}
-            \negID{2}{$\neg(\varphi\vee\psi)$}
+            \negI[2]{$\neg(\varphi\vee\psi)$}
         \end{prooftree}\RTL
 
         \item\quad\LTR
@@ -132,11 +132,9 @@
             \botI
 
             \veeE{1}{$\bot$}
-            \negID{2}{$\neg(\neg\varphi\wedge\neg\psi)$}
+            \negI[2]{$\neg(\neg\varphi\wedge\neg\psi)$}
         \end{prooftree}\RTL
-
-        \item 
-        با استفاده از بخش
+        \item با استفاده از بخش
         (؟)
         و با جایگذاری
         $\neg\varphi$
