@@ -16,31 +16,31 @@
 
             \AxiomC{$[\varphi\vee\psi]^1$}
             \conE{$\varphi$}
-            \AxiomC{$\phi\to(\psi\to\sigma)$}
-            \toE{$\phi\to\sigma$}
+            \AxiomC{$\varphi\to(\psi\to\sigma)$}
+            \toE{$\varphi\to\sigma$}
 
             \toE{$\sigma$}
-            \toI[1]{$(\phi\wedge\psi)\to\sigma$}
+            \toI[1]{$(\varphi\wedge\psi)\to\sigma$}
         \end{prooftree}
         \begin{prooftree}
-            \AxiomC{$[\phi]^2$}
+            \AxiomC{$[\varphi]^2$}
             \AxiomC{$[\psi]^1$}
-            \conI{$\phi\wedge\psi$}
+            \conI{$\varphi\wedge\psi$}
 
-            \AxiomC{$(\phi\wedge\psi)\to\sigma$}
+            \AxiomC{$(\varphi\wedge\psi)\to\sigma$}
             \toE{$\sigma$}
             \toI[1]{$\psi\to\sigma$}
-            \toI[2]{$\phi\to(\psi\to\sigma)$}
+            \toI[2]{$\varphi\to(\psi\to\sigma)$}
         \end{prooftree}\RTL
         \item\quad\\
         \LTR\begin{prooftree}
             \AxiomC{$[\psi]^1$}
-            \toI{$\phi\to\psi$}
+            \toI{$\varphi\to\psi$}
             
-            \AxiomC{$[\neg(\phi\to\psi)]^2$}
+            \AxiomC{$[\neg(\varphi\to\psi)]^2$}
             \botI
-            \negI[1]{$\neg\phi$}
-            \toI[2]{$\neg(\phi\to\psi)\to\neg\phi$}
+            \negI[1]{$\neg\varphi$}
+            \toI[2]{$\neg(\varphi\to\psi)\to\neg\varphi$}
         \end{prooftree}\RTL
         \item\quad\\\LTR
         \begin{prooftree}
@@ -75,6 +75,10 @@
             \botI
             \negI[1]{$\neg\psi$}
 
+            \botI
+            \negI[2]{$\neg\varphi$}
+            \veeI{$\neg\varphi\vee\psi$}
+            \AxiomC{$[\neg(\neg\varphi\vee\psi)]^3$}
             \botI
             \RAA[3]{$\neg\varphi\vee\psi$}
             \toI[4]{$(\varphi\to\psi)\to(\neg\varphi\vee\psi)$}
