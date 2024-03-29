@@ -25,4 +25,124 @@
     حکم را ثابت کنید.)
     \item نتیجه بگیرید
     $\vdashCPC\neg\varphi$ اگرر $\vdashIPC\neg\varphi$.
-\end{enumerate}
+\end{enumerate}\quad
+\begin{ans}
+    \begin{enumerate}[label=(\alph*)]
+        \item فرض کنید $\vdashIPC \neg\neg\varphi$. از طرفی همه‌ی قضایای منطق شهودی قضایای منطق کلاسیک نیز هستند، در نتیجه $\vdashCPC \neg\neg\varphi$. از طرف دیگر هم به کمک \lr{RAA} می‌توان نشان داد $\neg\neg\varphi \vdashCPC \varphi$:
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$\neg\neg\varphi$}
+                \AXC{$[\neg\varphi]^1$}
+                \botI
+                \RAA[1]{$\varphi$}
+            \end{prooftree}
+        \end{LTR}
+        در نتیجه $\vdashCPC \varphi$.
+
+        \item فرض کنید $\vdashCPC \varphi$. در درخت برهان $\varphi$، تمام رخدادهای \lr{RAA} که به صورت
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$[\neg\psi_i]^i$}\noLine
+                \UIC{$\vdots$}\noLine
+                \UIC{$\bot$}
+                \RAA[i]{$\psi_i$}
+            \end{prooftree}
+        \end{LTR}
+        هستند را به زیردرختی بدون \lr{RAA} و با یک فرض باز $\psi_i \vee \neg\psi_i$ به صورت
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$\psi_i \vee \neg\psi_i$}
+                \AXC{$[\psi_i]^i$}
+                \AXC{$[\neg\psi_i]^i$}\noLine
+                \UIC{$\vdots$}\noLine
+                \UIC{$\bot$}
+                \botE{$\psi_i$}
+                \veeE{i}{$\psi_i$}
+            \end{prooftree}
+        \end{LTR}
+        تبدیل می‌کنیم. درخت برهان حاصل را $\Der$ بنامید و فرض کنید این درخت $n$ فرض باز به فرم $\psi_i \vee \neg\psi_i$ داشته باشد. حال کافی است برهانی بدون فرض باز برای $\neg\neg\varphi$ بسازیم. حکم را با استقرا روی $n$ ثابت می‌کنیم.
+        
+        اگر $n = 0$، که یعنی $\Der$ شامل فرض باز نباشد، برهان $\neg\neg\varphi$ را به کمک $\Der$ به صورت زیر می‌سازیم:
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$[\neg\varphi]^1$}
+                \AXC{$\Der$}\noLine
+                \UIC{$\varphi$}
+                \botI
+                \negI[1]{$\neg\neg\varphi$}
+            \end{prooftree}
+        \end{LTR}
+        و در نتیجه $\vdashIPC \neg\neg\varphi$.
+
+        برای گام استقرا، فرض کنید $n > 0$.
+        درخت برهان $\Der'$ را به کمک $\Der$ به صورت زیر تعریف می‌کنیم:
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$[\psi_n \vee \neg\psi_n]^{n+1}$}\noLine
+                \UIC{$\Der$}\noLine
+                \UIC{$\varphi$}
+                \toI[n+1]{$(\psi_n \vee \neg\psi_n) \rightarrow \varphi$}
+            \end{prooftree}
+        \end{LTR}
+        دقت کنید در $\Der'$ فرض $\psi_n \vee \neg\psi_n$ بسته شده و شرطی $(\psi_n \vee \neg\psi_n) \rightarrow \varphi$ اثبات می‌شود. در نتیجه تعداد فرض‌های باز $\Der'$ برابر با $n-1$ است. با استفاده از فرض استقرا برای $\Der'$، برهانی برای ${\neg\neg((\psi_n \vee \neg\psi_n) \rightarrow \varphi)}$ بدون فرض باز خواهیم داشت. این برهان را $\Der''$ بنامید.
+        از $\Der''$ استفاده می‌کنیم تا برهانی برای ${\neg\neg(\psi_n \vee \neg\psi_n) \rightarrow \neg\neg\varphi}$ بسازیم و آن را $\Der_1$ می‌نامیم. توجه کنید که در تعریف $\Der_1$ برای کوتاه‌نویسی از $\chi$ به جای $\psi_n \vee \neg\psi_n$ استفاده کرده‌ایم.
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$[\neg\neg\chi]^2$}
+                \AXC{$\Der''$}\noLine
+                \UIC{$\neg\neg(\chi \rightarrow \varphi)$}
+                \AXC{$[\chi \rightarrow \varphi]^5$}
+                \AXC{$[\chi]^4$}
+                \toE{$\varphi$}
+                \AXC{$[\neg\varphi]^3$}
+                \botI
+                \negI[5]{$\neg(\chi \rightarrow \varphi)$}
+                \botI
+                \negI[4]{$\neg\chi$}
+                \botI
+                \negI[3]{$\neg\neg\varphi$}
+                \toI[2]{$\neg\neg\chi \rightarrow \neg\neg\varphi$}
+            \end{prooftree}
+        \end{LTR}
+        همچنین می‌دانیم مقدم گزاره‌ی شرطی‌ای که از $\Der_1$ نتیجه می‌شود در منطق شهودی قابل اثبات است. برهان آن را با نام $\Der_2$ به صورت زیر می‌سازیم:
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$[\neg(\psi_n \vee \neg\psi_n)]^1$}
+                \AXC{$[\neg(\psi_n \vee \neg\psi_n)]^1$}
+                \AXC{$[\psi_n]$}
+                \veeI{$\psi_n \vee \neg\psi_n$}
+                \botI
+                \negI{$\neg\psi_n$}
+                \veeI{$\psi_n \vee \neg\psi_n$}
+                \botI
+                \negI[1]{$\neg\neg(\psi_n \vee \neg\psi_n) $}
+            \end{prooftree}
+        \end{LTR}
+        با استفاده از قاعده‌ی وضع مقدم داریم:
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$\Der_1$}\noLine
+                \UIC{$\neg\neg(\psi_n \vee \neg\psi_n) \rightarrow \neg\neg\varphi$}
+                \AXC{$\Der_2$}\noLine
+                \UIC{$\neg\neg(\psi_n \vee \neg\psi_n) $}
+                \toE{$\neg\neg\varphi$}
+            \end{prooftree}
+        \end{LTR}
+
+        \item فرض کنید $\vdashCPC \neg\varphi$. می‌خواهیم نشان دهیم $\vdashIPC \neg\varphi$. از بخش قبل داریم $\vdashIPC \neg\neg\neg\varphi$. از طرفی می‌دانیم $\neg\neg\neg\varphi \vdashIPC \neg\varphi$:
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$\neg\neg\neg\varphi$}
+                \AXC{$[\varphi]^1$}
+                \AXC{$[\neg\varphi]^2$}
+                \botI
+                \negI[2]{$\neg\neg\varphi$}
+                \botI
+                \negI[1]{$\neg\varphi$}
+            \end{prooftree}
+        \end{LTR}
+    \end{enumerate}
+    در نتیجه $\vdashIPC \neg\varphi$.
+    
+    جهت عکس بدیهی است، زیرا هر قضیه از منطق شهودی قضیه‌ای از منطق کلاسیک نیز هست.
+\end{ans}
