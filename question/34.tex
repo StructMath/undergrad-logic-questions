@@ -1,8 +1,8 @@
-
+%ANS Incomplete
 بدون استفاده از قاعدهٔ \lr{RAA} برای گزاره‌های زیر درخت استنتاج بسازید:
 \begin{enumerate}[label=(\alph*)]
     \item $\varphi\vdash\neg\neg\varphi$
-    \item $\neg\neg\neg\varphi\vdash\neg\varphi$
+    \item $\neg\neg\neg\varphi\dashv\vdash\neg\varphi$
     \item $\vdash\neg\neg(\varphi\vee\neg\varphi)$
     \item $\neg\neg(\varphi\to\psi)\dashv\vdash(\neg\neg\varphi\to\neg\neg\psi)$
     \item $\neg\neg(\varphi\wedge\psi)\dashv\vdash(\neg\neg\varphi\wedge\neg\neg\psi)$
@@ -12,7 +12,16 @@
 \end{enumerate}\quad\vspace{-1cm}
 \begin{ans}
     \begin{enumerate}[label=(\alph*)]
-        \item\nopagebreak\quad\\\LTR
+        \item\label{q34:a} \quad
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$\varphi$}
+                \AXC{$[\neg\varphi]^1$}
+                \botI
+                \negI[1]{$\neg\neg\varphi$}
+            \end{prooftree}
+        \end{LTR}
+        \item\label{q34:b}\nopagebreak\quad\\\LTR
         \begin{prooftree}
             \AxiomC{$[\varphi]^2$}
             \AxiomC{$[\neg\varphi]^1$}
@@ -28,7 +37,7 @@
             \RightLabel{$\bot$\lr I}\BinaryInfC{$\bot$}
             \RightLabel{$\neg$\lr I $(1)$}\UnaryInfC{$\neg\neg\neg\varphi$}
         \end{prooftree}\RTL
-        \item\quad\\\LTR
+        \item\label{q34:c} \quad\\\LTR
         \begin{prooftree}
             \AxiomC{$[\varphi]^1$}
             \RightLabel{$\vee$\lr I}\UnaryInfC{$\varphi\vee\neg\varphi$}
@@ -40,7 +49,7 @@
             \RightLabel{$\bot$\lr I}\BinaryInfC{$\bot$}
             \RightLabel{$\neg$\lr I $(2)$}\UnaryInfC{$\neg\neg(\varphi\vee\neg\varphi)$}
         \end{prooftree}\RTL
-        \item\quad\\\LTR
+        \item\label{q34:d} \quad\\\LTR
         \begin{prooftree}
             \AxiomC{$[\varphi]^1$}
             \AxiomC{$[\varphi\to\psi]^2$}
@@ -83,7 +92,49 @@
             \RightLabel{$\neg$\lr I $(5)$}\UnaryInfC{$\neg\neg(\varphi\to\psi)$}
         \end{prooftree}\RTL
         
-        \item\quad\\\LTR
+        \item\label{q34:e} \quad
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$[\varphi \wedge \psi]^2$}
+                \conE{$\varphi$}
+                \AXC{$[\neg\varphi]^1$}
+                \botI
+                \negI[2]{$\neg(\varphi \wedge \psi)$}
+                \AXC{$\neg\neg(\varphi \wedge \psi)$}
+                \botI
+                \negI[1]{$\neg\neg\varphi$}
+                \AXC{$[\varphi \wedge \psi]^4$}
+                \conE{$\psi$}
+                \AXC{$[\neg\psi]^3$}
+                \botI
+                \negI[4]{$\neg(\varphi \wedge \psi)$}
+                \AXC{$\neg\neg(\varphi \wedge \psi)$}
+                \botI
+                \negI[3]{$\neg\neg\psi$}
+                \conI{$\neg\neg\varphi \wedge \neg\neg\psi$}
+            \end{prooftree}
+        \end{LTR}
+
+        \begin{LTR}
+            \begin{prooftree}
+                \AXC{$[\varphi]^2$}
+                \AXC{$[\psi]^3$}
+                \conI{$\varphi \wedge \psi$}
+                \AXC{$[\neg(\varphi \wedge \psi)]^1$}
+                \botI
+                \negI[3]{$\neg\psi$}
+                \AXC{$\neg\neg\varphi \wedge \neg\neg\psi$}
+                \conE{$\neg\neg\psi$}
+                \botI
+                \negI[2]{$\neg\varphi$}
+                \AXC{$\neg\neg\varphi \wedge \neg\neg\psi$}
+                \conE{$\neg\neg\varphi$}
+                \botI
+                \negI[1]{$\neg\neg(\varphi \wedge \psi)$}
+            \end{prooftree}
+        \end{LTR}
+
+        \item\label{q34:f}\LTR
         \begin{prooftree}
             \AxiomC{$[\varphi]^1$}
             \veeI{$\varphi\vee\psi$}
@@ -117,7 +168,7 @@
             \negI[2]{$\neg(\varphi\vee\psi)$}
         \end{prooftree}\RTL
 
-        \item\quad\LTR
+        \item\label{q34:g} \quad\LTR
         \begin{prooftree}
             \AxiomC{$\varphi\vee\psi$}
 
@@ -134,8 +185,8 @@
             \veeE{1}{$\bot$}
             \negI[2]{$\neg(\neg\varphi\wedge\neg\psi)$}
         \end{prooftree}\RTL
-        \item با استفاده از بخش
-        (؟)
+        \item\label{q34:h} با استفاده از بخش
+        \ref{q34:b}
         و با جایگذاری
         $\neg\varphi$
         در
@@ -143,7 +194,7 @@
         استنتاجی برای
         $$\vdash\neg\neg\neg\neg\varphi\to\neg\neg\varphi$$
         می‌سازیم. سپس با استفاده از بخش
-        (؟)
+        \ref{q34:d}
         و با جایگذاری
         $\neg\neg\varphi$
         در
