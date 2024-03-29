@@ -1,6 +1,9 @@
 \usepackage{amsthm}
 \usepackage{amsmath, amsfonts, mathabx}
 \usepackage{mathtools,array,booktabs,mathabx,stmaryrd}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tocloft}
+\usepackage{titletoc}
 \usepackage{graphicx}
 \usepackage{natbib}
 \usepackage[inline]{enumitem}
@@ -21,9 +24,19 @@
 
 \newcommand*{\maximumNumberOfQuestions}{100}
 
+
+\newlistof{exn}{exn}{}
 \theoremstyle{definition}
-\newtheorem{exc}[section]{پرسش}
-\newcommand{\exn}[1]{\setcounter{section}{#1}\addtocounter{section}{-1}\exc}
+\newtheorem{exc}[exn]{پرسش}
+\newcommand{\exn}[1]{\setcounter{exn}{#1}\addtocounter{exn}{-1}\exc%
+\addcontentsline{exn}{exn}{\protect\numberline{}#1}%
+}
+
+\titlecontents*{exn}[0pt]{}{}{}{%
+%TODO status
+}[\quad][]
+
+
 
 \usepackage{versions}
 \excludeversion{ans}
