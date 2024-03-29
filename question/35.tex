@@ -31,8 +31,8 @@
         \item فرض کنید $\vdashIPC \neg\neg\varphi$. از طرفی همه‌ی قضایای منطق شهودی قضایای منطق کلاسیک نیز هستند، در نتیجه $\vdashCPC \neg\neg\varphi$. از طرف دیگر هم به کمک \lr{RAA} می‌توان نشان داد $\neg\neg\varphi \vdashCPC \varphi$:
         \begin{LTR}
             \begin{prooftree}
-                \AXC{$\neg\neg\varphi$}
                 \AXC{$[\neg\varphi]^1$}
+                \AXC{$\neg\neg\varphi$}
                 \botI
                 \RAA[1]{$\varphi$}
             \end{prooftree}
@@ -65,8 +65,8 @@
         و حکم اثبات می‌شود. برای اثبات ادعاهای \ref{q35:dn-intro}، \ref{q35:dn-dist} و \ref{q35:dn-lem} برهان‌های زیر ببینید.
         \begin{LTR}
             \begin{prooftree}
-                \AXC{$[\neg\varphi]^1$}
                 \AXC{$\varphi$}
+                \AXC{$[\neg\varphi]^1$}
                 \botI
                 \negI[1]{$\neg\neg\varphi$}
             \end{prooftree}
@@ -74,16 +74,16 @@
 
         \begin{LTR}
             \begin{prooftree}
-                \AXC{$[\neg\neg\varphi]^2$}
-                \AXC{$\neg\neg(\varphi \rightarrow \psi)$}
-                \AXC{$[\varphi \rightarrow \psi]^5$}
                 \AXC{$[\varphi]^4$}
+                \AXC{$[\varphi \rightarrow \psi]^5$}
                 \toE{$\psi$}
                 \AXC{$[\neg\psi]^3$}
                 \botI
                 \negI[5]{$\neg(\varphi \rightarrow \psi)$}
+                \AXC{$\neg\neg(\varphi \rightarrow \psi)$}
                 \botI
                 \negI[4]{$\neg\varphi$}
+                \AXC{$[\neg\neg\varphi]^2$}
                 \botI
                 \negI[3]{$\neg\neg\psi$}
                 \toI[2]{$\neg\neg\varphi \rightarrow \neg\neg\psi$}
@@ -92,13 +92,13 @@
         
         \begin{LTR}
             \begin{prooftree}
-                \AXC{$[\neg(\varphi \vee \neg\varphi)]^1$}
-                \AXC{$[\neg(\varphi \vee \neg\varphi)]^1$}
                 \AXC{$[\varphi]$}
                 \veeI{$\varphi \vee \neg\varphi$}
+                \AXC{$[\neg(\varphi \vee \neg\varphi)]^1$}
                 \botI
                 \negI{$\neg\varphi$}
                 \veeI{$\varphi \vee \neg\varphi$}
+                \AXC{$[\neg(\varphi \vee \neg\varphi)]^1$}
                 \botI
                 \negI[1]{$\neg\neg(\varphi \vee \neg\varphi) $}
             \end{prooftree}
@@ -107,11 +107,11 @@
         \item فرض کنید $\vdashCPC \neg\varphi$. می‌خواهیم نشان دهیم $\vdashIPC \neg\varphi$. از بخش قبل داریم $\vdashIPC \neg\neg\neg\varphi$. برهان زیر نشان می‌دهد $\neg\neg\neg\varphi \vdashIPC \neg\varphi$.
         \begin{LTR}
             \begin{prooftree}
-                \AXC{$\neg\neg\neg\varphi$}
                 \AXC{$[\varphi]^1$}
                 \AXC{$[\neg\varphi]^2$}
                 \botI
                 \negI[2]{$\neg\neg\varphi$}
+                \AXC{$\neg\neg\neg\varphi$}
                 \botI
                 \negI[1]{$\neg\varphi$}
             \end{prooftree}
