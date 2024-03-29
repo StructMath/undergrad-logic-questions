@@ -39,97 +39,72 @@
         \end{LTR}
         در نتیجه $\vdashCPC \varphi$.
 
-        \item فرض کنید $\vdashCPC \varphi$. در درخت برهان $\varphi$، تمام رخدادهای \lr{RAA} که به صورت
-        \begin{LTR}
-            \begin{prooftree}
-                \AXC{$[\neg\psi_i]^i$}\noLine
-                \UIC{$\vdots$}\noLine
-                \UIC{$\bot$}
-                \RAA[i]{$\psi_i$}
-            \end{prooftree}
-        \end{LTR}
-        هستند را به زیردرختی بدون \lr{RAA} و با یک فرض باز $\psi_i \vee \neg\psi_i$ به صورت
-        \begin{LTR}
-            \begin{prooftree}
-                \AXC{$\psi_i \vee \neg\psi_i$}
-                \AXC{$[\psi_i]^i$}
-                \AXC{$[\neg\psi_i]^i$}\noLine
-                \UIC{$\vdots$}\noLine
-                \UIC{$\bot$}
-                \botE{$\psi_i$}
-                \veeE{i}{$\psi_i$}
-            \end{prooftree}
-        \end{LTR}
-        تبدیل می‌کنیم. درخت برهان حاصل را $\Der$ بنامید و فرض کنید این درخت $n$ فرض باز به فرم $\psi_i \vee \neg\psi_i$ داشته باشد. حال کافی است برهانی بدون فرض باز برای $\neg\neg\varphi$ بسازیم. حکم را با استقرا روی $n$ ثابت می‌کنیم.
+        \item فرض کنید $\vdashCPC \varphi$. به روشی که در پاسخ پرسش \ref{q58} توضیح داده شد، درخت برهان $\varphi$ را به برهانی بدون استفاده از \lr{RAA} و با استفاده از نمونه‌های \lr{LEM} به عنوان فرض باز تبدیل می‌کنیم. فرض کنید تعداد این فرض‌های باز به فرم $\psi_i \vee \neg\psi_i$ برابر با $n$ باشد. یعنی داریم:
+        \[ \psi_1 \vee \neg\psi_1 , \dots , \psi_n \vee \neg\psi_n \vdashIPC \varphi \]
+        می‌خواهیم نشان دهیم برهانی بدون فرض باز برای $\neg\neg\varphi$ وجود دارد. این حکم را با استقرا روی $n$ ثابت می‌کنیم.
         
-        اگر $n = 0$، که یعنی $\Der$ شامل فرض باز نباشد، برهان $\neg\neg\varphi$ را به کمک $\Der$ به صورت زیر می‌سازیم:
+        فرض کنید $n = 0$، یعنی $\vdashIPC \varphi$. از طرفی می‌دانیم
+        \begin{equation}\label{q35:dn-intro}
+            \varphi \vdashIPC \neg\neg\varphi
+        \end{equation}. در نتیجه $\vdashIPC \neg\neg\varphi$. برای گام استقرا، فرض کنید $n > 0$. با استفاده از قاعده‌ی معرفی شرطی خواهیم داشت
+        \[ \psi_1 \vee \neg\psi_1 , \dots , \psi_{n-1} \vee \neg\psi_{n-1} \vdashIPC (\psi_n \vee \neg\psi_n) \rightarrow \varphi \]
+        از فرض استقرا داریم
+        \[ \vdashIPC \neg\neg((\psi_n \vee \neg\psi_n) \rightarrow \varphi) \]
+        همچنین می‌توان نشان داد که در منطق شهودی نقیض نقیض روی شرطی پخش می‌شود، یعنی
+        \begin{equation}\label{q35:dn-dist} \neg\neg((\psi_n \vee \neg\psi_n) \rightarrow \varphi) \vdashIPC \neg\neg(\psi_n \vee \neg\psi_n) \rightarrow \neg\neg\varphi \end{equation}
+        در نتیجه
+        \[ \vdashIPC \neg\neg(\psi_n \vee \neg\psi_n) \rightarrow \neg\neg\varphi \]
+        که استفاده از قضیه‌ی استنتاج یعنی
+        \[ \neg\neg(\psi_n \vee \neg\psi_n) \vdashIPC \neg\neg\varphi \]
+        از طرفی ادعا می‌کنیم که نقیض نقیض \lr{LEM} در منطق شهودی قابل اثبات است، یعنی
+        \begin{equation}\label{q35:dn-lem}
+            \vdashIPC \neg\neg(\psi_n \vee \neg\psi_n)
+        \end{equation}
+        و در نتیجه
+        \[ \vdashIPC \neg\neg\varphi \]
+        و حکم اثبات می‌شود. برای اثبات ادعاهای \ref{q35:dn-intro}، \ref{q35:dn-dist} و \ref{q35:dn-lem} برهان‌های زیر ببینید.
         \begin{LTR}
             \begin{prooftree}
                 \AXC{$[\neg\varphi]^1$}
-                \AXC{$\Der$}\noLine
-                \UIC{$\varphi$}
+                \AXC{$\varphi$}
                 \botI
                 \negI[1]{$\neg\neg\varphi$}
             \end{prooftree}
         \end{LTR}
-        و در نتیجه $\vdashIPC \neg\neg\varphi$.
 
-        برای گام استقرا، فرض کنید $n > 0$.
-        درخت برهان $\Der'$ را به کمک $\Der$ به صورت زیر تعریف می‌کنیم:
         \begin{LTR}
             \begin{prooftree}
-                \AXC{$[\psi_n \vee \neg\psi_n]^{n+1}$}\noLine
-                \UIC{$\Der$}\noLine
-                \UIC{$\varphi$}
-                \toI[n+1]{$(\psi_n \vee \neg\psi_n) \rightarrow \varphi$}
+                \AXC{$[\neg\neg\varphi]^2$}
+                \AXC{$\neg\neg(\varphi \rightarrow \psi)$}
+                \AXC{$[\varphi \rightarrow \psi]^5$}
+                \AXC{$[\varphi]^4$}
+                \toE{$\psi$}
+                \AXC{$[\neg\psi]^3$}
+                \botI
+                \negI[5]{$\neg(\varphi \rightarrow \psi)$}
+                \botI
+                \negI[4]{$\neg\varphi$}
+                \botI
+                \negI[3]{$\neg\neg\psi$}
+                \toI[2]{$\neg\neg\varphi \rightarrow \neg\neg\psi$}
             \end{prooftree}
         \end{LTR}
-        دقت کنید در $\Der'$ فرض $\psi_n \vee \neg\psi_n$ بسته شده و شرطی $(\psi_n \vee \neg\psi_n) \rightarrow \varphi$ اثبات می‌شود. در نتیجه تعداد فرض‌های باز $\Der'$ برابر با $n-1$ است. با استفاده از فرض استقرا برای $\Der'$، برهانی برای ${\neg\neg((\psi_n \vee \neg\psi_n) \rightarrow \varphi)}$ بدون فرض باز خواهیم داشت. این برهان را $\Der''$ بنامید.
-        از $\Der''$ استفاده می‌کنیم تا برهانی برای ${\neg\neg(\psi_n \vee \neg\psi_n) \rightarrow \neg\neg\varphi}$ بسازیم و آن را $\Der_1$ می‌نامیم. توجه کنید که در تعریف $\Der_1$ برای کوتاه‌نویسی از $\chi$ به جای $\psi_n \vee \neg\psi_n$ استفاده کرده‌ایم.
+        
         \begin{LTR}
             \begin{prooftree}
-                \AXC{$[\neg\neg\chi]^2$}
-                \AXC{$\Der''$}\noLine
-                \UIC{$\neg\neg(\chi \rightarrow \varphi)$}
-                \AXC{$[\chi \rightarrow \varphi]^5$}
-                \AXC{$[\chi]^4$}
-                \toE{$\varphi$}
-                \AXC{$[\neg\varphi]^3$}
+                \AXC{$[\neg(\varphi \vee \neg\varphi)]^1$}
+                \AXC{$[\neg(\varphi \vee \neg\varphi)]^1$}
+                \AXC{$[\varphi]$}
+                \veeI{$\varphi \vee \neg\varphi$}
                 \botI
-                \negI[5]{$\neg(\chi \rightarrow \varphi)$}
+                \negI{$\neg\varphi$}
+                \veeI{$\varphi \vee \neg\varphi$}
                 \botI
-                \negI[4]{$\neg\chi$}
-                \botI
-                \negI[3]{$\neg\neg\varphi$}
-                \toI[2]{$\neg\neg\chi \rightarrow \neg\neg\varphi$}
-            \end{prooftree}
-        \end{LTR}
-        همچنین می‌دانیم مقدم گزاره‌ی شرطی‌ای که از $\Der_1$ نتیجه می‌شود در منطق شهودی قابل اثبات است. برهان آن را با نام $\Der_2$ به صورت زیر می‌سازیم:
-        \begin{LTR}
-            \begin{prooftree}
-                \AXC{$[\neg(\psi_n \vee \neg\psi_n)]^1$}
-                \AXC{$[\neg(\psi_n \vee \neg\psi_n)]^1$}
-                \AXC{$[\psi_n]$}
-                \veeI{$\psi_n \vee \neg\psi_n$}
-                \botI
-                \negI{$\neg\psi_n$}
-                \veeI{$\psi_n \vee \neg\psi_n$}
-                \botI
-                \negI[1]{$\neg\neg(\psi_n \vee \neg\psi_n) $}
-            \end{prooftree}
-        \end{LTR}
-        با استفاده از قاعده‌ی وضع مقدم داریم:
-        \begin{LTR}
-            \begin{prooftree}
-                \AXC{$\Der_1$}\noLine
-                \UIC{$\neg\neg(\psi_n \vee \neg\psi_n) \rightarrow \neg\neg\varphi$}
-                \AXC{$\Der_2$}\noLine
-                \UIC{$\neg\neg(\psi_n \vee \neg\psi_n) $}
-                \toE{$\neg\neg\varphi$}
+                \negI[1]{$\neg\neg(\varphi \vee \neg\varphi) $}
             \end{prooftree}
         \end{LTR}
 
-        \item فرض کنید $\vdashCPC \neg\varphi$. می‌خواهیم نشان دهیم $\vdashIPC \neg\varphi$. از بخش قبل داریم $\vdashIPC \neg\neg\neg\varphi$. از طرفی می‌دانیم $\neg\neg\neg\varphi \vdashIPC \neg\varphi$:
+        \item فرض کنید $\vdashCPC \neg\varphi$. می‌خواهیم نشان دهیم $\vdashIPC \neg\varphi$. از بخش قبل داریم $\vdashIPC \neg\neg\neg\varphi$. برهان زیر نشان می‌دهد $\neg\neg\neg\varphi \vdashIPC \neg\varphi$.
         \begin{LTR}
             \begin{prooftree}
                 \AXC{$\neg\neg\neg\varphi$}
