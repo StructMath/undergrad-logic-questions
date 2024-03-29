@@ -37,7 +37,7 @@
 \vspace{0.5cm}
 \foreach \q in \qList{%
   \IfFileExists{question/\q.tex} {%
-		\exc \input{question/\q.tex}%
+		\exc \label{q\q} \input{question/\q.tex}%
   }%
 }%
 
