@@ -12,10 +12,10 @@
         \item\quad\\\LTR
         \begin{prooftree}
             \AxiomC{$[\varphi\vee\psi]^1$}
-            \conE{$\psi$}
+            \wedE{$\psi$}
 
             \AxiomC{$[\varphi\vee\psi]^1$}
-            \conE{$\varphi$}
+            \wedE{$\varphi$}
             \AxiomC{$\varphi\to(\psi\to\sigma)$}
             \toE{$\varphi\to\sigma$}
 
@@ -25,7 +25,7 @@
         \begin{prooftree}
             \AxiomC{$[\varphi]^2$}
             \AxiomC{$[\psi]^1$}
-            \conI{$\varphi\wedge\psi$}
+            \wedI{$\varphi\wedge\psi$}
 
             \AxiomC{$(\varphi\wedge\psi)\to\sigma$}
             \toE{$\sigma$}

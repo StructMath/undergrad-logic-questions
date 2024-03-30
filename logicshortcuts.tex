@@ -4,40 +4,34 @@
 \newcommand*{\botE}[1]{\RightLabel{$\bot$\lr E}\UnaryInfC{#1}}
 
 \NewDocumentCommand{\negI}{o m}{%
-  \IfNoValueTF{#1}{%
-    % Clause for when the optional argument is not present
+  \IfNoValueTF{#1}{
     \RightLabel{$\neg$\lr I}\UnaryInfC{#2}
-  }{%
-    % Clause for when the optional argument is present
+  }{
     \RightLabel{$\neg$\lr I $(#1)$}\UnaryInfC{#2}
-  }%
+  }
 }
 \newcommand*{\negE}{\RightLabel{$\neg$\lr E}\BinaryInfC{$\bot$}}
 
-\newcommand*{\conI}[1]{\RightLabel{$\wedge$\lr I}\BinaryInfC{#1}}
-\newcommand*{\conE}[1]{\RightLabel{$\wedge$\lr E}\UnaryInfC{#1}}
+\newcommand*{\wedI}[1]{\RightLabel{$\wedge$\lr I}\BinaryInfC{#1}}
+\newcommand*{\wedE}[1]{\RightLabel{$\wedge$\lr E}\UnaryInfC{#1}}
 
 \NewDocumentCommand{\toI}{o m}{%
-  \IfNoValueTF{#1}{%
-    % Clause for when the optional argument is not present
+  \IfNoValueTF{#1}{
     \RightLabel{$\to$\lr I}\UnaryInfC{#2}
-  }{%
-    % Clause for when the optional argument is present
+  }{
     \RightLabel{$\to$\lr I $(#1)$}\UnaryInfC{#2}
-  }%
+  }
 }
 \newcommand*{\toE}[1]{\RightLabel{$\to$\lr{E}}\BinaryInfC{#1}}
 
 \newcommand*{\prop}{\textsc{\lr{Prop}}}
 
 \NewDocumentCommand{\RAA}{o m}{%
-  \IfNoValueTF{#1}{%
-    % Clause for when the optional argument is not present
+  \IfNoValueTF{#1}{
     \RightLabel{\lr{RAA}}\UnaryInfC{#2}
-  }{%
-    % Clause for when the optional argument is present
+  }{
     \RightLabel{\lr{RAA} $(#1)$}\UnaryInfC{#2}
-  }%
+  }
 }
 
 \newcommand*{\vdashIPC}{\vdash_\text{\lr{IPC}}}
