@@ -16,7 +16,7 @@
             \begin{prooftree}
                 \AXC{$\varphi$}
                 \AXC{$[\neg\varphi]^1$}
-                \botI
+                \negE
                 \negI[1]{$\neg\neg\varphi$}
             \end{prooftree}
         \end{LTR}
@@ -97,18 +97,18 @@
                 \AXC{$[\varphi \wedge \psi]^2$}
                 \conE{$\varphi$}
                 \AXC{$[\neg\varphi]^1$}
-                \botI
+                \negE
                 \negI[2]{$\neg(\varphi \wedge \psi)$}
                 \AXC{$\neg\neg(\varphi \wedge \psi)$}
-                \botI
+                \negE
                 \negI[1]{$\neg\neg\varphi$}
                 \AXC{$[\varphi \wedge \psi]^4$}
                 \conE{$\psi$}
                 \AXC{$[\neg\psi]^3$}
-                \botI
+                \negE
                 \negI[4]{$\neg(\varphi \wedge \psi)$}
                 \AXC{$\neg\neg(\varphi \wedge \psi)$}
-                \botI
+                \negE
                 \negI[3]{$\neg\neg\psi$}
                 \conI{$\neg\neg\varphi \wedge \neg\neg\psi$}
             \end{prooftree}
@@ -120,15 +120,15 @@
                 \AXC{$[\psi]^3$}
                 \conI{$\varphi \wedge \psi$}
                 \AXC{$[\neg(\varphi \wedge \psi)]^1$}
-                \botI
+                \negE
                 \negI[3]{$\neg\psi$}
                 \AXC{$\neg\neg\varphi \wedge \neg\neg\psi$}
                 \conE{$\neg\neg\psi$}
-                \botI
+                \negE
                 \negI[2]{$\neg\varphi$}
                 \AXC{$\neg\neg\varphi \wedge \neg\neg\psi$}
                 \conE{$\neg\neg\varphi$}
-                \botI
+                \negE
                 \negI[1]{$\neg\neg(\varphi \wedge \psi)$}
             \end{prooftree}
         \end{LTR}
@@ -138,13 +138,13 @@
             \AxiomC{$[\varphi]^1$}
             \veeI{$\varphi\vee\psi$}
             \AxiomC{$\neg(\varphi\vee\psi)$}
-            \botI
+            \negE
             \negI[1]{$\neg\varphi$}
 
             \AxiomC{$[\psi]^2$}
             \veeI{$\varphi\vee\psi$}
             \AxiomC{$\neg(\varphi\vee\psi)$}
-            \botI
+            \negE
             \negI[2]{$\neg\psi$}
 
             \conI{$\neg\varphi\wedge\neg\psi$}
@@ -156,12 +156,12 @@
             \AxiomC{$[\varphi]^1$}
             \AxiomC{$\neg\varphi\wedge\neg\psi$}
             \conE{$\neg\varphi$}
-            \botI
+            \negE
 
             \AxiomC{$[\psi]^1$}
             \AxiomC{$\neg\varphi\wedge\neg\psi$}
             \conE{$\neg\psi$}
-            \botI
+            \negE
 
             \veeE{1}{$\bot$}
             \negI[2]{$\neg(\varphi\vee\psi)$}
@@ -174,12 +174,12 @@
             \AxiomC{$[\varphi]^1$}
             \AxiomC{$[\neg\varphi\wedge\neg\psi]^2$}
             \conE{$\neg\varphi$}
-            \botI
+            \negE
 
             \AxiomC{$\psi$}
             \AxiomC{$[\neg\varphi\wedge\neg\psi]^2$}
             \conE{$\neg\psi$}
-            \botI
+            \negE
 
             \veeE{1}{$\bot$}
             \negI[2]{$\neg(\neg\varphi\wedge\neg\psi)$}
