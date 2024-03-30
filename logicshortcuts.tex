@@ -24,8 +24,6 @@
 }
 \newcommand*{\toE}[1]{\RightLabel{$\to$\lr{E}}\BinaryInfC{#1}}
 
-\newcommand*{\prop}{\textsc{\lr{Prop}}}
-
 \NewDocumentCommand{\RAA}{o m}{%
   \IfNoValueTF{#1}{
     \RightLabel{\lr{RAA}}\UnaryInfC{#2}
@@ -33,6 +31,9 @@
     \RightLabel{\lr{RAA} $(#1)$}\UnaryInfC{#2}
   }
 }
+
+\newcommand*{\prop}{\textsc{\lr{Prop}}}
+
 
 \newcommand*{\vdashIPC}{\vdash_\text{\lr{IPC}}}
 \newcommand*{\vdashCPC}{\vdash_\text{\lr{CPC}}}
