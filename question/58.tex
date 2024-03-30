@@ -64,12 +64,9 @@
         \AxiomC{$[\varphi]^2$}
 
         \AxiomC{$[\neg\varphi]^2$}
-        \AxiomC{$[\neg\varphi]^1$}
         \noLine\UnaryInfC{$\mathcal{D}$}
         \noLine\UnaryInfC{$\bot$}
-        \RightLabel{$\neg$\lr{I} $(1)$}\UnaryInfC{$\neg\neg\varphi$}
-        \negE
-        \RightLabel{$\bot$\lr{E}}\UnaryInfC{$\varphi$}
+        \botE{$\varphi$}
         
         \RightLabel{$\vee$\lr{E} $(2)$}\TrinaryInfC{$\varphi$}
     \end{prooftree}
