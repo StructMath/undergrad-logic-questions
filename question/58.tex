@@ -30,11 +30,11 @@
         \AxiomC{$[\varphi]^1$}
         \RightLabel{$\vee$\lr{I}}\UnaryInfC{$\varphi\vee\neg\varphi$}
                                         \AxiomC{$[\neg(\varphi\vee\neg\varphi)]^2$}
-        \RightLabel{$\bot$\lr{I}}\BinaryInfC{$\bot$}
+        \negE
         \RightLabel{$\neg$\lr{I} $(1)$}\UnaryInfC{$\neg\varphi$}
         \RightLabel{$\vee$\lr{I}}\UnaryInfC{$\varphi\vee\neg\varphi$}
                                         \AxiomC{$[\neg(\varphi\vee\neg\varphi)]^2$}
-        \RightLabel{$\bot$\lr{I}}\BinaryInfC{$\bot$}
+        \negE
         \RightLabel{RAA $(2)$}\UnaryInfC{$\varphi\vee\neg\varphi$}
 
     \end{prooftree}
@@ -68,7 +68,7 @@
         \noLine\UnaryInfC{$\mathcal{D}$}
         \noLine\UnaryInfC{$\bot$}
         \RightLabel{$\neg$\lr{I} $(1)$}\UnaryInfC{$\neg\neg\varphi$}
-        \RightLabel{$\bot$\lr{I}}\BinaryInfC{$\bot$}
+        \negE
         \RightLabel{$\bot$\lr{E}}\UnaryInfC{$\varphi$}
         
         \RightLabel{$\vee$\lr{E} $(2)$}\TrinaryInfC{$\varphi$}
