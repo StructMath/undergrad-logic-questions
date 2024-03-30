@@ -1,7 +1,7 @@
 بدون استفاده از قاعدهٔ \lr{RAA} برای گزاره‌های زیر درخت استنتاج بسازید:
 \begin{enumerate}[label=(\alph*)]
     \item $\varphi\vdash\neg\neg\varphi$
-    \item $\neg\neg\neg\varphi\dashv\vdash\neg\varphi$
+    \item $\neg\neg\neg\varphi\vdash\neg\varphi$
     \item $\vdash\neg\neg(\varphi\vee\neg\varphi)$
     \item $\neg\neg(\varphi\to\psi)\dashv\vdash(\neg\neg\varphi\to\neg\neg\psi)$
     \item $\neg\neg(\varphi\wedge\psi)\dashv\vdash(\neg\neg\varphi\wedge\neg\neg\psi)$
@@ -29,12 +29,6 @@
             \AxiomC{$\neg\neg\neg\varphi$}
             \negE
             \RightLabel{$\neg$\lr{I} $(2)$}\UnaryInfC{$\neg\varphi$}
-        \end{prooftree}
-        \begin{prooftree}
-            \AxiomC{$\neg\varphi$}
-            \AxiomC{$[\neg\neg\varphi]^1$}
-            \negE
-            \RightLabel{$\neg$\lr I $(1)$}\UnaryInfC{$\neg\neg\neg\varphi$}
         \end{prooftree}\RTL
         \item\label{q34:c} \quad\\\LTR
         \begin{prooftree}
