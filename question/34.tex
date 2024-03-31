@@ -59,30 +59,26 @@
             \RightLabel{$\to$\lr I $(4)$}\UnaryInfC{$\neg\neg\varphi\to\neg\neg\psi$}
         \end{prooftree}
         \begin{prooftree}
-            \AxiomC{$[\varphi]^4$}
-
             \AxiomC{$[\psi]^1$}
             \RightLabel{$\to$\lr I}\UnaryInfC{$\varphi\to\psi$}
-            \AxiomC{$[\neg(\varphi\to\psi)]^5$}
+            \AxiomC{$[\neg(\varphi\to\psi)]^4$}
             \negE
             \RightLabel{$\neg$\lr I $(1)$}\UnaryInfC{$\neg\psi$}
 
-            \AxiomC{$[\varphi]^2$}
-            \AxiomC{$[\neg\varphi]^3$}
+            \AxiomC{$[\varphi]^3$}
+            \AxiomC{$[\neg\varphi]^2$}
             \negE
-            \RightLabel{$\neg$\lr E $(3)$}\UnaryInfC{$\neg\neg\varphi$}
+            \RightLabel{$\neg$\lr E $(2)$}\UnaryInfC{$\neg\neg\varphi$}
             \AxiomC{$\neg\neg\varphi\to\neg\neg\psi$}
             \RightLabel{$\to$\lr E}\BinaryInfC{$\neg\neg\psi$}
-            \negE
-            \RightLabel{$\neg$\lr I $(2)$}\UnaryInfC{$\neg\varphi$}
 
             \negE
             \RightLabel{$\bot$\lr E}\UnaryInfC{$\psi$}
-            \RightLabel{$\to$\lr I $(4)$}\UnaryInfC{$\varphi\to\psi$}
+            \RightLabel{$\to$\lr I $(3)$}\UnaryInfC{$\varphi\to\psi$}
             
-            \AxiomC{$[\neg(\varphi\to\psi)]^5$}
+            \AxiomC{$[\neg(\varphi\to\psi)]^4$}
             \negE
-            \RightLabel{$\neg$\lr I $(5)$}\UnaryInfC{$\neg\neg(\varphi\to\psi)$}
+            \RightLabel{$\neg$\lr I $(4)$}\UnaryInfC{$\neg\neg(\varphi\to\psi)$}
         \end{prooftree}\RTL
         
         \item\label{q34:e} \quad
