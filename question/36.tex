@@ -31,4 +31,138 @@ $\mathord{(-)}^n\colon\prop\to\prop$
         % }
         
         (راهنمایی: از قضیهٔ گلیونکو استفاده کنید.)
-\end{enumerate}
+\end{enumerate}\quad\vspace{-0.5cm}
+\begin{ans}
+    \begin{enumerate}[label=(\alph*)]
+        \item
+        حکم را با استقرا روی پیچیدگی
+        $\varphi$
+        ثابت می‌کنیم. برای پایهٔ استقرا ابتدا قرار دهید
+        $\varphi=\bot$.
+        در این صورت
+        $\varphi^n=\bot$.
+        باید نشان بدهیم
+        $\neg\neg\bot\vdashIPC\bot$.
+        این حکم با درخت برهان زیر ثابت می‌شود:
+        \LTR\begin{prooftree}
+            \AxiomC{$[\bot]^1$}
+            \negI[1]{$\neg\bot$}
+
+            \AxiomC{$\neg\neg\bot$}
+            \negE
+        \end{prooftree}\RTL
+        
+        حال فرض کنید
+        $\varphi=p_i$
+        و
+        $\varphi_n=\neg\neg p_i$.
+        باید نشان بدهیم
+        $\neg\neg\neg\neg p_i\vdashIPC \neg\neg p_i$.
+        این حکم با جایگذاری
+        $\neg p_i$
+        به جای
+        $\varphi$
+        در بخش
+        \ref{q34:b}
+        پرسش
+        \ref{q34}
+        ثابت می‌شود.
+        
+        حال فرض می‌کنیم
+        $\varphi$
+        با استفاده از ادات‌های نقیض، عطف، فصل یا شرطی ساخته شده است و حکم برای اجزای آن ثابت شده است. 
+        
+        برای
+        $\varphi=\neg\psi$
+        و
+        $\varphi^n=\neg\psi^n$
+        باید ثابت کنیم
+        $\neg\neg\neg\psi^n\vdashIPC \neg\psi^n$.
+        این حکم با جایگذاری
+        $\psi^n$
+        در بخش
+        \ref{q34:b}
+        پرسش
+        \ref{q34}
+        ثابت می‌شود.
+
+        برای
+        $\varphi=\psi\wedge\chi$
+        و
+        $\varphi^n=\psi^n\wedge\chi^n$
+        باید ثابت کنیم
+        $\neg\neg(\psi^n\wedge\chi^n)\vdashIPC \psi^n\wedge\chi^n$.
+        مطابق بخش
+        \ref{q34:e}
+        پرسش
+        \ref{q34}
+        می‌دانیم
+        $\neg\neg(\psi^n\wedge\chi^n)\vdashIPC \neg\neg\psi^n\wedge\neg\neg\chi^n$.
+        طبق فرض استقرا می‌دانیم
+        $\neg\neg\psi^n\vdashIPC \psi^n$
+        و
+        $\neg\neg\chi^n\vdashIPC\chi^n$.
+        اکنون کافی است با استفاده از قاعدهٔ حذف عطف از
+        $\neg\neg\psi^n\wedge\neg\neg\chi^n$
+        دو طرف عطف را نتیجه بگیریم و سپس با استفاده از فرض استقرایی
+        $\psi^n$
+        و
+        $\chi^n$
+        را نتیجه بگیریم و سپس با قاعدهٔ معرفی عطف نتیجه بگیریم
+        $\psi^n\wedge\chi^n$.
+
+        برای
+        $\varphi=\psi\vee\chi$
+        و
+        $\varphi^n=\neg\neg(\psi^n\vee\chi^n)$
+        باید ثابت کنیم
+        $$\neg\neg\neg\neg(\psi^n\vee\chi^n)\vdashIPC\neg\neg(\psi^n\vee\chi^n)$$
+        این حکم با جایگذاری
+        $\neg(\psi^n\vee\chi^n)$
+        در بخش
+        \ref{q34:b}
+        پرسش
+        \ref{q34}
+        ثابت می‌شود.
+        
+        برای
+        $\varphi=\psi\to\chi$
+        و
+        $\varphi^n=\psi^n\to\chi^n$
+        باید ثابت کنیم
+        $\neg\neg(\psi^n\to\chi^n)\vdashIPC\psi^n\to\chi^n$.
+        مطابق بخش
+        \ref{q34:d}
+        پرسش
+        \ref{q34}
+        می‌دانیم
+        $\neg\neg(\psi^n\to\chi^n)\vdashIPC \neg\neg\psi^n\to\neg\neg\chi^n$.
+        همچنین مطابق فرض استقرا داریم
+        $\neg\neg\chi^n\vdashIPC\chi^n$.
+        از بخش
+        \ref{q34:a}
+        پرسش
+        \ref{q34}
+        نیز می‌دانیم
+        $\psi^n\vdashIPC\neg\neg\psi^n$.
+        حکم را با استنتاج زیر ثابت می‌کنیم
+        \LTR\begin{prooftree}
+            \AxiomC{$[\psi^n]^1$}
+            \noLine\UnaryInfC{$\vdots$}
+            \noLine\UnaryInfC{$\neg\neg\psi^n$}
+
+            \AxiomC{$\neg\neg(\psi^n\to\chi^n)$}
+            \noLine\UnaryInfC{$\vdots$}
+            \noLine\UnaryInfC{$\neg\neg\psi^n\to\neg\neg\chi^n$}
+
+            \toE{$\neg\neg\chi^n$}
+            \noLine\UnaryInfC{$\vdots$}
+            \noLine\UnaryInfC{$\chi^n$}
+            
+            \toI[1]{$\psi^n\to\chi^n$}
+
+        \end{prooftree}\RTL
+        توجه کنید مطابق اطلاعات قبلی می‌دانیم بخش‌هایی از استنتاج که جا انداخته‌ایم را می‌توان با استنتاجی معتبر تکمیل کرد.
+    \end{enumerate}
+\end{ans}
+%ANS Incomplete
