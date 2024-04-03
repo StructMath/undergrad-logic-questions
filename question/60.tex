@@ -70,31 +70,32 @@ $\vdash\varphi\to\psi$.
 \end{enumerate}\quad\vspace{-9mm}
 \begin{ans}
     \begin{enumerate}[label=(\alph*)]
-        \item
-        فرض کنید
+        \item برای نشان‌دادن بازتابی بودن $\leq$، کافی است برای هر $\varphi \in \Phi$ ثابت کنیم $\vdash \varphi \rightarrow \varphi$، که به راحتی و با یک بار استفاده از معرفی شرطی اثبات می‌شود.
+        برای نشان‌دادن تراگذری بودن آن، فرض کنید
         $\varphi\leq\psi$
         و
         $\psi\leq\sigma$.
         این یعنی
         $\vdash\varphi\to\psi$
         و
-        $\vdash\psi\to\sigma$.
+        $\vdash\psi\to\sigma$، که با استفاده از قضیهٔ استنتاج، یعنی $\varphi\vdash\psi$ و $\psi\vdash\sigma$. در نتیجه $\varphi\vdash\sigma$ و با استفاده‌ی مجدد از قضیهٔ استنتاج، $\vdash\varphi\rightarrow\sigma$. در نتیجه $\varphi\leq\sigma$.
+        
         \item ادعا می‌کنیم برای
         $\uparrow\Phi$
         متناهی عطف تمام اعضای
         $\Phi$
-        (که با
+        (که آن را با
         $\bigwedge\Phi$
-        آن را نشان می‌دهیم)
-        اینفیمم این مجموعه است.
+        نشان می‌دهیم)
+        اینفیمم (یا بزرگترین کران پایین) این مجموعه است.
         فرض کنید
         $\psi\in\uparrow\Phi$.
         این یعنی برای هر
         $\varphi\in\Phi$
         داریم
         $\vdash\varphi\to\psi$.
-        حال اگر برای ساختن استنتاجی برای
-        $\bigwedge\Phi\to\psi$
+        حال برای نشان دادن
+        $\vdash\bigwedge\Phi\to\psi$
         کافی است
         $\bigwedge\Phi$
         را فرض بگیریم، با استفاده از قاعدهٔ حذف عطف یکی از اعضای
@@ -103,12 +104,12 @@ $\vdash\varphi\to\psi$.
         $\varphi$
         را نتیجه بگیریم، و سپس با نوشتن استنتاجی که
         $\varphi\to\psi$
-        را اثبات می‌کند و قاعدهٔ حذف عطف
+        را اثبات می‌کند و قاعدهٔ حذف شرطی
         $\psi$
-        را نتیجه بگیریم و سپس با قاعدهٔ حذف عطف مقدمهٔ
+        را نتیجه بگیریم و سپس با قاعدهٔ معرفی شرطی مقدمهٔ
         $\bigwedge\Phi$
         را حذف کنیم و نتیجه بگیریم
-        $\bigwedge\Phi\to\psi$.
+        $\bigwedge\Phi\to\psi$. پس برای هر ‌$\psi\in\uparrow\Phi$ داریم $\bigwedge\Phi\leq\psi$، و در نتیجه $\bigwedge\Phi$ یک کران پایین برای $\uparrow\Phi$ است. برای نشان دادن بزرگترین کران پایین بودن آن نیز فرض می‌کنیم $\sigma$ کران پایین دیگری برای $\uparrow\Phi$ باشد و نشان می‌دهیم $\sigma\leq\bigwedge\Phi$.
         
         \item 
         به ازای هر 
