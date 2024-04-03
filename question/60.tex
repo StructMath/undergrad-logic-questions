@@ -70,7 +70,7 @@ $\vdash\varphi\to\psi$.
 \end{enumerate}\quad\vspace{-9mm}
 \begin{ans}
     \begin{enumerate}[label=(\alph*)]
-        \item برای نشان‌دادن بازتابی بودن $\leq$، کافی است برای هر $\varphi \in \Phi$ ثابت کنیم $\vdash \varphi \rightarrow \varphi$، که به راحتی و با یک بار استفاده از معرفی شرطی اثبات می‌شود.
+        \item\label{q60:a} برای نشان‌دادن بازتابی بودن $\leq$، کافی است برای هر $\varphi \in \Phi$ ثابت کنیم $\vdash \varphi \rightarrow \varphi$، که به راحتی و با یک بار استفاده از معرفی شرطی اثبات می‌شود.
         برای نشان‌دادن تراگذری بودن آن، فرض کنید
         $\varphi\leq\psi$
         و
@@ -80,7 +80,7 @@ $\vdash\varphi\to\psi$.
         و
         $\vdash\psi\to\sigma$، که با استفاده از قضیهٔ استنتاج، یعنی $\varphi\vdash\psi$ و $\psi\vdash\sigma$. در نتیجه $\varphi\vdash\sigma$ و با استفاده‌ی مجدد از قضیهٔ استنتاج، $\vdash\varphi\rightarrow\sigma$. در نتیجه $\varphi\leq\sigma$.
         
-        \item ادعا می‌کنیم برای
+        \item\label{q60:b} ادعا می‌کنیم برای
         $\uparrow\Phi$
         متناهی عطف تمام اعضای
         $\Phi$
@@ -111,7 +111,7 @@ $\vdash\varphi\to\psi$.
         را حذف کنیم و نتیجه بگیریم
         $\bigwedge\Phi\to\psi$. پس برای هر ‌$\psi\in\uparrow\Phi$ داریم $\bigwedge\Phi\leq\psi$، و در نتیجه $\bigwedge\Phi$ یک کران پایین برای $\uparrow\Phi$ است. برای نشان دادن بزرگترین کران پایین بودن آن نیز فرض می‌کنیم $\sigma$ کران پایین دیگری برای $\uparrow\Phi$ باشد و نشان می‌دهیم $\sigma\leq\bigwedge\Phi$.
         
-        \item 
+        \item\label{q60:c} 
         به ازای هر 
         $\psi,\varphi\in\downarrow\Phi$
         داریم
@@ -120,15 +120,16 @@ $\vdash\varphi\to\psi$.
         $\varphi\leq\psi$
         <<این موضوع از تعریف 
         $\downarrow\Phi$
-        نتیجه می شود. >>
+        نتیجه می‌شود. >>
         پس هر عضو 
         $\downarrow\Phi$
-        می تواند یک سوپریمم باشد.
-        \item  
+        می‌تواند یک سوپریمم باشد.
+        
+        \item\label{q60:d}  
         فرض کنید 
         $\varphi$
         یک توتولوژی باشد. 
-        می دانیم به ازای هر 
+        می‌دانیم به ازای هر 
         $\psi\in\prop$
         داریم
         $\models(\psi\to\varphi)$
@@ -144,7 +145,7 @@ $\vdash\varphi\to\psi$.
         به طور مشابه 
         $\bot$
         را در نظر بگیرید. 
-        می دانیم برای هر 
+        می‌دانیم برای هر 
         $\psi\in\prop$
         داریم 
         $\models\bot\to\psi$
@@ -158,31 +159,31 @@ $\vdash\varphi\to\psi$.
         $\leq$
         است.
 
-        \item 
+        \item\label{q60:e} 
         برای فرمول 
         $\varphi\in\prop$
         فرمول 
-        $\neq\varphi$
+        $\neg\varphi$
         را در نظر بگیرید. 
         فرض کنیم که برای 
         $\gamma\in\Phi$
         داریم 
         \[\models\varphi\to\gamma\]
         \[\models\neg\varphi\to\gamma\]
-        آنگاه می توانیم نتیجه بگیریم که 
+        آنگاه می‌توانیم نتیجه بگیریم که 
         $\models(\varphi\vee\neg\varphi)\to\gamma$
         \\
         چون 
         $(\varphi\vee\neg\varphi)$
         یک توتولوژی است. 
         $\gamma$
-        نیز باید توتولوژی باشد. و طبق د می دانیم که 
+        نیز باید توتولوژی باشد. و طبق \ref{q60:d} می‌دانیم که 
         $\gamma$
         ماکزیمم
         $\Phi$
         است.
         \\
-        از طرف دیگر می دانیم به ازای هر 
+        از طرف دیگر می‌دانیم به ازای هر 
         $\iota\in\prop$
         اگر 
         $\vdash\iota\to\varphi$
@@ -194,7 +195,7 @@ $\vdash\varphi\to\psi$.
         $\bot$
         خواهد بود.
 
-        \item 
+        \item\label{q60:f} 
         اگر بجای
         $\sigma$
         متمم 
