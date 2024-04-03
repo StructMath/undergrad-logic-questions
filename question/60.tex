@@ -68,6 +68,7 @@ $\vdash\varphi\to\psi$.
     $\downarrow\{\varphi,\sigma\}$
     بزرگتر باشد.
 \end{enumerate}\quad\vspace{-9mm}
+
 \begin{ans}
     \begin{enumerate}[label=(\alph*)]
         \item 
@@ -110,5 +111,105 @@ $\vdash\varphi\to\psi$.
         $\bigwedge\Phi$
         را حذف کنیم و نتیجه بگیریم
         $\bigwedge\Phi\to\psi$.
+        
+        \item 
+        به ازای هر 
+        $\psi,\phi\in\downarrow\Phi$
+        داریم
+        $\psi\leq\phi$
+        و
+        $\phi\leq\psi$
+        <<این موضوع از تعریف 
+        $\downarrow\Phi$
+        نتیجه می شود. >>
+        پس هر عضو 
+        $\downarrow\Phi$
+        می تواند یک سوپریمم باشد.
+        \item  
+        فرض کنید 
+        $\phi$
+        یک توتولوژی باشد. 
+        می دانیم به ازای هر 
+        $\psi\in\prop$
+        داریم
+        $\models(\psi\to\phi)$
+        همچنین طبق قضیه تمامیت برای منطق گزاره‌ای داریم:
+        $\vdash(\psi\to\phi)$
+        در نتیجه هر توتولوژی یا
+        $\top$
+        ماکزیمم 
+        $\prop$
+        با رابطه ترتیب 
+        $\leq$
+        است.
+        به طور مشابه 
+        $\bot$
+        را در نظر بگیرید. 
+        می دانیم برای هر 
+        $\psi\in\prop$
+        داریم 
+        $\models\bot\to\psi$
+        و مجدد طبق قضیه تمامیت
+        $\vdash(\bot\to\psi)$
+        در نتیجه 
+        $\bot$
+        مینیمم 
+        $\prop$
+        با رابطه ترتیب
+        $\leq$
+        است.
+
+        \item 
+        برای فرمول 
+        $\phi\in\prop$
+        فرمول 
+        $\neq\phi$
+        را در نظر بگیرید. 
+        فرض کنیم که برای 
+        $\gamma\in\Phi$
+        داریم 
+        \[\models\phi\to\gamma\]
+        \[\models\neg\phi\to\gamma\]
+        آنگاه می توانیم نتیجه بگیریم که 
+        $\models(\phi\vee\neg\phi)\to\gamma$
+        \\
+        چون 
+        $(\phi\vee\neg\phi)$
+        یک توتولوژی است. 
+        $\gamma$
+        نیز باید توتولوژی باشد. و طبق د می دانیم که 
+        $\gamma$
+        ماکزیمم
+        $\Phi$
+        است.
+        \\
+        از طرف دیگر می دانیم به ازای هر 
+        $\iota\in\prop$
+        اگر 
+        $\vdash\iota\to\phi$
+        و
+        $\vdash\iota\to\neg\phi$
+        آنگاه
+        $\vdash\iota\to\bot$
+        در نتیجه سوپریمم نیز اینجا 
+        $\bot$
+        خواهد بود.
+
+        \item 
+        اگر بجای
+        $\sigma$
+        متمم 
+        $\varphi$
+        را قرار دهیم به ازای هر 
+        $\gamma\in\prop$
+        خواهیم داشت:
+        \\
+        اگر 
+        $\gamma\in\downarrow\{\varphi,\neg\varphi\}$
+        آنگاه
+        $\vdash\gamma\to\bot$
+        \\
+        در نتیجه 
+        $\gamma\leq\psi$
     \end{enumerate}
 \end{ans}
