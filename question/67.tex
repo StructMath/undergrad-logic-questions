@@ -1,0 +1,20 @@
+عبارت زیر را در زبان مرتبه اول مناسب بیان کنید.\\
+هر پدر ایرانی در شب یلدا با فرزندانش به دیدار خانواده خود می‌رود و پدربزرگ فرزندان برای آنها قصه می‌خواند
+\quad\vspace{0.5 cm}	
+\begin{ans}
+	$$
+		{P_1}(x, y) := \text{x برای y قصه می‌خواند}
+	$$
+	$$ 
+		{P_2}(x, y) := \text{x, y اعضا یک خانواده هستند}
+	$$
+	$$
+		{P_3}(x, y) := \text{x در شب یلدا به دیدار y می‌رود}
+	$$
+	$$
+		f(x) := \text{پدر x}
+	$$
+	$$
+		\forall x \Bigg(\exists y \Big(f(y) = x\Big) \rightarrow \bigg({\forall z \Big({P_2}(z, x) \rightarrow {P_3}(x, z)\Big) \wedge \forall y \Big(f(y) = x \rightarrow {P_1}(f(x), y)\Big)\bigg)}\Bigg)
+	$$
+\end{ans}
