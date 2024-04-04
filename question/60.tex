@@ -7,160 +7,209 @@ $\varphi\leq\psi$
 اگر
 $\vdash\varphi\to\psi$.
 \begin{enumerate}[label=(\alph*)]
-   \item 
-        وا
-        فرض کنید
+    \item نشان دهید
+    $\leq$
+    بازتابی و تراگذری است.%\footnote{
+    %     فاصلهٔ
+    %     $\leq$
+    %     از ترتیب جزئی بودن پادمتقارن بودن است. اگر با یکی فرض کردن فرمول‌هایی که هر دو یکدیگر را نتیجه می‌دهند این خاصیت را نیز به
+    %     $\leq$
+    %     اضافه کنیم به جبر لیندنباوم--تارسکی منطق کلاسیک می‌رسیم که یک جبر بولی
+    %     (\lr{Boolean Algebra})
+    %     است.
+    % }
+    \item اگر
+    $\Phi$
+    مجموعه‌ای از فرمول‌ها باشد تعریف می‌کنیم
+    $\uparrow\Phi=\{\psi\in\prop : (\forall\varphi\in\Phi)\ \varphi\leq\psi\}$.
+    نشان دهید برای هر
+    $\Phi$
+    متناهی، مجموعهٔ
+    $\uparrow\Phi$
+    اینفیمم دارد.
+    \item اگر
+    $\Phi$
+    مجموعه‌ای از فرمول‌ها باشد تعریف می‌کنیم
+    $\downarrow\Phi=\{\psi\in\prop : (\forall\varphi\in\Phi)\ \psi\leq\varphi\}$.
+    نشان دهید برای هر
+    $\Phi$
+    متناهی، مجموعهٔ
+    $\downarrow\Phi$
+    سوپریمم دارد.
+    \item نشان دهید رابطهٔ ترتیب
+    $\leq$
+    روی مجموعهٔ
+    $\prop$
+    عنصر ماکسیمم و مینیمم دارد.
+    (نماینده‌ای دلخواه از مجموعهٔ عناصر ماکسیمم را $1$ و نماینده‌ای دلخواه از مجموعهٔ عناصر مینیمم را $0$ می‌نامیم.)
+    \item به
+    $\psi$
+    متمم
+    $\varphi$
+    می‌گوییم اگر
+    $1$
+    اینفیمم
+    $\uparrow\{\varphi,\psi\}$
+    و
+    $0$
+    سوپریمم
+    $\downarrow\{\varphi,\psi\}$
+    باشد. نشان دهید هر فرمول دارای متمم است.
+    \item نشان دهید برای هر دو فرمول
+    $\varphi$
+    و
+    $\psi$
+    بزرگترین فرمول
+    $\sigma$
+    (طبق ترتیب $\leq$)
+    هست که
+    $\psi$
+    از هر عضو
+    $\downarrow\{\varphi,\sigma\}$
+    بزرگتر باشد.
+\end{enumerate}\quad\vspace{-9mm}
+\begin{ans}
+    \begin{enumerate}[label=(\alph*)]
+        \item\label{q60:a} برای نشان‌دادن بازتابی بودن $\leq$، کافی است برای هر $\varphi \in \Phi$ ثابت کنیم $\vdash \varphi \rightarrow \varphi$، که به راحتی و با یک بار استفاده از معرفی شرطی اثبات می‌شود.
+        برای نشان‌دادن تراگذری بودن آن، فرض کنید
         $\varphi\leq\psi$
         و
         $\psi\leq\sigma$.
         این یعنی
         $\vdash\varphi\to\psi$
         و
-        $\vdash\psi\to\sigma$.
-
-        \item فرمول 
-        $\bigvee\Phi$
-        را در نظر بگیرید. 
-        برای هر 
-        $\varphi\in\Phi$
-        داریم 
-        $\vdash\varphi\to\bigvee\Phi$
-        <<این نتیجه از آنجا می آید که اگر 
-        $\vdash\psi\to\iota$
-        آنگاه 
-        $\vdash\psi\to(\iota\vee\kappa)$
-        >>
-        پس 
-        $\bigvee\Phi\in\uparrow\Phi$
-        .فرض کنیم که 
-        $\psi$
-        یک کران پایین برای 
+        $\vdash\psi\to\sigma$، که با استفاده از قضیهٔ استنتاج، یعنی $\varphi\vdash\psi$ و $\psi\vdash\sigma$. در نتیجه $\varphi\vdash\sigma$ و با استفاده‌ی مجدد از قضیهٔ استنتاج، $\vdash\varphi\rightarrow\sigma$. در نتیجه $\varphi\leq\sigma$.
+        
+        \item\label{q60:b} ادعا می‌کنیم برای
         $\uparrow\Phi$
-        باشد. پس برای هر 
-        $\varphi\in\uparrow\Phi$
-        داریم
-        $\vdash\psi\to\varphi$
-        از طرفی چون
-        $\uparrow\Phi\subseteq\Phi$
-        داریم 
-        $\vdash\psi\to\bigvee\Phi$
-        .پس 
-        $\bigvee\Phi$
-        اینفیمم مد نظر است.
-
-        \item فرمول
+        متناهی عطف تمام اعضای
+        $\Phi$
+        (که آن را با
         $\bigwedge\Phi$
-        را در نظر بگیرید. برای هر 
+        نشان می‌دهیم)
+        اینفیمم (یا بزرگترین کران پایین) این مجموعه است.
+        فرض کنید
+        $\psi\in\uparrow\Phi$.
+        این یعنی برای هر
         $\varphi\in\Phi$
         داریم
-        $\vdash\bigwedge\Phi\to\varphi$
-        همچنین برای هر 
-        $\psi\in\downarrow\Phi$،
-        $\vdash\psi\to\bigwedge\Phi$.
-        پس 
-        $\bigwedge\Phi\in\downarrow\Phi$
-        و
+        $\vdash\varphi\to\psi$.
+        حال برای نشان دادن
+        $\vdash\bigwedge\Phi\to\psi$
+        کافی است
         $\bigwedge\Phi$
-        یک کران بالا برای 
-        $\downarrow\Phi$
-        است. فرض کنید 
-        $\iota\in\prop$
-        یک کران بالا برای 
-        $\downarrow\Phi$
-        است. پس به ازای هر 
-        $\sigma\in\downarrow\Phi$
-        داریم 
-        $\vdash\sigma\to\iota$.
-        چون 
-        $\downarrow\Phi\subseteq\Phi$،
-        نتیجه می گیریم
-        $\vdash\bigwedge\Phi\to\iota$
-        <<این مطلب از این موضوع بدست می آید که 
-        اگر 
-        $\vdash\kappa_{1}\to\gamma$،
-        آنگاه برای
-        $\kappa_{2}\in\prop$
-        دلخواه داریم
-        $\vdash((\kappa_{1}\wedge\kappa_{2})\to\gamma)$.
-        >>
-        در نتیجه 
-        $\bigwedge\Phi$
-        کوچکترین کران بالای 
-        $\downarrow\Phi$
-        است.
-
-        \item قرار دهید
-        $\Phi=\emptyset$.
-        \[\uparrow\Phi = \{\psi\in \ \prop :(\forall\varphi\in\Phi)\varphi\leq\psi\}\]
-        \[\downarrow\Phi = \{\psi\in \ \prop :(\forall\varphi\in\Phi)\psi\leq\varphi\}\]
-        با توجه به این که 
+        را فرض بگیریم، با استفاده از قاعدهٔ حذف عطف یکی از اعضای
         $\Phi$
-        متناهی است. طبق ب و ج دو مجموعه بالا به ترتیب دارای اینفیمم و سوپریمم هستند. 
-        اینفیمم اینجا ماکزیمم ما و سوپریمم ما اینجا مینیمم ما است. 
-
-        \item ادعا می کنیم که 
-        $\neg\varphi$
-        متمم
+        مثل
         $\varphi$
-        است. فرض کنیم وجود دارد 
-        $\phi\in\prop$
-        که 
-        $\vdash\varphi\to\phi$
+        را نتیجه بگیریم، و سپس با نوشتن استنتاجی که
+        $\varphi\to\psi$
+        را اثبات می‌کند و قاعدهٔ حذف شرطی
+        $\psi$
+        را نتیجه بگیریم و سپس با قاعدهٔ معرفی شرطی مقدمهٔ
+        $\bigwedge\Phi$
+        را حذف کنیم و نتیجه بگیریم
+        $\bigwedge\Phi\to\psi$. پس برای هر ‌$\psi\in\uparrow\Phi$ داریم $\bigwedge\Phi\leq\psi$، و در نتیجه $\bigwedge\Phi$ یک کران پایین برای $\uparrow\Phi$ است. برای نشان دادن بزرگترین کران پایین بودن آن نیز فرض می‌کنیم $\sigma$ کران پایین دیگری برای $\uparrow\Phi$ باشد و نشان می‌دهیم $\sigma\leq\bigwedge\Phi$.
+        
+        \item\label{q60:c} 
+        به ازای هر 
+        $\psi,\varphi\in\downarrow\Phi$
+        داریم
+        $\psi\leq\varphi$
         و
-        $\vdash\varphi\to\neg\phi$.
-        پس 
-        $\vdash\varphi\to(\phi\wedge\neg\phi)$.
-        این معادل است با 
-        $\vdash\phi\to\bot$.
-        چون 
+        $\varphi\leq\psi$
+        <<این موضوع از تعریف 
+        $\downarrow\Phi$
+        نتیجه می‌شود. >>
+        پس هر عضو 
+        $\downarrow\Phi$
+        می‌تواند یک سوپریمم باشد.
+        
+        \item\label{q60:d}  
+        فرض کنید 
+        $\varphi$
+        یک توتولوژی باشد. 
+        می‌دانیم به ازای هر 
+        $\psi\in\prop$
+        داریم
+        $\models(\psi\to\varphi)$
+        همچنین طبق قضیه تمامیت برای منطق گزاره‌ای داریم:
+        $\vdash(\psi\to\varphi)$
+        در نتیجه هر توتولوژی یا
+        $\top$
+        ماکزیمم 
+        $\prop$
+        با رابطه ترتیب 
+        $\leq$
+        است.
+        به طور مشابه 
+        $\bot$
+        را در نظر بگیرید. 
+        می‌دانیم برای هر 
+        $\psi\in\prop$
+        داریم 
+        $\models\bot\to\psi$
+        و مجدد طبق قضیه تمامیت
+        $\vdash(\bot\to\psi)$
+        در نتیجه 
         $\bot$
         مینیمم 
         $\prop$
-        است 
-        << طبق ج و د >>
-        ،سوپریمم
-        $\downarrow\{\varphi,\neg\varphi\}$
-        صفر است.
-        \\
-        \\
-        مشابها فرض کنیم برای یک 
-        $\iota\in\prop$
-        داریم
-        $\vdash\varphi\to\iota$
-        و
-        $\vdash\neg\varphi\to\iota$.
-        از این دو بدست می آید
-        $\vdash(\neg\varphi\vee\varphi)\to\iota$.
-        چون 
-        $\vdash(\neg\varphi\vee\varphi)$
-        و این نکته که به ازای هر 
-        $\gamma,\eta\in\prop$
-        اگر 
-        $\vdash\gamma$،
-        آنگاه 
-        $\vdash\eta\to\gamma$،
-        و این موضوع که 
-        $(\gamma\to\psi),(\psi\to\theta)\vdash\gamma\to\theta$
-        نتیجه می گیریم که برای هر 
-        $\eta\in\prop$،
-        $\vdash\eta\to\iota$.
-        پس 
-        $\iota$
-        ماکزیمم 
-        $\prop$
+        با رابطه ترتیب
+        $\leq$
         است.
 
-        \item بجای
-        $\sigma$
-        قرار دهید
-        $0$.
-        در این حالت سوپریمم
-        $\downarrow\{\varphi,0\}$
-        می شود
-        $0$
-        که از هر عضو 
-        $\prop$
-        کوچکتر است.
+        \item\label{q60:e} 
+        برای فرمول 
+        $\varphi\in\prop$
+        فرمول 
+        $\neg\varphi$
+        را در نظر بگیرید. 
+        فرض کنیم که برای 
+        $\gamma\in\Phi$
+        داریم 
+        \[\models\varphi\to\gamma\]
+        \[\models\neg\varphi\to\gamma\]
+        آنگاه می‌توانیم نتیجه بگیریم که 
+        $\models(\varphi\vee\neg\varphi)\to\gamma$
+        \\
+        چون 
+        $(\varphi\vee\neg\varphi)$
+        یک توتولوژی است. 
+        $\gamma$
+        نیز باید توتولوژی باشد. و طبق \ref{q60:d} می‌دانیم که 
+        $\gamma$
+        ماکزیمم
+        $\Phi$
+        است.
+        \\
+        از طرف دیگر می‌دانیم به ازای هر 
+        $\iota\in\prop$
+        اگر 
+        $\vdash\iota\to\varphi$
+        و
+        $\vdash\iota\to\neg\varphi$
+        آنگاه
+        $\vdash\iota\to\bot$
+        در نتیجه سوپریمم نیز اینجا 
+        $\bot$
+        خواهد بود.
 
+        \item\label{q60:f} 
+        اگر بجای
+        $\sigma$
+        متمم 
+        $\varphi$
+        را قرار دهیم به ازای هر 
+        $\gamma\in\prop$
+        خواهیم داشت:
+        \\
+        اگر 
+        $\gamma\in\downarrow\{\varphi,\neg\varphi\}$
+        آنگاه
+        $\vdash\gamma\to\bot$
+        \\
+        در نتیجه 
+        $\gamma\leq\psi$
     \end{enumerate}
 \end{ans}
