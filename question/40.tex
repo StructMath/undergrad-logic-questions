@@ -1,5 +1,4 @@
-
-	(\emph{قضیهٔ جانشینی})
+(\emph{قضیهٔ جانشینی})
 	فرض کنید
 	$\varphi_1\dashv\vdash\varphi_2$.
 	ثابت کنید
@@ -7,137 +6,145 @@
 	
 	(راهنمایی: از استقرا روی $\psi$ استفاده کنید.)
 	\begin{ans}
-	\\	ابتدا حالت خاص مسئله را بررسی می‌کنیم. \\ اگر که در $\psi$، اتم ${p}$ ظاهر نشده است. آنگاه  داریم : \\
-	$$
+		\\	ابتدا حالت خاص مسئله را بررسی می‌کنیم. \\ اگر که در $\psi$، اتم ${p}$ ظاهر نشده است. آنگاه  داریم : \\
+		$$
 		\psi[\varphi_1/p] = \psi
-	$$
-	$$
+		$$
+		$$
 		\psi[\varphi_2/p] = \psi
-	$$
-	پس حکم بدیهی است.\\
-	پس فرض کنیم که در $\psi$ اتم $p$ ظاهر شده است. به استقرا روی طول فرمول گزاره را ثابت می‌کنیم. \\
-	حالت پایه:
-	$$ \mid \psi \mid = 1 $$
-	 در این حالت داریم که‌:
-	 $$ \psi = p $$
-	$$\Longrightarrow {\psi[\varphi_1/p] = \varphi_1 \dashv\vdash \varphi_2 = \psi[\varphi_2/p]}$$
-	با استقرا قوی فرض کنیم که حکم برای هر فرمول با طول کمتر از $k$ برقرار است. حال حکم را برای فرمول‌ دلخواه $\gamma$ با طول $k$ ثابت می‌کنیم.
-	\quad\vspace{0.5 cm}
-	\begin{enumerate}
-		\item اگر که $\gamma$ به صورت $\neg \alpha$ است. داریم
-		$$\mid \alpha \mid + 1 = \mid \gamma \mid$$
-		$$\Longrightarrow {\mid \alpha \mid \le k}$$
-		$$\Longrightarrow {\alpha[\varphi_1/p] \dashv\vdash \alpha[\varphi_2/p]}$$
 		$$
+		پس حکم بدیهی است.\\
+		پس فرض کنیم که در $\psi$ اتم $p$ ظاهر شده است. به استقرا روی طول فرمول گزاره را ثابت می‌کنیم. \\
+		حالت پایه:
+		$$ \mid \psi \mid = 1 $$
+		در این حالت داریم که‌:
+		$$ \psi = p $$
+		$$\Longrightarrow {\psi[\varphi_1/p] = \varphi_1 \dashv\vdash \varphi_2 = \psi[\varphi_2/p]}$$
+		با استقرا قوی فرض کنیم که حکم برای هر فرمول با طول کمتر از $k$ برقرار است. حال حکم را برای فرمول‌ دلخواه $\gamma$ با طول $k$ ثابت می‌کنیم.
+		\quad\vspace{0.5 cm}
+		\begin{enumerate}
+			\item اگر که $\gamma$ به صورت $\neg \alpha$ است. داریم
+			$$\mid \alpha \mid + 1 = \mid \gamma \mid$$
+			$$\Longrightarrow {\mid \alpha \mid \le k}$$
+			$$\Longrightarrow {\alpha[\varphi_1/p] \dashv\vdash \alpha[\varphi_2/p]}$$
+			$$
 			\alpha_1 := \alpha[\varphi_1/p]
-		$$
-		$$
+			$$
+			$$
 			\alpha_2 := \alpha[\varphi_2/p]
-		$$
-		حال ثابت می‌کنیم که
-		$$ \neg \alpha_1 \dashv\vdash \neg \alpha_2$$  
-		$$
-			\infer[\neg I_2]{\neg \alpha_2}{
-				\kern 1cm \infer[\neg E]{\bot}{
-					\infer*{\alpha_1}{[\alpha_2]_2} \kern 0.5cm
-					& 
-					[\neg \alpha_1]_1
-				} \kern 1cm
-			}
-		$$
-	
-		$$
+			$$
+			حال ثابت می‌کنیم که
+			$$ \neg \alpha_1 \dashv\vdash \neg \alpha_2$$ 
+			\begin{prooftree}
+				\quad\LTR
+				\AxiomC{$[\alpha_2]^2$}
+				\noLine\UnaryInfC{$\vdots$}
+				\noLine\UnaryInfC{$\alpha_1$}
+				\AxiomC{$[\neg \alpha_1]^1$}
+				\negE
+				\negI[2]{$\neg \alpha_2$}
+				
+			\end{prooftree} 
+			$$
 			\Longrightarrow {\neg \alpha_1 \vdash \neg \alpha_2}	
-		$$
-	
-	و به روش مشابه ثایت می‌شود که
-		$ \neg \alpha_2 \vdash \neg \alpha_1$
-	و حکم صادق است.
-	\item   
-		اگر که $\gamma$ به صورت
-		$\alpha \rightarrow \beta$
-		است، پس 
-		$\mid \alpha \mid , \mid \beta \mid \le \mid \gamma\ \mid$
-		پس طبق فرض استقرا می‌دانیم که :
-		$$ 
-		\alpha[\varphi_1/p] =: \alpha_1 \dashv\vdash \alpha_2 := \alpha[\varphi_2/p]
-		$$
-		$$
-		\beta[\varphi_1/p] =: \beta_1 \dashv\vdash \beta_2 := 			\beta[\varphi_2/p]
-		$$
+			$$
+			
+			و به روش مشابه ثایت می‌شود که
+			$ \neg \alpha_2 \vdash \neg \alpha_1$
+			و حکم صادق است.
+			\item   
+			اگر که $\gamma$ به صورت
+			$\alpha \rightarrow \beta$
+			است، پس 
+			$\mid \alpha \mid , \mid \beta \mid \le \mid \gamma\ \mid$
+			پس طبق فرض استقرا می‌دانیم که :
+			$$ 
+			\alpha[\varphi_1/p] =: \alpha_1 \dashv\vdash \alpha_2 := \alpha[\varphi_2/p]
+			$$
+			$$
+			\beta[\varphi_1/p] =: \beta_1 \dashv\vdash \beta_2 := 			\beta[\varphi_2/p]
+			$$
 			پس داریم :
-		$$
-		 	(\alpha \rightarrow \beta) [\varphi_1/p] = (\alpha_1 \rightarrow \beta_1)
-		$$
-		$$
+			$$
+			(\alpha \rightarrow \beta) [\varphi_1/p] = (\alpha_1 \rightarrow \beta_1)
+			$$
+			$$
 			(\alpha \rightarrow \beta) [\varphi_2/p] = (\alpha_2 \rightarrow \beta_2)
-		$$
-		حال نشان می‌دهیم که :
-		$$
+			$$
+			حال نشان می‌دهیم که :
+			$$
 			\alpha_1 \rightarrow \beta_1 \dashv\vdash \alpha2 \rightarrow \beta_2	
-		$$
-		
-		$$
-			\infer[\to I_2]{\alpha_2 \rightarrow \beta_2}{
-				\infer*{\beta_2}{\infer[\to E]{\beta_1}{
-					[\alpha_1 \rightarrow \beta_1]_1
-					&
-					\infer*{\alpha_1}{[\alpha_2]_2}	
-				}}
-			}
-		$$
-		
-		پس داریم که
-		$(\alpha_1 \rightarrow \beta_1) \vdash (\alpha_2 \rightarrow \beta_2)$ 
-		و به روش مشابه 
-		$(\alpha_2 \rightarrow \beta_2) \vdash (\alpha_1 \rightarrow \beta_1)$ \\
-		پس حکم صادق است.
-		
-		\item 
-		اگر $\gamma$ به صورت
-		
-		$\alpha \wedge \beta$
-		است، پس 
-		$\mid \alpha \mid , \mid \beta \mid \le \mid \gamma\ \mid$
-		پس طبق فرض استقرا می‌دانیم که :
-		$$ 
-		\alpha[\varphi_1/p] =: \alpha_1 \dashv\vdash \alpha_2 := \alpha[\varphi_2/p]
-		$$
-		$$
-		\beta[\varphi_1/p] =: \beta_1 \dashv\vdash \beta_2 := \beta[\varphi_2/p]
-		$$
-		پس داریم :
-		$$
-		(\alpha \wedge \beta) [\varphi_1/p] = (\alpha_1 \wedge \beta_1)
-		$$
-		$$
-		(\alpha \wedge \beta) [\varphi_2/p] = (\alpha_2 \wedge \beta_2)
-		$$
-		حال نشان می‌دهیم که :
-		$$
-		\alpha_1 \wedge \beta_1 \dashv\vdash \alpha2 \wedge \beta_2	
-		$$
-		
-		$$
-			\infer[\wedge I]{\alpha_2 \wedge \beta_2}{
-				\infer*{\alpha_2}{\infer[\wedge E]{\alpha_1}{
-					[\alpha_1 \wedge \beta_1]_1
-				}}
-				&
-				\infer*{\beta_2}{\infer[\wedge E]{\beta_1}{
-						[\alpha_1 \wedge \beta_1]_1
-				}}
-			}
-		$$
-		
-		پس داریم که
-		$(\alpha_1 \wedge \beta_1) \vdash (\alpha_2 \wedge \beta_2)$ 
-		و به روش مشابه 
-		$(\alpha_2 \wedge \beta_2) \vdash (\alpha_1 \wedge \beta_1)$ \\
-		پس حکم صادق است.
-		
-		\item 
-		اگر $\gamma$ به صورت
+			$$
+			
+			\begin{prooftree}
+				\quad\LTR
+				\AxiomC{$[\alpha_2]^2$}
+				\noLine\UnaryInfC{$\vdots$}
+				\noLine\UnaryInfC{$\alpha_1$}
+				
+				\AxiomC{$[\alpha_1 \rightarrow \beta_1]^1$}
+				
+				\toE{$\beta_1$}
+				\noLine\UnaryInfC{$\vdots$}
+				\noLine\UnaryInfC{$\beta_2$}
+				
+				\toI[2]{$\alpha_2 \rightarrow \beta_2$}
+			\end{prooftree}
+			
+			پس داریم که
+			$(\alpha_1 \rightarrow \beta_1) \vdash (\alpha_2 \rightarrow \beta_2)$ 
+			و به روش مشابه 
+			$(\alpha_2 \rightarrow \beta_2) \vdash (\alpha_1 \rightarrow \beta_1)$ \\
+			پس حکم صادق است.
+			
+			\item 
+			اگر $\gamma$ به صورت
+			
+			$\alpha \wedge \beta$
+			است، پس 
+			$\mid \alpha \mid , \mid \beta \mid \le \mid \gamma\ \mid$
+			پس طبق فرض استقرا می‌دانیم که :
+			$$ 
+			\alpha[\varphi_1/p] =: \alpha_1 \dashv\vdash \alpha_2 := \alpha[\varphi_2/p]
+			$$
+			$$
+			\beta[\varphi_1/p] =: \beta_1 \dashv\vdash \beta_2 := \beta[\varphi_2/p]
+			$$
+			پس داریم :
+			$$
+			(\alpha \wedge \beta) [\varphi_1/p] = (\alpha_1 \wedge \beta_1)
+			$$
+			$$
+			(\alpha \wedge \beta) [\varphi_2/p] = (\alpha_2 \wedge \beta_2)
+			$$
+			حال نشان می‌دهیم که :
+			$$
+			\alpha_1 \wedge \beta_1 \dashv\vdash \alpha2 \wedge \beta_2	
+			$$
+			
+			\begin{prooftree}
+				\quad\LTR
+				\AxiomC{$[\alpha_1 \wedge \beta_1]^1$}
+				\wedE {$\alpha_1$}
+				\noLine\UnaryInfC{$\vdots$}
+				\noLine\UnaryInfC{$\alpha_2$}
+				
+				\AxiomC{$[\alpha_1 \wedge \beta_1]^1$}
+				\wedE {$\beta_1$}
+				\noLine\UnaryInfC{$\vdots$}
+				\noLine\UnaryInfC{$\beta_2$}
+				
+				\wedI{$\alpha_2 \wedge \beta_2$}
+			\end{prooftree}
+			
+			پس داریم که
+			$(\alpha_1 \wedge \beta_1) \vdash (\alpha_2 \wedge \beta_2)$ 
+			و به روش مشابه 
+			$(\alpha_2 \wedge \beta_2) \vdash (\alpha_1 \wedge \beta_1)$ \\
+			پس حکم صادق است.
+			
+			\item 
+			اگر $\gamma$ به صورت
 			
 			$\alpha \vee \beta$
 			است، پس 
@@ -161,19 +168,22 @@
 			\alpha_1 \vee \beta_1 \dashv\vdash \alpha2 \vee \beta_2	
 			$$
 			
-			$$
-			\infer[\vee E_{2,3}]{\alpha_2 \vee \beta_2}{
-				[\alpha_1 \vee \beta_1]_1
-				&
-				\infer[\vee I]{\alpha_2 \vee \beta_2}{
-					\infer*{\alpha_2}{[\alpha_1]_2}
-				}
-				&
-				\infer[\vee I]{\alpha_2 \vee \beta_2}{
-					\infer*{\beta_2}{[\beta_1]_3}
-				}
-			}
-			$$
+			\begin{prooftree}
+				\quad\LTR
+				\AxiomC{$[\alpha_1]^2$}
+				\noLine\UnaryInfC{$\vdots$}
+				\noLine\UnaryInfC{$\alpha_2$}
+				\veeI {$\alpha_2 \vee \beta_2$}
+				
+				\AxiomC{$[\beta_1]^3$}
+				\noLine\UnaryInfC{$\vdots$}
+				\noLine\UnaryInfC{$\beta_2$}
+				\veeI {$\alpha_2 \vee \beta_2$}
+				
+				\AxiomC{$[\alpha_1 \vee \beta_1]^1$}
+				
+				\veeE{2,3}{$\alpha_2 \vee \beta_2$}
+			\end{prooftree}
 			
 			پس داریم که
 			$(\alpha_1 \vee \beta_1) \vdash (\alpha_2 \vee \beta_2)$ 
@@ -181,7 +191,7 @@
 			$(\alpha_2 \vee \beta_2) \vdash (\alpha_1 \vee \beta_1)$ \\
 			پس حکم صادق است.
 			
-	
-		
-	\end {enumerate}
-	\end{ans}
+			
+			
+			\end {enumerate}
+		\end{ans}
