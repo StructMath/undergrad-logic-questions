@@ -1,0 +1,36 @@
+عبارت زیر را در دستگاه استنتاج طبیعی ثابت کنید.\\
+ 	$\vdash (\phi \to \neg \psi) \vee \psi$
+ 	
+ 	\quad\vspace {0.5cm}
+ 	\begin{ans}
+ 		$$
+ 			\infer[RAA_1]{(\phi \to \neg \psi) \vee \psi}{
+ 				\infer[\neg E]{\bot}{
+ 					[(\phi \to \neg \psi) \vee \psi]_1
+ 					&
+ 					\infer[\vee I]{(\phi \to \neg \psi) \vee \psi}{
+ 						\infer[RAA_2]{\psi}{
+ 							\kern 0.3cm
+ 							\infer[\neg E]{\bot}{
+ 								\infer[\to I_3]{\phi \to \psi}{
+ 									[\phi]_3
+ 									&
+ 									\infer[\neg I_4]{\neg \psi}{
+ 										\kern 0.4cm
+ 										\infer[\neg E]{\bot}{
+ 											[\neg \psi]_2
+ 											&
+ 											[\psi]_4
+ 										}
+ 										\kern 0.4cm
+ 									}
+ 								}
+ 							}
+ 						\kern 0.3cm
+ 						}
+ 					}
+ 				}	
+ 			}
+ 		$$
+ 	\end{ans}
+ 	
