@@ -6,7 +6,7 @@
 	
 	(راهنمایی: از استقرا روی $\psi$ استفاده کنید.)
 	\begin{ans}
-		\\	ابتدا حالت خاص مسئله را بررسی می‌کنیم. \\ اگر که در $\psi$، اتم ${p}$ ظاهر نشده است. آنگاه  داریم : \\
+		\\	ابتدا حالت خاص مسئله را بررسی می‌کنیم. \\ اگر در $\psi$، اتم ${p}$ ظاهر نشده است. آنگاه  داریم : \\
 		$$
 		\psi[\varphi_1/p] = \psi
 		$$
@@ -16,182 +16,143 @@
 		پس حکم بدیهی است.\\
 		پس فرض کنیم که در $\psi$ اتم $p$ ظاهر شده است. به استقرا روی طول فرمول گزاره را ثابت می‌کنیم. \\
 		حالت پایه:
-		$$ \mid \psi \mid = 1 $$
+		$$ | \psi | = 1 $$
 		در این حالت داریم که‌:
 		$$ \psi = p $$
-		$$\Longrightarrow {\psi[\varphi_1/p] = \varphi_1 \dashv\vdash \varphi_2 = \psi[\varphi_2/p]}$$
-		با استقرا قوی فرض کنیم که حکم برای هر فرمول با طول کمتر از $k$ برقرار است. حال حکم را برای فرمول‌ دلخواه $\gamma$ با طول $k$ ثابت می‌کنیم.
-		\quad\vspace{0.5 cm}
-		\begin{enumerate}
-			\item اگر که $\gamma$ به صورت $\neg \alpha$ است. داریم
-			$$\mid \alpha \mid + 1 = \mid \gamma \mid$$
-			$$\Longrightarrow {\mid \alpha \mid \le k}$$
-			$$\Longrightarrow {\alpha[\varphi_1/p] \dashv\vdash \alpha[\varphi_2/p]}$$
-			$$
-			\alpha_1 := \alpha[\varphi_1/p]
-			$$
-			$$
-			\alpha_2 := \alpha[\varphi_2/p]
-			$$
-			حال ثابت می‌کنیم که
-			$$ \neg \alpha_1 \dashv\vdash \neg \alpha_2$$ 
+		در نتیجه
+		$$\psi[\varphi_1/p] = \varphi_1 \dashv\vdash \varphi_2 = \psi[\varphi_2/p]$$
+		با استقرا قوی فرض کنیم که حکم برای هر فرمول با طول کمتر از $k$ برقرار است. حال حکم را برای فرمول‌ دلخواه $\psi$ با طول $k$، به ازای حالت‌های مختلف ساخت $\psi$ ثابت می‌کنیم.
+			
+		اگر $\psi$ به صورت $\neg \sigma$ است. داریم
+			$| \sigma | + 1 = | \psi |$،
+			که یعنی
+			$| \sigma | < k$
+			و در نتیجه بنا به فرض استقرا، حکم برای $\sigma$ برقرار است، یعنی
+			$\sigma[\varphi_1/p] \dashv\vdash \sigma[\varphi_2/p]$. به کمک برهان ${\sigma[\varphi_2/p] \vdash \sigma[\varphi_1/p]}$ برهان زیر را برای $\neg \sigma[\varphi_1/p] \vdash \neg \sigma[\varphi_2/p]$ می‌سازیم
 			\begin{prooftree}
 				\quad\LTR
-				\AxiomC{$[\alpha_2]^2$}
+				\AxiomC{$[\sigma[\varphi_2/p]]^1$}
 				\noLine\UnaryInfC{$\vdots$}
-				\noLine\UnaryInfC{$\alpha_1$}
-				\AxiomC{$[\neg \alpha_1]^1$}
+				\noLine\UnaryInfC{$\sigma[\varphi_1/p]$}
+				\AxiomC{$\neg \sigma[\varphi_1/p]$}
 				\negE
-				\negI[2]{$\neg \alpha_2$}
-				
+				\negI[1]{$\neg \sigma[\varphi_2/p]$}
 			\end{prooftree} 
 			$$
-			\Longrightarrow {\neg \alpha_1 \vdash \neg \alpha_2}	
+			\Longrightarrow {\neg \sigma_1 \vdash \neg \sigma_2}	
 			$$
 			
 			و به روش مشابه ثایت می‌شود که
-			$ \neg \alpha_2 \vdash \neg \alpha_1$
-			و حکم صادق است.
-			\item   
-			اگر که $\gamma$ به صورت
-			$\alpha \rightarrow \beta$
+			$ \neg \sigma[\varphi_2/p] \vdash \neg \sigma[\varphi_1/p]$
+			و در حالت $\psi = \neg \sigma$ حکم صادق است.
+			
+			برای باقی حالت‌ها، یعنی $\psi = \sigma \rightarrow \theta$, $\psi = \sigma \wedge \theta$ و $\psi = \sigma \vee \theta$ برای کوتاه‌نویسی تعریف می‌کنیم
+			$$\sigma_1 := \sigma[\varphi_1/p]$$
+			$$\sigma_2 := \sigma[\varphi_2/p]$$
+			$$\theta_1 := \theta[\varphi_1/p]$$
+			$$\theta_2 := \theta[\varphi_2/p]$$
+
+			اگر $\psi$ به صورت
+			$\sigma \rightarrow \theta$
 			است، پس 
-			$\mid \alpha \mid , \mid \beta \mid \le \mid \gamma\ \mid$
-			پس طبق فرض استقرا می‌دانیم که :
-			$$ 
-			\alpha[\varphi_1/p] =: \alpha_1 \dashv\vdash \alpha_2 := \alpha[\varphi_2/p]
+			$| \sigma |, | \theta | < k$
+
+			از فرض استقرا می‌دانیم
+			$\sigma_1 \dashv\vdash \sigma_2$ و
+			$\theta_1 \dashv\vdash \theta_2$.
+			همچنین، بنا به تعریف جانشینی داریم
+			$$
+			(\sigma \rightarrow \theta) [\varphi_1/p] = \sigma_1 \rightarrow \theta_1
 			$$
 			$$
-			\beta[\varphi_1/p] =: \beta_1 \dashv\vdash \beta_2 := 			\beta[\varphi_2/p]
+			(\sigma \rightarrow \theta) [\varphi_2/p] = \sigma_2 \rightarrow \theta_2
 			$$
-			پس داریم :
+			حال به کمک برهان‌های $\sigma_2 \vdash \sigma_1$ و $\theta_1 \vdash \theta_2$ که از فرض استقرا داشتیم، درخت زیر را به عنوان برهانی برای
+			$\sigma_1 \rightarrow \theta_1 \vdash \sigma2 \rightarrow \theta_2$
+			می‌سازیم:
+			\begin{prooftree}
+				\quad\LTR
+				\AxiomC{$[\sigma_2]^1$}
+				\noLine\UnaryInfC{$\vdots$}
+				\noLine\UnaryInfC{$\sigma_1$}
+				
+				\AxiomC{$\sigma_1 \rightarrow \theta_1$}
+				
+				\toE{$\theta_1$}
+				\noLine\UnaryInfC{$\vdots$}
+				\noLine\UnaryInfC{$\theta_2$}
+				
+				\toI[1]{$\sigma_2 \rightarrow \theta_2$}
+			\end{prooftree}
+			به روش مشابه می‌توان نشان داد
+			$\sigma_2 \rightarrow \theta_2 \vdash \sigma_1 \rightarrow \theta_1$. پس در حالت $\psi = \sigma \rightarrow \theta$ نیز حکم صادق است.
+ 
+			اگر $\psi$ به صورت
+			$\sigma \wedge \theta$
+			باشد، خواهیم داشت 
+			$| \sigma | , | \theta | < k$ و در نتیجه
+			از فرض استقرا خواهیم داشت
+			$\sigma_1 \dashv\vdash \sigma_2$ و $\theta_1 \dashv\vdash \theta_2$
+			همچنین از تعریف جانشینی می‌دانیم
 			$$
-			(\alpha \rightarrow \beta) [\varphi_1/p] = (\alpha_1 \rightarrow \beta_1)
+			(\sigma \wedge \theta) [\varphi_1/p] = \sigma_1 \wedge \theta_1
 			$$
 			$$
-			(\alpha \rightarrow \beta) [\varphi_2/p] = (\alpha_2 \rightarrow \beta_2)
+			(\sigma \wedge \theta) [\varphi_2/p] = \sigma_2 \wedge \theta_2
 			$$
-			حال نشان می‌دهیم که :
-			$$
-			\alpha_1 \rightarrow \beta_1 \dashv\vdash \alpha2 \rightarrow \beta_2	
-			$$
+			حال به کمک برهان‌های $\sigma_1 \vdash \sigma_2$ و $\theta_1 \vdash \theta_2$ که از فرض استقرا داشتیم، برهان زیر را برای $\sigma_1 \wedge \theta_1 \vdash \sigma2 \wedge \theta_2$ می‌سازیم:
 			
 			\begin{prooftree}
 				\quad\LTR
-				\AxiomC{$[\alpha_2]^2$}
+				\AxiomC{$\sigma_1 \wedge \theta_1$}
+				\wedE {$\sigma_1$}
 				\noLine\UnaryInfC{$\vdots$}
-				\noLine\UnaryInfC{$\alpha_1$}
+				\noLine\UnaryInfC{$\sigma_2$}
 				
-				\AxiomC{$[\alpha_1 \rightarrow \beta_1]^1$}
-				
-				\toE{$\beta_1$}
+				\AxiomC{$\sigma_1 \wedge \theta_1$}
+				\wedE {$\theta_1$}
 				\noLine\UnaryInfC{$\vdots$}
-				\noLine\UnaryInfC{$\beta_2$}
+				\noLine\UnaryInfC{$\theta_2$}
 				
-				\toI[2]{$\alpha_2 \rightarrow \beta_2$}
+				\wedI{$\sigma_2 \wedge \theta_2$}
 			\end{prooftree}
+			به روش مشابه می‌توان نشان داد
+			$(\sigma_2 \wedge \theta_2) \vdash (\sigma_1 \wedge \theta_1)$. پس حکم صادق است.
 			
-			پس داریم که
-			$(\alpha_1 \rightarrow \beta_1) \vdash (\alpha_2 \rightarrow \beta_2)$ 
-			و به روش مشابه 
-			$(\alpha_2 \rightarrow \beta_2) \vdash (\alpha_1 \rightarrow \beta_1)$ \\
-			پس حکم صادق است.
-			
-			\item 
-			اگر $\gamma$ به صورت
-			
-			$\alpha \wedge \beta$
-			است، پس 
-			$\mid \alpha \mid , \mid \beta \mid \le \mid \gamma\ \mid$
-			پس طبق فرض استقرا می‌دانیم که :
-			$$ 
-			\alpha[\varphi_1/p] =: \alpha_1 \dashv\vdash \alpha_2 := \alpha[\varphi_2/p]
+			 
+			فرض کنید $\psi$ به صورت
+			$\sigma \vee \theta$
+			باشد، که یعنی  
+			$| \sigma | , | \theta | < k$، و در نتیجه از فرض استقرا داریم $\sigma_1 \dashv\vdash \sigma_2$ و $\theta_1 \dashv\vdash \theta_2$.
+			همچنین از تعریف جانشینی می‌دانیم
+			$$
+			(\sigma \vee \theta) [\varphi_1/p] = \sigma_1 \vee \theta_1
 			$$
 			$$
-			\beta[\varphi_1/p] =: \beta_1 \dashv\vdash \beta_2 := \beta[\varphi_2/p]
+			(\sigma \vee \theta) [\varphi_2/p] = \sigma_2 \vee \theta_2
 			$$
-			پس داریم :
-			$$
-			(\alpha \wedge \beta) [\varphi_1/p] = (\alpha_1 \wedge \beta_1)
-			$$
-			$$
-			(\alpha \wedge \beta) [\varphi_2/p] = (\alpha_2 \wedge \beta_2)
-			$$
-			حال نشان می‌دهیم که :
-			$$
-			\alpha_1 \wedge \beta_1 \dashv\vdash \alpha2 \wedge \beta_2	
-			$$
+			حال به کمک برهان‌های $\sigma_1 \vdash \sigma_2$ و $\theta_1 \vdash \theta_2$ که از فرض استقرا داشتیم، برهان زیر را برای
+			$\sigma_1 \vee \theta_1 \vdash \sigma2 \vee \theta_2	
+			$
+			می‌سازیم:
 			
 			\begin{prooftree}
 				\quad\LTR
-				\AxiomC{$[\alpha_1 \wedge \beta_1]^1$}
-				\wedE {$\alpha_1$}
+				\AxiomC{$[\sigma_1]^1$}
 				\noLine\UnaryInfC{$\vdots$}
-				\noLine\UnaryInfC{$\alpha_2$}
+				\noLine\UnaryInfC{$\sigma_2$}
+				\veeI {$\sigma_2 \vee \theta_2$}
 				
-				\AxiomC{$[\alpha_1 \wedge \beta_1]^1$}
-				\wedE {$\beta_1$}
+				\AxiomC{$[\theta_1]^1$}
 				\noLine\UnaryInfC{$\vdots$}
-				\noLine\UnaryInfC{$\beta_2$}
+				\noLine\UnaryInfC{$\theta_2$}
+				\veeI {$\sigma_2 \vee \theta_2$}
 				
-				\wedI{$\alpha_2 \wedge \beta_2$}
+				\AxiomC{$\sigma_1 \vee \theta_1$}
+				
+				\veeE{1}{$\sigma_2 \vee \theta_2$}
 			\end{prooftree}
 			
-			پس داریم که
-			$(\alpha_1 \wedge \beta_1) \vdash (\alpha_2 \wedge \beta_2)$ 
-			و به روش مشابه 
-			$(\alpha_2 \wedge \beta_2) \vdash (\alpha_1 \wedge \beta_1)$ \\
-			پس حکم صادق است.
-			
-			\item 
-			اگر $\gamma$ به صورت
-			
-			$\alpha \vee \beta$
-			است، پس 
-			$\mid \alpha \mid , \mid \beta \mid \le \mid \gamma\ \mid$
-			پس طبق فرض استقرا می‌دانیم که :
-			$$ 
-			\alpha[\varphi_1/p] =: \alpha_1 \dashv\vdash \alpha_2 := \alpha[\varphi_2/p]
-			$$
-			$$
-			\beta[\varphi_1/p] =: \beta_1 \dashv\vdash \beta_2 := \beta[\varphi_2/p]
-			$$
-			پس داریم :
-			$$
-			(\alpha \vee \beta) [\varphi_1/p] = (\alpha_1 \vee \beta_1)
-			$$
-			$$
-			(\alpha \vee \beta) [\varphi_2/p] = (\alpha_2 \vee \beta_2)
-			$$
-			حال نشان می‌دهیم که :
-			$$
-			\alpha_1 \vee \beta_1 \dashv\vdash \alpha2 \vee \beta_2	
-			$$
-			
-			\begin{prooftree}
-				\quad\LTR
-				\AxiomC{$[\alpha_1]^2$}
-				\noLine\UnaryInfC{$\vdots$}
-				\noLine\UnaryInfC{$\alpha_2$}
-				\veeI {$\alpha_2 \vee \beta_2$}
-				
-				\AxiomC{$[\beta_1]^3$}
-				\noLine\UnaryInfC{$\vdots$}
-				\noLine\UnaryInfC{$\beta_2$}
-				\veeI {$\alpha_2 \vee \beta_2$}
-				
-				\AxiomC{$[\alpha_1 \vee \beta_1]^1$}
-				
-				\veeE{2,3}{$\alpha_2 \vee \beta_2$}
-			\end{prooftree}
-			
-			پس داریم که
-			$(\alpha_1 \vee \beta_1) \vdash (\alpha_2 \vee \beta_2)$ 
-			و به روش مشابه 
-			$(\alpha_2 \vee \beta_2) \vdash (\alpha_1 \vee \beta_1)$ \\
-			پس حکم صادق است.
-			
-			
-			
-			\end {enumerate}
+			و به روش مشابه می‌توان نشان داد
+			$\sigma_2 \vee \theta_2 \vdash \sigma_1 \vee \theta_1$، و در نتیجه حکم در حالت $\psi = \sigma \vee \theta$ نیز صادق است.
 		\end{ans}
