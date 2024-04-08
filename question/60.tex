@@ -7,7 +7,8 @@ $\varphi\leq\psi$
 اگر
 $\vdash\varphi\to\psi$.
 \begin{enumerate}[label=(\alph*)]
-    \item نشان دهید
+    \item 
+    نشان دهید
     $\leq$
     بازتابی و تراگذری است.%\footnote{
     %     فاصلهٔ
@@ -21,20 +22,20 @@ $\vdash\varphi\to\psi$.
     \item اگر
     $\Phi$
     مجموعه‌ای از فرمول‌ها باشد تعریف می‌کنیم
-    $\uparrow\Phi=\{\psi\in\prop : (\forall\varphi\in\Phi)\ \varphi\leq\psi\}$.
+    $\upset\Phi=\{\psi\in\prop : (\forall\varphi\in\Phi)\ \varphi\leq\psi\}$.
     نشان دهید برای هر
     $\Phi$
     متناهی، مجموعهٔ
-    $\uparrow\Phi$
+    $\upset\Phi$
     اینفیمم دارد.
     \item اگر
     $\Phi$
     مجموعه‌ای از فرمول‌ها باشد تعریف می‌کنیم
-    $\downarrow\Phi=\{\psi\in\prop : (\forall\varphi\in\Phi)\ \psi\leq\varphi\}$.
+    $\downset\Phi=\{\psi\in\prop : (\forall\varphi\in\Phi)\ \psi\leq\varphi\}$.
     نشان دهید برای هر
     $\Phi$
     متناهی، مجموعهٔ
-    $\downarrow\Phi$
+    $\downset\Phi$
     سوپریمم دارد.
     \item نشان دهید رابطهٔ ترتیب
     $\leq$
@@ -49,11 +50,11 @@ $\vdash\varphi\to\psi$.
     می‌گوییم اگر
     $1$
     اینفیمم
-    $\uparrow\{\varphi,\psi\}$
+    $\upset\{\varphi,\psi\}$
     و
     $0$
     سوپریمم
-    $\downarrow\{\varphi,\psi\}$
+    $\downset\{\varphi,\psi\}$
     باشد. نشان دهید هر فرمول دارای متمم است.
     \item نشان دهید برای هر دو فرمول
     $\varphi$
@@ -65,7 +66,7 @@ $\vdash\varphi\to\psi$.
     هست که
     $\psi$
     از هر عضو
-    $\downarrow\{\varphi,\sigma\}$
+    $\downset\{\varphi,\sigma\}$
     بزرگتر باشد.
 \end{enumerate}\quad\vspace{-9mm}
 \begin{ans}
@@ -80,136 +81,51 @@ $\vdash\varphi\to\psi$.
         و
         $\vdash\psi\to\sigma$، که با استفاده از قضیهٔ استنتاج، یعنی $\varphi\vdash\psi$ و $\psi\vdash\sigma$. در نتیجه $\varphi\vdash\sigma$ و با استفادهٔ مجدد از قضیهٔ استنتاج، $\vdash\varphi\rightarrow\sigma$. در نتیجه $\varphi\leq\sigma$.
         
-        \item\label{q60:b} ادعا می‌کنیم برای
-        $\uparrow\Phi$
-        متناهی عطف تمام اعضای
-        $\Phi$
-        (که آن را با
-        $\bigwedge\Phi$
-        نشان می‌دهیم)
-        اینفیمم (یا بزرگترین کران پایین) این مجموعه است.
-        فرض کنید
-        $\psi\in\uparrow\Phi$.
-        این یعنی برای هر
-        $\varphi\in\Phi$
-        داریم
-        $\vdash\varphi\to\psi$.
-        حال برای نشان دادن
-        $\vdash\bigwedge\Phi\to\psi$
-        کافی است
-        $\bigwedge\Phi$
-        را فرض بگیریم، با استفاده از قاعدهٔ حذف عطف یکی از اعضای
-        $\Phi$
-        مثل
-        $\varphi$
-        را نتیجه بگیریم، و سپس با نوشتن استنتاجی که
-        $\varphi\to\psi$
-        را اثبات می‌کند و قاعدهٔ حذف شرطی
-        $\psi$
-        را نتیجه بگیریم و سپس با قاعدهٔ معرفی شرطی مقدمهٔ
-        $\bigwedge\Phi$
-        را حذف کنیم و نتیجه بگیریم
-        $\bigwedge\Phi\to\psi$. پس برای هر ‌$\psi\in\uparrow\Phi$ داریم $\bigwedge\Phi\leq\psi$، و در نتیجه $\bigwedge\Phi$ یک کران پایین برای $\uparrow\Phi$ است. برای نشان دادن بزرگترین کران پایین بودن آن نیز فرض می‌کنیم $\sigma$ کران پایین دیگری برای $\uparrow\Phi$ باشد و نشان می‌دهیم $\sigma\leq\bigwedge\Phi$.
-        
-        \item\label{q60:c} 
-        به ازای هر 
-        $\psi,\varphi\in\downarrow\Phi$
-        داریم
-        $\psi\leq\varphi$
-        و
-        $\varphi\leq\psi$
-        <<این موضوع از تعریف 
-        $\downarrow\Phi$
-        نتیجه می‌شود. >>
-        پس هر عضو 
-        $\downarrow\Phi$
-        می‌تواند یک سوپریمم باشد.
-        
-        \item\label{q60:d}  
-        فرض کنید 
-        $\varphi$
-        یک توتولوژی باشد. 
-        می‌دانیم به ازای هر 
-        $\psi\in\prop$
-        داریم
-        $\models(\psi\to\varphi)$
-        همچنین طبق قضیه تمامیت برای منطق گزاره‌ای داریم:
-        $\vdash(\psi\to\varphi)$
-        در نتیجه هر توتولوژی یا
-        $\top$
-        ماکزیمم 
-        $\prop$
-        با رابطه ترتیب 
-        $\leq$
-        است.
-        به طور مشابه 
-        $\bot$
-        را در نظر بگیرید. 
-        می‌دانیم برای هر 
-        $\psi\in\prop$
-        داریم 
-        $\models\bot\to\psi$
-        و مجدد طبق قضیه تمامیت
-        $\vdash(\bot\to\psi)$
-        در نتیجه 
-        $\bot$
-        مینیمم 
-        $\prop$
-        با رابطه ترتیب
-        $\leq$
-        است.
+        در ادامه، بدون این که باز به صراحت از قضیهٔ استنتاج نام ببریم، از آن استفاده کرده و همه‌جا $\varphi \le \psi$ را معادل با $\varphi \vdash \psi$ می‌گیریم.
 
-        \item\label{q60:e} 
-        برای فرمول 
-        $\varphi\in\prop$
-        فرمول 
-        $\neg\varphi$
-        را در نظر بگیرید. 
-        فرض کنیم که برای 
-        $\gamma\in\Phi$
-        داریم 
-        \[\models\varphi\to\gamma\]
-        \[\models\neg\varphi\to\gamma\]
-        آنگاه می‌توانیم نتیجه بگیریم که 
-        $\models(\varphi\vee\neg\varphi)\to\gamma$
-        \\
-        چون 
-        $(\varphi\vee\neg\varphi)$
-        یک توتولوژی است. 
-        $\gamma$
-        نیز باید توتولوژی باشد. و طبق \ref{q60:d} می‌دانیم که 
-        $\gamma$
-        ماکزیمم
-        $\Phi$
-        است.
-        \\
-        از طرف دیگر می‌دانیم به ازای هر 
-        $\iota\in\prop$
-        اگر 
-        $\vdash\iota\to\varphi$
-        و
-        $\vdash\iota\to\neg\varphi$
-        آنگاه
-        $\vdash\iota\to\bot$
-        در نتیجه سوپریمم نیز اینجا 
-        $\bot$
-        خواهد بود.
+        \item\label{q60:b}
+        فرض کنید $\Phi = \{\varphi_1, \dots, \varphi_n\}$.
+        ادعا می‌کنیم $\bigvee\Phi = \varphi_1 \vee \dots \vee \varphi_n$ اینفیمم یا بزرگترین کران پایین $\upset\Phi$ است. ابتدا نشان می‌دهیم $\bigvee\Phi \vdash \psi$.
+        یک عضو دلخواه از $\upset \Phi$ مانند $\psi$ را در نظر بگیرید. از تعریف $\upset\Phi$ می‌دانیم که برای هر عضو $\Phi$ مانند $\varphi_i$ داریم $\varphi_i \vdash \psi$. با استقرا روی $n$ نشان می‌دهیم $\bigvee\Phi \vdash \psi$. برای پایه‌ی استقرا، یعنی در حالتی که $n = 1$ باشد، داریم $\bigvee\Phi = \varphi_1$ و حکم از تعریف $\upset\Phi$ نتیجه می‌شود. حال برای گام استقرا، بنا به فرض استقرا می‌توان فرض کرد حکم برای $n - 1$ برقرار است، یعنی داریم $\varphi_1 \vee \dots \vee \varphi_{n-1} \vdash \psi$. درخت برهان زیر را برای $\bigvee \Phi \vdash \psi$ می‌سازیم:
+        \begin{LTR}\begin{prooftree}
+            \AXC{$\varphi_1 \vee \dots \vee \varphi_n$}
+            \AXC{{\emph{\rl{فرض استقرا}}}}
+            \noLine\UIC{$[\varphi_1 \vee \dots \vee \varphi_{n-1}]^1$}
+            \noLine\UIC{$\vdots$}
+            \noLine\UIC{$\psi$}
+            \AXC{{\emph{\rl{تعریف $\upset\Phi$}}}}
+            \noLine\UIC{$[\varphi_n]^1$}
+            \noLine\UIC{$\vdots$}
+            \noLine\UIC{$\psi$}
+            \veeE{1}{$\psi$}
+        \end{prooftree}\end{LTR}
+        در نتیجه $\bigvee\Phi$ یک کران پایین برای $\upset\Phi$ است. برای این که بگوییم $\bigvee\Phi$ بزرگترین کران پایین برای $\upset\Phi$ است، کافی است نشان دهیم $\bigvee\Phi \in \upset\Phi$، یعنی برای هر $\varphi \in \Phi$ بگوییم $\varphi \vdash \bigvee\Phi$، که با استفاده از استفاده از قاعده‌ی معرفی ترکیب فصلی و جابه‌جایی ترکیب فصلی ساده است.
 
-        \item\label{q60:f} 
-        اگر بجای
-        $\sigma$
-        متمم 
-        $\varphi$
-        را قرار دهیم به ازای هر 
-        $\gamma\in\prop$
-        خواهیم داشت:
-        \\
-        اگر 
-        $\gamma\in\downarrow\{\varphi,\neg\varphi\}$
-        آنگاه
-        $\vdash\gamma\to\bot$
-        \\
-        در نتیجه 
-        $\gamma\leq\psi$
+        \item\label{q60:c}
+        فرض کنید $\Phi = \{\varphi_1, \dots, \varphi_n\}$.
+        ادعا می‌کنیم $\bigwedge\Phi = \varphi_1 \wedge \dots \wedge \varphi_n$ سوپریمم یا کوچکترین کران بالای $\downset\Phi$ است. اثبات مشابه بخش \ref{q60:b} است. ابتدا با استقرا روی $n$ نشان می‌دهیم $\bigwedge\Phi$ از هر عضو $\downset\Phi$ مانند $\psi$ بزرگتر است. در این‌جا نیز می‌دانیم بنا به تعریف $\downset\Phi$، برای هر $\varphi_i$ داریم $\psi \vdash \varphi_i$. در حالت $n = 1$، داریم $\bigwedge\Phi = \varphi_1$ و حکم از تعریف $\downset\Phi$ نتیجه می‌شود. در گام استقرا، بنا به فرض استقرا داریم $\psi \vdash \varphi_1 \wedge \dots \wedge \varphi_{n-1}$. برای اثبات $\psi \vdash \bigwedge\Phi$ درخت برهان زیر را می‌سازیم:
+        \begin{LTR}\begin{prooftree}
+            \AXC{{\emph{\rl{فرض استقرا}}}}    
+            \noLine\UIC{$\psi$}
+            \noLine\UIC{$\vdots$}
+            \noLine\UIC{$\varphi_1 \wedge \dots \wedge \varphi_{n-1}$}
+            \AXC{{\emph{\rl{تعریف $\downset\Phi$}}}}
+            \noLine\UIC{$\psi$}
+            \noLine\UIC{$\vdots$}
+            \noLine\UIC{$\varphi_n$}
+            \wedI{$\varphi_1 \wedge \dots \wedge \varphi_n$}
+        \end{prooftree}\end{LTR}
+        پس $\bigwedge \Phi$ یک کران بالا برای $\downset\Phi$ است. به طریق مشابه بخش \ref{q60:b} می‌توان نشان داد که $\bigwedge\Phi \in \downset\Phi$ و در نتیجه $\bigwedge\Phi$ کوچکترین کران بالا برای $\downset\Phi$ است.
+
+        \item\label{q60:d}
+        بنا به نتایج بخش‌های \ref{q60:b} و \ref{q60:c}، می‌دانیم مجموعه‌ی $\upset\emptyset$ اینفیمم و مجموعه‌ی $\downset\emptyset$ سوپریمم دارد. این دو فرمول را به ترتیب $0$ و $1$ می‌نامیم.
+        بنا به تعریف، و به انتفای مقدم، داریم $\upset\emptyset = \downset\emptyset = \prop$. در نتیجه $0$ و $1$ به ترتیب مینیمم و ماکسیمم ترتیب تعریف شده روی $\prop$ هستند.
+
+        \item\label{q60:e}
+        به ازای هر $\varphi$، ادعا می‌کنیم $\neg \varphi$ متمم مورد نظر با دو خاصیت ذکرشده است. بنا به تعریف، $0$ و $1$ عناصر مینیمم و ماکسیمم ترتیب هستند. بنابراین، کافی است نشان دهیم اینفیمم $\upset\{\varphi, \neg\varphi\}$ از هر فرمول دلخواه بزرگتر، و سوپریمم $\downset\{\varphi, \neg\varphi\}$ از هر فرمول دلخواه کوچکتر است. در این‌جا تنها مورد اوّل را اثبات می‌کنیم، چرا که مورد دوم نیز مشابه مورد اوّل اثبات می‌شود. 
+        اینفیمم $\upset\{\varphi, \neg\varphi\}$ را $I$ بنامید. بنا به تعریف، برای هر $\psi \in \upset\{\varphi, \neg\varphi\}$ داریم $\varphi \vdash \psi$ و $\neg\varphi \vdash \psi$. با استفاده از قاعده‌ی حذف ترکیب فصلی داریم $\varphi \vee \neg\varphi \vdash \psi$ و درنتیجه $\varphi \vee \neg\varphi$ یک کران پایین برای $\upset\{\varphi, \neg\varphi\}$ است. پس $\varphi \vee \neg\varphi \vdash I$. از طرفی می‌دانیم $\vdash \varphi \vee \neg\varphi$، در نتیجه $\vdash I$. به راحتی از قضیهٔ تضعیف می‌توان برای هر فرمول دلخواه $\theta$ نتیجه گرفت $\theta \vdash I$. پس $I$ عضو ماکسیمم ترتیب است. مورد دوم نیز به همین شکل و به کمک قاعدهٔ معرفی ترکیب عطفی و حذف تناقض اثبات می‌شود.
+
+        \item\label{q60:f}
+        ادعا می‌کنیم برای هر $\varphi$ و $\psi$ دلخواه، $\varphi \rightarrow \psi$ همان $\sigma$ با شرایط ذکرشده است. یعنی باید نشان دهیم اوّلاً $\psi$ کران بالایی برای $\downset\{\varphi, \varphi \rightarrow \psi\}$ است، و ثانیاً برای هر $\sigma$ که $\psi$ کران بالایی برای $\downset\{\varphi, \sigma\}$ باشد، $\sigma \vdash \varphi \rightarrow \psi$. برای اثبات مورد اول، فرض کنید $\theta \in \downset\{\varphi, \varphi \rightarrow \psi\}$، یعنی $\theta \vdash \varphi$ و $\theta \vdash \varphi \rightarrow \psi$. با استفاده از قاعدهٔ حذف شرطی می‌توان نشان داد $\theta \vdash \psi$. پس $\psi$ از هر عضو $\downset\{\varphi, \varphi \rightarrow \psi\}$ بزرگتر است. برای اثبات مورد دوم، فرض کنید برای یک $\sigma$ دلخواه، $\psi$ از هر عضو $\downset\{\varphi, \sigma\}$ بزرگتر باشد. می‌دانیم $\varphi \wedge \sigma \in \downset\{\varphi, \varphi \rightarrow \psi\}$، در نتیجه $\varphi \wedge \sigma \vdash \psi$. از طرفی با استفاده از قاعدهٔ معرفی ترکیب عطفی داریم $\varphi, \sigma \vdash \varphi \wedge \sigma$، و در نتیجه $\varphi, \sigma \vdash \psi$. به کمک قاعدهٔ معرفی شرطی خوایم داشت $\sigma \vdash \varphi \rightarrow \psi$.
     \end{enumerate}
 \end{ans}
