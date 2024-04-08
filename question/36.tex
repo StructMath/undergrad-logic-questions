@@ -167,7 +167,15 @@ $\mathord{(-)}^n\colon\prop\to\prop$
         توجه کنید مطابق اطلاعات قبلی می‌دانیم بخش‌هایی از استنتاج که جا انداخته‌ایم را می‌توان با استنتاجی معتبر تکمیل کرد.
 
         \item
-        راه حل بخش (ب)
+        مجددا حکم را به استقرا روی پیچیدگی $\varphi$ ثابت می‌کنیم.\\
+        اگر $\varphi = \bot$، باید نشان دهیم $\bot \dashv\vdash_{CPC} \bot$ که به وضوح صادق است.\\
+        اگر $\varphi = p$ به صورتی که $p$ اتمی است، باید نشان دهیم $p \dashv\vdash_{CPC} \neg\neg p$ که اثبات آن ساده است.\\
+        حال اگر $\varphi = \neg\psi$، خواهیم داشت $\varphi^n = \neg\psi^n$. طبق فرض استقرا $\psi \dashv\vdash_{CPC} \psi^n$. بنابراین با استفاده از قضیهٔ جانشینی خواهیم داشت:
+        $$\psi \dashv\vdash_{CPC} \psi^n \Rightarrow \neg p[\psi/p] \dashv\vdash_{CPC} \neg p[\psi^n/p] \Rightarrow \neg\psi \dashv\vdash_{CPC} \neg\psi^n \Rightarrow \varphi \dashv\vdash_{CPC} \varphi^n$$
+        اگر $\varphi = \psi \wedge \theta$، خواهیم داشت $\varphi^n = \psi^n \wedge \theta^n$. در این صورت مشابه حالت قبل و با استفاده از قضیهٔ جانشینی و طبق فرض استقرا به راحتی اثبات می‌شود $\varphi^n \dashv\vdash_{CPC} \varphi$.\\
+        اگر $\varphi = \psi \vee \theta$، خواهیم داشت $\varphi^n = \neg\neg(\psi^n \vee \theta^n)$. می‌دانیم $\psi^n \vee \theta^n \dashv\vdash_{CPC} \neg\neg(\psi^n \vee \theta^n)$. ضمنا مجددا با استفاده از قضیهٔ جانشینی و طبق فرض استقرا می‌توان نشان داد $\psi^n \vee \theta^n \dashv\vdash_{CPC} \psi \vee \theta$. بنابراین خواهیم داشت:
+        $$\neg\neg(\psi^n \vee \theta^n) \dashv\vdash_{CPC} \psi^n \vee \theta^n \dashv\vdash_{CPC} \psi \vee \theta \Rightarrow \varphi^n \dashv\vdash_{CPC} \varphi$$
+        نهایتا اگر $\varphi = \psi \rightarrow \theta$ نیز اثبات به طریق مشابه حالات قبل به راحتی انجام می‌شود.
 
         \item
         واضح است که $\varphi^n \vdash_{IPC} \neg\neg\varphi^n$. ضمنا در بخش (الف) ثابت کردیم $\neg\neg\varphi^n \vdash_{IPC} \varphi^n$. بنابراین $\varphi^n \dashv\vdash_{IPC} \neg\neg\varphi^n$. نهایتا واضح است که $\varphi^n \dashv\vdash_{CPC} \neg\neg\varphi^n$. به این ترتیب داریم:
