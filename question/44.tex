@@ -84,7 +84,7 @@ $(((p\to q)\to p)\to p)$
       \UIC{$((p \rightarrow q) \rightarrow p) \rightarrow p$}
     \end{prooftree}
     \RTL
-    \item با توجه به تعریف
+    \item با توجه به تعریف برای $\to$:
     \LTR
     \begin{tabular}{c | c c c}
       \diagbox[linecolor=white]{$p$}{$q$} & $0$ & $\frac{1}{2}$ & $1$ \\ \hline
@@ -93,6 +93,31 @@ $(((p\to q)\to p)\to p)$
       $1$ & $0$ & $\frac{1}{2}$ & $1$
     \end{tabular}
     \RTL
+    برای $\wedge$
+    \LTR
+    \begin{tabular}{c | c c c}
+      \diagbox[linecolor=white]{$p$}{$q$} & $0$ & $\frac{1}{2}$ & $1$ \\ \hline
+      $0$ & $0$ & $0$ & $0$ \\
+      $\frac{1}{2}$ & $0$ & $\frac{1}{2}$ & $\frac{1}{2}$ \\
+      $1$ & $0$ & $\frac{1}{2}$ & $1$
+    \end{tabular}
+    \RTL
+    برای $\vee$
+    \LTR
+    \begin{tabular}{c | c c c}
+      \diagbox[linecolor=white]{$p$}{$q$} & $0$ & $\frac{1}{2}$ & $1$ \\ \hline
+      $0$ & $0$ & $\frac{1}{2}$ & $1$ \\
+      $\frac{1}{2}$ & $\frac{1}{2}$ & $\frac{1}{2}$ & $1$ \\
+      $1$ & $1$ & $1$ & $1$
+    \end{tabular}
+    \RTL
+    برای $\neg$
+    \LTR\begin{tabular}{c | c}
+      $p$ & $\neg p$ \\ \hline
+      $0$ & $1$ \\
+      $\frac{1}{2}$ & $0$ \\
+      $1$ & $0$
+    \end{tabular}\LTR
     \item براساس بخش قبل، فقط اگر $v(p) = {1\over2}$ و $v(q) = 0$ باشد مقدار گزاره مخالف $1$ است.
     \LTR
     \begin{tabular}{c | c | r c l c l c l}
