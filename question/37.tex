@@ -11,10 +11,10 @@
     \begin{enumerate}[label=(\alph*)]
         \item\quad\\\LTR
         \begin{prooftree}
-            \AxiomC{$[\varphi\vee\psi]^1$}
+            \AxiomC{$[\varphi\wedge\psi]^1$}
             \wedE{$\psi$}
 
-            \AxiomC{$[\varphi\vee\psi]^1$}
+            \AxiomC{$[\varphi\wedge\psi]^1$}
             \wedE{$\varphi$}
             \AxiomC{$\varphi\to(\psi\to\sigma)$}
             \toE{$\varphi\to\sigma$}
@@ -39,8 +39,8 @@
             
             \AxiomC{$[\neg(\varphi\to\psi)]^2$}
             \negE
-            \negI[1]{$\neg\varphi$}
-            \toI[2]{$\neg(\varphi\to\psi)\to\neg\varphi$}
+            \negI[1]{$\neg\psi$}
+            \toI[2]{$\neg(\varphi\to\psi)\to\neg\psi$}
         \end{prooftree}\RTL
         \item\quad\\\LTR
         \begin{prooftree}
