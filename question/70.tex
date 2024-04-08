@@ -1,37 +1,38 @@
 
-		ثابت کنید که احکام زیر معادل‌اند.
-		 \begin{enumerate}
-		 	\item $\Gamma\nvdash \bot$	
-		 	\item فرمول
-		 	$\varphi$
-		 	وجود ندارد به صورتی که 
-		 	$\Gamma \vdash \varphi$ 
-		 	و
-		 	$\Gamma \vdash \neg \varphi$.
-		 	
-		 	\item وجود دارد فرمول
-			$\varphi$
-			چنانکه $\Gamma \nvdash \varphi$.
-		 	
-		 \end{enumerate}
-		 
+	
+	ثابت کنید که احکام زیر معادل‌اند.
+	\begin{enumerate}
+		\item $\Gamma\nvdash \bot$	
+		\item فرمول
+		$\varphi$
+		وجود ندارد به صورتی که 
+		$\Gamma \vdash \varphi$ 
+		و
+		$\Gamma \vdash \neg \varphi$.
+		
+		\item وجود دارد فرمول
+		$\varphi$
+		چنانکه $\Gamma \nvdash \varphi$.
+		
+	\end{enumerate}
+	
 	\quad\vspace {-0.5 cm}
 	\begin{ans}
 		۱ $\Leftarrow$ ۲ \\
-		 فرض کنیم که برای یک $A$ می‌دانیم که
-		 $\Gamma \vdash A$
-		 و 
-		 $\Gamma \vdash \neg A$
-		 پس داریم
-		 $$
-		 	\infer[\neg E]{\bot}{
-		 		\infer*{A}{\Gamma}
-		 		&
-		 		\infer*{\neg A}{\Gamma}
-		 	}	
-		 $$ 
-
-که تناقض است.\\
+		فرض کنیم که برای یک $A$ می‌دانیم که
+		$\Gamma \vdash A$
+		و 
+		$\Gamma \vdash \neg A$
+		پس داریم
+		$$
+		\infer[\neg E]{\bot}{
+			\infer*{A}{\Gamma}
+			&
+			\infer*{\neg A}{\Gamma}
+		}	
+		$$ 
+		
+		که تناقض است.\\
 		۲ $\Leftarrow$ ۳ \\
 		اگر برای هر 
 		$A$
@@ -46,15 +47,15 @@
 		
 		۳ $\Leftarrow$ ۱ \\
 		اگر فرض کنیم که 
-  $\Gamma$ 
-  ناسازگار است.
-  پس
+		$\Gamma$ 
+		ناسازگار است.
+		پس
 		$\Gamma \vdash \bot$
-		پس با استفاده از قائده معرفی . 
-  $\bot$
-  برای هر
-  $A$
-  داریم
-		$\Gamma \vdash A$
-		 
+		پس با استفاده از قائده معرفی 
+		$\bot$
+		برای هر
+		$A$
+		داریم
+		$\Gamma \vdash \bot \vdash A$
+		
 	\end{ans}
