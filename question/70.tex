@@ -1,18 +1,17 @@
 
 		ثابت کنید که احکام زیر معادل‌اند.
 		 \begin{enumerate}
-		 	\item $\Gamma$
-		 	سازگار است.		
-		 	\item
-		 	$A$
+		 	\item $\Gamma\nvdash \bot$	
+		 	\item فرمول
+		 	$\varphi$
 		 	وجود ندارد به صورتی که 
-		 	$\Gamma \vdash A$ 
+		 	$\Gamma \vdash \varphi$ 
 		 	و
-		 	$\Gamma \vdash \neg A$ 	
+		 	$\Gamma \vdash \neg \varphi$.
 		 	
-		 	\item $\Gamma \nvdash A$ 
-		 	برای حداقل یک فرمول 
-		 	$A$
+		 	\item وجود دارد فرمول
+			$\varphi$
+			چنانکه $\Gamma \nvdash \varphi$.
 		 	
 		 \end{enumerate}
 		 
@@ -46,11 +45,16 @@
 		که با فرض ۲ در تناقض است
 		
 		۳ $\Leftarrow$ ۱ \\
-		اگر برای هر 
-		$A$
-		بدانیم که
-		$\Gamma \vdash A$
-		پس 
+		اگر فرض کنیم که 
+  $\Gamma$ 
+  ناسازگار است.
+  پس
 		$\Gamma \vdash \bot$
+		پس با استفاده از قائده معرفی . 
+  $\bot$
+  برای هر
+  $A$
+  داریم
+		$\Gamma \vdash A$
 		 
 	\end{ans}
