@@ -1,27 +1,27 @@
  	
 با ترسیم درخت برهان ثابت کنید
- 	$$\vdash (\phi \to \neg \psi) \vee \psi$$
+ 	$$\vdash (\varphi \to \neg \psi) \vee \psi$$
  	
  	\quad\vspace {0.5cm}
  	\begin{ans}
  		$$
- 			\infer[RAA ~(1)]{(\phi \to \neg \psi) \vee \psi}{
+ 			\infer[RAA ~(1)]{(\varphi \to \neg \psi) \vee \psi}{
  				\infer[\neg E]{\bot}{
- 					[\neg((\phi \to \neg \psi) \vee \psi)]^1
+ 					[\neg((\varphi \to \neg \psi) \vee \psi)]^1
  					&
- 					\infer[\vee I]{(\phi \to \neg \psi) \vee \psi}{
- 						\infer[RAA ~(2)]{\phi \to \neg \psi}{
+ 					\infer[\vee I]{(\varphi \to \neg \psi) \vee \psi}{
+ 						\infer[RAA ~(2)]{\varphi \to \neg \psi}{
  							\kern 0.3cm
  							\infer[\neg E]{\bot}{
- 								[\neg((\phi \to \neg \psi) \vee \psi)]^1
- 								\infer[\vee I]{(\phi \to \neg \psi) \vee \psi}{
+ 								[\neg((\varphi \to \neg \psi) \vee \psi)]^1
+ 								\infer[\vee I]{(\varphi \to \neg \psi) \vee \psi}{
  									\infer[RAA ~(3)]{\psi}{
  										\kern 0.4cm
  										\infer[\neg E]{\bot}{
- 											[\neg(\phi \to \neg \psi)]^2
+ 											[\neg(\varphi \to \neg \psi)]^2
  											&
- 											\infer[\to I ~(4)]{\phi \to \neg \psi}{
- 												[\phi]^4
+ 											\infer[\to I ~(4)]{\varphi \to \neg \psi}{
+ 												[\varphi]^4
  												&
  												[\neg \psi]^3
  											}
