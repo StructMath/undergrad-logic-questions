@@ -3,37 +3,37 @@
   \item $\varphi \rightarrow \psi \dashv\vdashHP \neg\psi \rightarrow \neg\varphi$
   \item $\vdashHP \big(\varphi \rightarrow (\psi \rightarrow \theta)\big) \rightarrow \big((\varphi \rightarrow \psi) \rightarrow (\varphi \rightarrow \theta)\big)$
 \end{enumerate}
-\quad\vdash{-0.5}
-\begin{ans}
-  \begin{enumerate}[label=(\alph*)]
-      \item 
-      ابتدا نشان می‌دهیم $\varphi \rightarrow \psi \vdashHP \neg\psi \rightarrow \neg\varphi$. مطابق قضیهٔ استنتاج می‌دانیم:
-      $$\varphi \rightarrow \psi \vdashHP \neg\psi \rightarrow \neg\varphi
-      \Leftrightarrow
-      \varphi \rightarrow \psi, \neg\psi \vdashHP \neg\varphi
-      $$
-      از طرفی طبق اصل ۱۰ دستگاه هیلبرت داریم $\neg\varphi \dashv\vdashHP \varphi\rightarrow\bot$. بنابراین:
-      $$\varphi \rightarrow \psi, \neg\psi \vdashHP \neg\varphi
-      \Leftrightarrow
-      \varphi \rightarrow \psi, \neg\psi \vdashHP \varphi\rightarrow\bot
-      $$
-      و مجددا مطابق قضیهٔ استنتاج داریم:
-      $$
-      \varphi \rightarrow \psi, \neg\psi \vdashHP \varphi\rightarrow\bot
-      \Leftrightarrow
-      \varphi \rightarrow \psi, \neg\psi, \varphi \vdashHP \bot
-      $$
-      بنابراین به جای گزارهٔ اولیه، گزارهٔ نهایی را ثابت می‌کنیم. برهان زیر، استنتاجی از مجموعهٔ مفروضات $\{\varphi \rightarrow \psi, \neg\psi, \varphi\}$ برای $\bot$ در دستگاه استنتاج هیلبرت است:
-      \LTR{
-      \begin{tabular*}{\textwidth}{l l @{\extracolsep{\fill}} r}
-      $1$ & $\varphi$ & \RTL{فرض} \\
-      $2$ & $\varphi \rightarrow \psi$ & \RTL{فرض} \\
-      $3$ & $\psi$ & $MP(1, 2)$ \\
-      $4$ & $\neg\psi$ & \RTL{فرض} \\
-      $5$ & $\neg\psi \leftrightarrow (\psi\rightarrow\bot)$ & \RTL{اصل ۱۰} \\
-      $6$ & $\psi\rightarrow\bot$ & $MP(4, 5)$ \\
-      $7$ & $\bot$ & $MP(3, 6)$
-      \end{tabular*}
-      }
-  \end{enumerate}
-\end{ans}
+% \quad\vdash{-0.5}
+% \begin{ans}
+%   \begin{enumerate}[label=(\alph*)]
+%       \item 
+%       ابتدا نشان می‌دهیم $\varphi \rightarrow \psi \vdashHP \neg\psi \rightarrow \neg\varphi$. مطابق قضیهٔ استنتاج می‌دانیم:
+%       $$\varphi \rightarrow \psi \vdashHP \neg\psi \rightarrow \neg\varphi
+%       \Leftrightarrow
+%       \varphi \rightarrow \psi, \neg\psi \vdashHP \neg\varphi
+%       $$
+%       از طرفی طبق اصل ۱۰ دستگاه هیلبرت داریم $\neg\varphi \dashv\vdashHP \varphi\rightarrow\bot$. بنابراین:
+%       $$\varphi \rightarrow \psi, \neg\psi \vdashHP \neg\varphi
+%       \Leftrightarrow
+%       \varphi \rightarrow \psi, \neg\psi \vdashHP \varphi\rightarrow\bot
+%       $$
+%       و مجددا مطابق قضیهٔ استنتاج داریم:
+%       $$
+%       \varphi \rightarrow \psi, \neg\psi \vdashHP \varphi\rightarrow\bot
+%       \Leftrightarrow
+%       \varphi \rightarrow \psi, \neg\psi, \varphi \vdashHP \bot
+%       $$
+%       بنابراین به جای گزارهٔ اولیه، گزارهٔ نهایی را ثابت می‌کنیم. برهان زیر، استنتاجی از مجموعهٔ مفروضات $\{\varphi \rightarrow \psi, \neg\psi, \varphi\}$ برای $\bot$ در دستگاه استنتاج هیلبرت است:
+%       \LTR{
+%       \begin{tabular*}{\textwidth}{l l @{\extracolsep{\fill}} r}
+%       $1$ & $\varphi$ & \RTL{فرض} \\
+%       $2$ & $\varphi \rightarrow \psi$ & \RTL{فرض} \\
+%       $3$ & $\psi$ & $MP(1, 2)$ \\
+%       $4$ & $\neg\psi$ & \RTL{فرض} \\
+%       $5$ & $\neg\psi \leftrightarrow (\psi\rightarrow\bot)$ & \RTL{اصل ۱۰} \\
+%       $6$ & $\psi\rightarrow\bot$ & $MP(4, 5)$ \\
+%       $7$ & $\bot$ & $MP(3, 6)$
+%       \end{tabular*}
+%       }
+%   \end{enumerate}
+% \end{ans}
