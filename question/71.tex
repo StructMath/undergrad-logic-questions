@@ -5,25 +5,25 @@
  	\quad\vspace {0.5cm}
  	\begin{ans}
  		$$
- 			\infer[RAA_1]{(\phi \to \neg \psi) \vee \psi}{
+ 			\infer[RAA ~(1)]{(\phi \to \neg \psi) \vee \psi}{
  				\infer[\neg E]{\bot}{
- 					[\neg((\phi \to \neg \psi) \vee \psi)]_1
+ 					[\neg((\phi \to \neg \psi) \vee \psi)]^1
  					&
  					\infer[\vee I]{(\phi \to \neg \psi) \vee \psi}{
- 						\infer[RAA_2]{\phi \to \neg \psi}{
+ 						\infer[RAA ~(2)]{\phi \to \neg \psi}{
  							\kern 0.3cm
  							\infer[\neg E]{\bot}{
- 								[\neg((\phi \to \neg \psi) \vee \psi)]_1
+ 								[\neg((\phi \to \neg \psi) \vee \psi)]^1
  								\infer[\vee I]{(\phi \to \neg \psi) \vee \psi}{
- 									\infer[RAA_3]{\psi}{
+ 									\infer[RAA ~(3)]{\psi}{
  										\kern 0.4cm
  										\infer[\neg E]{\bot}{
- 											[\neg(\phi \to \neg \psi)]_2
+ 											[\neg(\phi \to \neg \psi)]^2
  											&
- 											\infer[\to I_4]{\phi \to \neg \psi}{
- 												[\phi]_4
+ 											\infer[\to I ~(4)]{\phi \to \neg \psi}{
+ 												[\phi]^4
  												&
- 												[\neg \psi]_3
+ 												[\neg \psi]^3
  											}
  										}
  										\kern 0.4cm
