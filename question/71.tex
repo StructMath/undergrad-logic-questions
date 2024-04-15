@@ -34,6 +34,39 @@
  				}	
  			}
  		$$
- 		
+ 		دقت کنید برای اثبات $\varphi \rightarrow \neg\psi$ نیازی به استفاده از $\varphi$ نیست. همچنین می‌توان به دو صورت دیگر نیز این فرمول را اثبات کرد:
+
+		\begin{LTR}\begin{prooftree}
+			\AXC{$[\psi]^3$}
+			\veeI{$(\varphi \rightarrow \neg\psi) \vee \psi$}
+			\AXC{$[\neg((\varphi \rightarrow \neg\psi) \vee \psi)]^1$}
+			\negE
+			\negI[3]{$\neg\psi$}
+			\toI{$\varphi \rightarrow \neg\psi$}
+			\AXC{$[\varphi \rightarrow \neg\psi]^2$}
+			\veeI{$(\varphi \rightarrow \neg\psi) \vee \psi$}
+			\AXC{$[\neg((\varphi \rightarrow \neg\psi) \vee \psi)]^1$}
+			\negE
+			\negI[2]{$\neg(\varphi \rightarrow \neg\psi)$}
+			\negE
+			\RAA[1]{$(\varphi \rightarrow \neg\psi) \vee \psi$}
+		\end{prooftree}\end{LTR}
+		\begin{LTR}\begin{prooftree}
+			\AXC{$[\neg(\psi \vee \neg\psi)]^2$}
+			\AXC{$[\neg(\psi \vee \neg\psi)]^2$}
+			\AXC{$[\psi]^3$}
+			\veeI{$\psi \vee \neg\psi$}
+			\negE
+			\negI[3]{$\neg\psi$}
+			\veeI{$\psi \vee \neg\psi$}
+			\negE
+			\RAA[2]{$\psi \vee \neg\psi$}
+			\AXC{$[\psi]^1$}
+			\veeI{$(\varphi \rightarrow \neg\psi) \vee \psi$}
+			\AXC{$[\neg\psi]^1$}
+			\toI{$\varphi \rightarrow \neg\psi$}
+			\veeI{$(\varphi \rightarrow \neg\psi) \vee \psi$}
+			\veeE{1}{$(\varphi \rightarrow \neg\psi) \vee \psi$}
+		\end{prooftree}\end{LTR}
  	\end{ans}
  	
