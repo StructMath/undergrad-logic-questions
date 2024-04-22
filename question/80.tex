@@ -1,6 +1,36 @@
-جانشینی‌های زیر را انجام دهید. (در صورت آزاد نبودن نام برای متغیر، می‌توانید متغیرهای پابندکننده را تغییرنام دهید.)
-\begin{enumerate}[label=(\alph*)]
-  \item $(\exists x (x \leq y))[x+1/y]$
-  \item $((\forall z ((x = z) \rightarrow (y = z)))[f(y)/x])[z/y]$
-  \item $((\exists x R(x, y))[x/y])[y/x]$
-\end{enumerate}
+
+	جانشینی‌های زیر را انجام دهید. (در صورت آزاد نبودن نام برای متغیر، می‌توانید متغیرهای پابندکننده را تغییرنام دهید.)
+	\begin{enumerate}[label=(\alph*)]
+		\item $(\exists x (x \leq y))[x+1/y]$
+		\item $((\forall z ((x = z) \rightarrow (y = z)))[f(y)/x])[z/y]$
+		\item $((\exists x R(x, y))[x/y])[y/x]$
+	\end{enumerate}
+	\quad\vspace{0.5cm}
+	\begin{ans}
+		توجه داریم که جانشینی نام t برای متغیر x در یک فرمول آزاد است اگر و تنها اگر هیچ وقوع آزادی از x در محدوده سوری روی یکی از متغیر‌های t نباشد. 
+		برای مثال
+		$$
+			\forall z(f(x, z))
+		$$
+		در این فرمول جانشینی 
+		$
+		 	f(y,z)
+		$
+		به جای x مجاز نیست.\\
+		\begin{enumerate}[label=(\alph*)]
+			\item چون که متغیر 
+			$x + 1$
+			 در فرمول ظاهر نشده است پس جانشینی آن تاثیری در فرمول ندارد.
+			\item 
+			$$
+				(\forall z ((x = z) \rightarrow (y = z)))[f(y)/x] = \forall z ((x = z) \rightarrow (y = z))
+			$$
+			توجه داریم که چون متغیر z آزاد نیست جانشینی برای آن مجاز نیست. پس عبارت زیر غلط است!!!
+			$$
+				\Longrightarrow ((\forall z ((x = z) \rightarrow (y = z)))[f(y)/x])[z/y] = 
+				\forall y ((x = y) \rightarrow (y = y))
+			$$
+			\item
+			چون متغیر x آزاد نیست پس جانشینی برای آن مجاز نیست. همچنین نام x نیز برای y در فرمول گفته شده مجاز نیست چرا که متغیر y وقوع آزادی در محدوده سوری روی متغیر x دارد.
+		\end{enumerate}
+	\end{ans}
