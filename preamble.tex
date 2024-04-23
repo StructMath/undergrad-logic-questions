@@ -8,11 +8,15 @@
 \usepackage{natbib}
 \usepackage[inline]{enumitem}
 \usepackage{forest}
+\forestset{m/.style={baseline,
+            for tree={parent anchor=south, 
+              child anchor=north,
+              align=center,
+              inner sep=0pt}}}
 \usepackage{diagbox}
 \usepackage{bussproofs}
 \usepackage[tableaux]{prooftrees}
 \EnableBpAbbreviations
-\usepackage{qtree}
 \usepackage{pdflscape}
 \usepackage{multicol}
 \usepackage[top=2cm]{geometry}

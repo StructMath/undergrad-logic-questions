@@ -5,3 +5,178 @@
   \item $\neg ((p \rightarrow r) \vee (q \rightarrow r)) \vdash \neg ((p \vee q) \rightarrow r)$
   \item $\neg ((p \vee q) \rightarrow r) \vdash \neg ((p \rightarrow r) \vee (q \rightarrow r))$
 \end{enumerate}
+\quad
+\begin{ans}
+  می‌دانیم $\Gamma \vdash A$ اگرر $\Gamma \cup \{\neg A\}$ ناسازگار باشد. بنابراین کافی است در هر مورد نشان دهیم تابلوی مربوط به $\Gamma \cup \{\neg A\}$ بسته می‌شود.
+  \begin{multicols}{2}
+    (آ)
+    \begin{forest}m
+      [
+        $p \rightarrow (q \vee r)$\\
+        $\neg ((p \rightarrow q) \vee (p \rightarrow r))$
+        [
+          $\neg (p \rightarrow q)$\\
+          $\neg (p \rightarrow r)$
+          [
+            $p$\\
+            $\neg q$
+            [
+              $p$\\
+              $\neg r$
+              [
+                $\neg p$\\
+                $\times$
+              ]
+              [
+                $q \vee r$
+                [
+                  $q$\\
+                  $\times$
+                ]
+                [
+                  $r$\\
+                  $\times$
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    \end{forest}
+
+    (ب)
+    \begin{forest}m
+      [
+        $p \rightarrow (q \wedge r)$\\
+        $\neg ((p \rightarrow q) \wedge (p \rightarrow r))$
+        [
+          $\neg (p \rightarrow q)$
+          [
+            $p$\\
+            $\neg q$
+            [
+              $\neg p$\\
+              $\times$
+            ]
+            [
+              $q \wedge r$
+              [
+                $q$\\
+                $r$\\
+                $\times$
+              ]
+            ]
+          ]
+        ]
+        [
+          $\neg (p \rightarrow r)$
+          [
+            $p$\\
+            $\neg r$
+            [
+              $\neg p$\\
+              $\times$
+            ]
+            [
+              $q \wedge r$
+              [
+                $q$\\
+                $r$\\
+                $\times$
+              ]
+            ] 
+          ]
+        ]
+      ]
+    \end{forest}
+  \end{multicols}
+  \pagebreak
+  \begin{multicols}{2}
+    (ج)
+    \begin{forest}m
+      [
+        $\neg ((p \rightarrow r) \vee (q \rightarrow r))$\\
+        $\neg \neg ((p \vee q) \rightarrow r)$
+        [
+          $\neg (p \rightarrow r)$\\
+          $\neg (q \rightarrow r)$
+          [
+            $p$\\
+            $\neg r$
+            [
+              $q$\\
+              $\neg r$
+              [
+                $(p \vee q) \rightarrow r$
+                [
+                  $\neg (p \vee q)$
+                  [
+                    $\neg p$\\
+                    $\neg q$\\
+                    $\times$
+                  ]
+                ]
+                [
+                  $r$\\
+                  $\times$
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    \end{forest}
+
+    (د)
+    \begin{forest}m
+      [
+        $\neg ((p \vee q) \rightarrow r)$\\
+        $\neg \neg ((p \rightarrow r) \vee (q \rightarrow r))$
+        [
+          $p \vee q$\\
+          $\neg r$
+          [
+            $(p \rightarrow r) \vee (q \rightarrow r)$
+            [
+              $p \rightarrow r$
+              [
+                $\neg p$
+                [
+                  $p$\\
+                  $\times$
+                ]
+                [
+                  $q$\\
+                  $\bigcirc$
+                ]
+              ]
+              [
+                $r$\\
+                $\times$
+              ]
+            ]
+            [
+              $q \rightarrow r$
+              [
+                $\neg q$
+                [
+                  $p$\\
+                  $\bigcirc$
+                ]
+                [
+                  $q$\\
+                  $\times$
+                ]
+              ]
+              [
+                $r$\\
+                $\times$
+              ]
+            ]
+          ]
+        ]
+      ]
+    \end{forest}
+  \end{multicols}
+  همان‌طور که مشاهده می‌شود، تابلوهای مربوط به همه‌ی موارد به جز مورد آخر بسته می‌شود. دقت کنید که در نتیجه همه‌ی موارد به جز مورد آخر برقرار هستند. دقت کنید دو مدل $v_1$ و $v_2$ با تعریف $v_1(p) = F$، $v_1(q) = T$ و $v_1(r) = F$ و $v_2(p) = T$، $v_2(q) = F$ و $v_2(r) = F$ دو مثال نقض برای برقراری استنتاج در مورد آخر هستند.
+\end{ans}
