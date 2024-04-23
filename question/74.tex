@@ -1,7 +1,28 @@
-فرمول زیر در زبان منطق گزاره‌ها را در نظر بگیرید:
-\[\neg p \rightarrow (q \vee \neg(p \wedge q))\]
-\begin{enumerate}[label=(\alph*)]
-  \item نمونه‌ٔ مرتبهٔ اولی از این فرمول بسازید که در آن اتم $p$ با فرمول $\neg(f(x)=y)$ و اتم $q$ با فرمول $\exists x (x > y)$ جانشین شده است.
-  \item آیا فرمول زیر نمونهٔ مرتبهٔ اولی از فرمول بالا است؟
-  \[ \neg(x = y) \rightarrow (\exists x (x > y) \vee (\neg(x = y) \wedge \exists x (x > y))) \]
-\end{enumerate}
+
+	فرمول زیر در زبان منطق گزاره‌ها را در نظر بگیرید:
+	\[\neg p \rightarrow (q \vee \neg(p \wedge q))\]
+	\begin{enumerate}[label=(\alph*)]
+		\item نمونه‌ٔ مرتبهٔ اولی از این فرمول بسازید که در آن اتم $p$ با فرمول $\neg(f(x)=y)$ و اتم $q$ با فرمول $\exists x (x > y)$ جانشین شده است.
+		\item آیا فرمول زیر نمونهٔ مرتبهٔ اولی از فرمول بالا است؟
+		\[ \neg(x = y) \rightarrow (\exists x (x > y) \vee (\neg(x = y) \wedge \exists x (x > y))) \]
+	\end{enumerate}
+	
+	\quad\vspace{0.5cm}
+	\begin{ans}
+		\begin{enumerate}
+		\item
+			$$
+			\neg \neg(f(x) = y) \rightarrow (\exists x (x > y) \vee \neg(\neg(f(x) = y) \wedge \exists x (x > y)))
+			$$
+		\item 
+		بله این چنین است. کافی است که
+		$
+			p := (x = y)
+		$
+		و
+		$
+			q := \exists x (x > y)
+		$
+		بگذاریم تا فرمول اولیه حاصل شود.
+		\end{enumerate}
+	\end{ans}
