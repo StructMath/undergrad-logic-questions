@@ -1,3 +1,39 @@
 ~\marginpar[left]{\textbf{(۱۰ نمره)}}
 با استفاده از دستگاه تابلو استنتاج زیر را نشان دهید.
 \[ \vdash (p \vee q) \rightarrow ((r \rightarrow \neg p) \rightarrow (r \rightarrow q)) \]
+\begin{ans}
+  \begin{center}
+    \begin{forest}m
+      [
+        $\neg ((p \vee q) \rightarrow ((r \rightarrow \neg p) \rightarrow (r \rightarrow q)))$
+        [
+          $p \vee q$\\
+          $\neg ((r \rightarrow \neg p) \rightarrow (r \rightarrow q))$
+          [
+            $r \rightarrow \neg p$\\
+            $\neg (r \rightarrow q)$
+            [
+              $r$\\
+              $\neg q$
+              [
+                $p$
+                [
+                  $\neg r$\\
+                  $\times$
+                ]
+                [
+                  $\neg p$\\
+                  $\times$
+                ]
+              ]
+              [
+                $q$\\
+                $\times$
+              ]
+            ]
+          ]
+        ]
+      ]
+    \end{forest}
+  \end{center}
+\end{ans}
