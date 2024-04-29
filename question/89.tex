@@ -8,3 +8,22 @@
 \]
 فرمول $\varphi$ را در نظر بگیرید که مجموعهٔ اتم‌های آن $p_1 \dots p_n$ است. ثابت کنید
 \[ v(\varphi) = v(\varphi[\psi_1/p_1]\dots[\psi_n/p_n]) \]
+\begin{ans}
+  حکم را با استقرا روی ساختار $\varphi$ نشان می‌دهیم. در پایهٔ استقرا، فرض کنید $\varphi = p_1$. اگر $v(p_1) = 1$، آنگاه طبق تعریف $\psi_1 = \neg \bot$ و خواهیم داشت $v(\psi_1) = v(\neg \bot) = 1 = v(p_1)$. مشابهاً، اگر $v(p_1) = 0$ خواهیم داشت $\psi_1 = \bot$ و $v(\psi_1) = v(\bot) = 0 = v(p_1)$. در گام استقرا، فرض کنید $\varphi = \theta \circ \gamma$ به ازای $\circ \in \{\wedge, \vee, \rightarrow\}$. از فرض استقرا داریم
+  \[ v(\theta) = v(\theta[\psi_1/p_1]\dots[\psi_n/p_n]) \]
+  \[ v(\gamma) = v(\gamma[\psi_1/p_1]\dots[\psi_n/p_n]) \]
+  از طرفی، طبق تعریف جانشینی داریم $(\star)$
+  \[ v((\theta \circ \gamma)[\psi_1/p_1]\dots[\psi_n/p_n]) = v((\theta[\psi_1/p_1]\dots[\psi_n/p_n]) \circ (\gamma[\psi_1/p_1]\dots[\psi_n/p_n])) \]
+  با باز کردن تعریف صدق برای ادات‌های مختلف حکم را اثبات می‌کنیم.
+  
+  اگر $\circ = \wedge$، یعنی $\varphi = \theta \wedge \gamma$، آنگاه بنا به تعریف صدق ترکیب عطفی داریم
+  \[ v(\varphi) = v(\theta \wedge \gamma) = \min(v(\theta), v(\Gamma)) \]
+  با استفاده از فرض استقرا داریم
+  \[ v(\theta \wedge \gamma) = \min(v(\theta[\psi_1/p_1]\dots[\psi_n/p_n]), v(\gamma[\psi_1/p_1]\dots[\psi_n/p_n])) \]
+  با استفادهٔ مجدد از تعریف صدق ترکیب عطفی خواهیم داشت
+  \[ v(\theta \wedge \gamma) = v((\theta[\psi_1/p_1]\dots[\psi_n/p_n]) \wedge (\gamma[\psi_1/p_1]\dots[\psi_n/p_n])) \]
+  از $(\star)$ داریم
+  \[ v(\theta \wedge \gamma) = v((\theta \wedge \gamma)[\psi_1/p_1]\dots[\psi_n/p_n]) \]
+
+  که همان حکم است. در حالت‌های $\varphi = \theta \vee \gamma$، $\varphi = \theta \rightarrow \gamma$ و $\varphi = \neg \theta$ نیز حکم به طریق مشابه اثبات می‌شود.
+\end{ans}
