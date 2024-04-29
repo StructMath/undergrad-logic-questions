@@ -3,4 +3,46 @@
 \begin{enumerate}
   \item $\neg (p \wedge q) \vdash \neg p \vee \neg q$
   \item $p \vee q \vdash \neg (\neg p \wedge \neg q)$
-\end{enumerate}
+\end{enumerate}\quad
+\begin{ans}
+  \begin{enumerate}
+    \item \quad
+    \begin{LTR}
+      \begin{prooftree}
+        \AXC{$[\neg p]^2$}
+        \veeI{$\neg p \vee \neg q$}
+        \AXC{$[\neg (\neg p \vee \neg q)]^1$}
+        \negE
+        \RAA[2]{$p$}
+        \AXC{$[\neg q]^3$}
+        \veeI{$\neg p \vee \neg q$}
+        \AXC{$[\neg (\neg p \vee \neg q)]^1$}
+        \negE
+        \RAA[3]{$q$}
+        \wedI{$p \wedge q$}
+        \AXC{$\neg (p \wedge q)$}
+        \negE
+        \RAA[1]{$\neg p \vee \neg q$}
+      \end{prooftree}
+    \end{LTR}
+    \item \quad
+    \begin{LTR}
+      \begin{prooftree}
+        \AxiomC{$p \vee q$}
+  
+        \AxiomC{$[p]^1$}
+        \AxiomC{$[\neg p \wedge \neg q]^2$}
+        \wedE{$\neg p$}
+        \negE
+  
+        \AxiomC{$q$}
+        \AxiomC{$[\neg p \wedge \neg q]^2$}
+        \wedE{$\neg q$}
+        \negE
+  
+        \veeE{1}{$\bot$}
+        \negI[2]{$\neg (\neg p \wedge \neg q)$}
+      \end{prooftree}
+    \end{LTR}
+  \end{enumerate}
+\end{ans}
