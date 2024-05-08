@@ -1,16 +1,41 @@
-\begin{enumerate}[\label=(\alph)]
-    \item $\mathcal{Z_+}=\langle\mathbb{Z},+\rangle$
-    \item $\mathcal{Z_\times}=\langle\mathbb{Z},+\rangle$
-    \item $\mathcal{Z_6}=\langle\{0,1,2,3,4,5,6\},+\rangle$
-    که $+$ عملگر جمع به پیمانهٔ شش هست؛ یعنی برای جمع هر دو عدد ابتدا آن‌ها را جمع می‌کنیم و سپس باقی‌ماندهٔ حاصل بر شش را در نظر می‌گیریم
+ساختارهای زیر از نوع شباهت
+$\langle\mathord{-};2,1;1\rangle$
+را در نظر بگیرید:
+\begin{enumerate}[label=(\alph*)]
+    \item $\mathcal{Z^+}=\langle\mathbb{Z},+,-,0\rangle$
+    که
+    $+$ جمع اعداد صحیح و
+    $-$ عملگری است که $n$ را به $-n$ می‌برد.
+    \item $\mathcal{Z^\times}=\langle\mathbb{Z},\times,-, 1\rangle$
+    $\times$ که ضرب اعداد صحیح و
+    $-$ عملگری است که $n$ را به $-n$ می‌برد.
+    \item $\mathcal{Z}_4=\langle\{0,1,2,3,4,\},+,-, 0\rangle$
+    که $+$ عملگر جمع به پیمانهٔ چهار است یعنی برای جمع هر دو عدد ابتدا آن‌ها را جمع می‌کنیم و سپس باقی‌ماندهٔ حاصل بر چهار را در نظر می‌گیریم
     (برای مثال
-    $2\times 3=0$
+    $2\times 3=2$
     و
-    $2\times 4=2$).
-    \item $\mathcal{S_3}=\langle S_3, \circ\rangle$
+    $2\times 2=0$)
+    و
+    $-$
+    عملگری است که $n$ را به $6-n$ می‌برد.
+    \item $\mathcal{S}_3=\langle S_3, \circ,^{-1},\text{id}\rangle$
     که
     $S_3$
     مجموعهٔ توابع یک‌به‌یک و پوشا از مجموعهٔ
     $\{0,1,2\}$
-    به خودش است.
+    به خودش،
+    $\circ$
+    ترکیب دو تابع،
+    $^{-1}$
+    عملگری که هر تابع را به وارون آن می‌برد و
+    $\text{id}$
+    تابع همانی است.
 \end{enumerate}
+در هر مورد بررسی کنید آیا اصول موضوعهٔ گروه
+(صفحهٔ ۸۰ فن‌دالن)
+در این ساختار صحیح هستند یا نه. سپس دربارهٔ ساختارهایی که گروه هستند بررسی کنید که فرمول‌های زیر در آن‌ها صادق‌اند یا کاذب:
+\begin{align*}
+    \varphi_1 &= \forall x\forall (y x\cdot y = y\cdot x) \\
+    \varphi_2 &= \exists x (\neg x = e \wedge x\cdot x = x) \\
+    \varphi_3 &= \forall x (((((x\cdot x)\cdot x)\cdot x)\cdot x)\cdot x = e)
+\end{align*}
