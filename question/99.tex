@@ -1,0 +1,73 @@
+نشان دهید هیچکدام از دو جمله زیر نتیجه منطقی دیگری نیست.
+  \[\forall x\forall y\forall z(P(x,y)\rightarrow(P(y,z)\rightarrow P(x,z)))\]
+  \[\forall x\forall y(P(x,y)\rightarrow(P(y,x)\rightarrow x=y))\]
+  \[\forall x\exists yP(x,y)\rightarrow\exists x\forall yP(x,y)\]
+\begin{ans}
+طبق تعریف نتیجه منطقی بودن در منطق مرتبه اول برای دو فرمول مرتبه اول 
+	$\phi$
+	و
+	$\psi$
+	زمانی داریم
+	$\phi\models\psi$
+	که برای هر ساختار 
+	$\mathfrak{A}$
+	اگر 
+	$\mathfrak{A}\models\phi$
+	آنگاه
+	$\mathfrak{A}\models\psi$
+	پس باید برای هر جفت ممکن از فرمول های داده شده ساختاری پیدا کنیم که یکی را ارضا کرده و دیگری را ارضا نکند(نقیض آن را ارضا کند.)
+	
+	
+	
+	1 به 2:
+	ساختار 
+	$\mathfrak{A}$
+	را به این شکل در نظر بگیرید:
+	\[\mathfrak{A} = (\{1,2,3\},P^{\mathfrak{A}})\]
+	که 
+	\[P^{\mathfrak{A}} = \{<1,2>,<2,3>,<2,1>,<1,3>\}\]
+	با این تعریف داریم:
+	\[\mathfrak{A}\models\forall x\forall y\forall z(P(x,y)\rightarrow(P(y,z)\rightarrow P(x,z)))\]
+	همچنین
+	\[\mathfrak{A}\models\exists x\exists y(P(x,y)\land P(y,x)\land\neg(x=y))\]
+	\\
+	1 به 3:
+	ساختار 
+	$\mathfrak{B}$
+	را اینگونه تعریف کنید:
+	\[\mathfrak{B} = (N,<=)\]
+	رابطه 
+	$<=$
+	همان رابطه ترتیب روی اعداد طبیعی است. حال داریم:
+	\[\mathfrak{B}\models\forall x\forall y\forall z(P(x,y)\rightarrow(P(y,z)\rightarrow P(x,z)))\]
+	و همچنین 
+	\[\mathfrak{B}\models\forall x\exists y(<=(x,y)\land\forall x\exists y <=(x,y))\]
+	\\
+	2 به 3: برای این مورد نیز ساختار 
+	$\mathfrak{B}$
+	بکار می آید زیرا این ساختار می تواند فرمول 2 را ارضا کند.
+	\\
+	2 به 1: ساختار 
+	$\mathfrak{C}$
+	را به این شکل تعریف می کنیم:
+	\[\mathfrak{C} = (\{1,2,3\},P^{\mathfrak{C}})\]
+	به طوری که 
+	\[P^{\mathfrak{C}} = \{<1,1>, <1,2>, <2,3>\}\]
+	در این حالت داریم:
+	\[\mathfrak{C}\models\forall x\forall y(P(x,y)\rightarrow(P(y,x)\rightarrow x=y))\]
+	همچنین 
+	\[\mathfrak{C}\models\exists x\exists y(P(x,y)\land P(y,z)\land\neg P(x,z))\]
+	\\
+	3 به 1:
+	\[\mathfrak{D} = (\{1,2,3,4\},P^{\mathfrak{D}})\]
+	
+	\[P^{\mathfrak{D}} = \{<1,2>, <2,3>, <2,1>\}\]
+	حال داریم:
+	\[\mathfrak{D}\models\forall x\exists yP(x,y)\rightarrow\exists x\forall yP(x,y)\]((به انتفای مقدم))
+	همچنین
+	\[\mathfrak{D}\models\exists x\exists y(P(x,y)\land P(y,z)\land\neg P(x,z))\]
+	\\
+	3 به 2: اینجا می توانیم از ساختار 
+	$\mathfrak{D}$
+	مجددا استفاده کنیم.
+\end{ans}
