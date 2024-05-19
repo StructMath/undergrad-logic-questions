@@ -1,18 +1,20 @@
 
-	موارد زیر را با ترسیم درخت برهان در دستگاه استنتاج طبیعی ثابت کنید:
-	\begin{enumerate}[label=(\alph*)]
+	موارد زیر را در دستگاه استنتاج طبعیعی ثابت کنید.
+	\LTR
+	\begin{enumerate}[label = \roman*)]
 		\item 
 			$\forall x (P(x) \to Q(x)) \vdash \forall x P(x) \to \forall x Q(x)$
+			برای سمت راست به چپ مثال نقض ارائه دهید.
 		\item 
-			$\exists x P(x) \to \exists x Q(x) \vdash \exists x(P(x) \to Q(x))$
+			$\exists x A(x) \to \exists x B(x) \vdash \exists x(A(x) \to B(x))$
+			این گزاره درست نیست. برای آن مثال نقض ارائه دهید.
 		\item 
-			$\vdash \exists x (P(x) \to \forall y P(y))$
+			$\vdash \exists (P(x) \to \forall x P(x))$
 		\item
-			$\forall x P(x) \dashv\vdash \neg \exists x \neg 	P(x)$
+			$\forall x A(x) \dashv\vdash \neg \exists x \neg 	A(x)$
 		\item
 			$\forall y \exists x (f(x) = y), \forall y \exists x (g(x) = y) \vdash \forall y \exists x (f(g(x)) = y)$
 		\item
-			$\exists x(P(x) \vee \varphi) \dashv\vdash \exists x P(x) \vee \varphi$
-			در صورتی که
-			$x \notin FV(\varphi)$
+			$\exists x(A(x) \vee B) \dashv\vdash \exists x A(x) \vee B \;\;\;\;\; x \notin FV(B)$
+		 	
 	\end{enumerate}
