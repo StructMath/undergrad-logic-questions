@@ -1,4 +1,5 @@
 
+	
 	با رسم درخت برهان ثابت کنید.
 	$$
 		\forall x \neg(p(x) \wedge q(x)) \vdash \forall x (\neg p(x) \vee \neg q(x))
@@ -78,7 +79,7 @@
 						[\neg (\neg p(c) \vee \neg q(c))]_2
 						&
 						\infer[\text{لم ۲}]{\neg p(c) \vee \neg q(c)}{
-							\infer[\forall E]{\neg (p(x) \wedge q(x))}{
+							\infer[\forall E]{\neg (p(c) \wedge q(c))}{
 								\forall x \neg(p(x) \wedge q(x))
 							}
 						}
@@ -88,4 +89,3 @@
 		$$
 		
 	\end{ans}
-	
