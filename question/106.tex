@@ -1,0 +1,91 @@
+
+	با رسم درخت برهان ثابت کنید.
+	$$
+		\forall x \neg(p(x) \wedge q(x)) \vdash \forall x (\neg p(x) \vee \neg q(x))
+	$$
+	\newline
+	\quad\vspace {0.5cm}
+	\begin{ans}
+		لم ۱ : 
+		$$
+			\neg (\forall x p(x)) \vdash \exists x \neg p(x)
+		$$
+		\newline
+		$$
+			\infer[RAA_1]{\exists x \neg p(x)}{
+				\infer[\neg E]{\bot}{
+					\infer[\forall I]{\forall x p(x)}{
+						\infer[RAA_2]{p(x)}{
+							\infer[\neg E]{\bot}{
+								\infer[\exists I]{\exists x \neg p(x)}{
+									[\neg p(x)]_2
+								}
+								&
+								[\neg \exists x(\neg p(x))]_1
+							}
+						}	
+					}
+					&
+					\neg(\forall x p(x))
+				}
+			}
+		$$
+		\pagebreak
+		
+		لم ۲ : 
+		$$
+			\neg(A \wedge B) \vdash (\neg A \vee \neg B)
+		$$
+		\newline
+		$$
+			\infer[RAA_1]{\neg A \vee \neg B}{
+				\infer[\neg E]{\bot}{
+					\infer[\wedge I]{A \wedge B}{
+						\infer[RAA_2]{A}{
+							\infer[\neg E]{\bot}{
+								\infer[\vee I]{\neg A \vee \neg B}{
+									[\neg A]_2
+								}
+								&
+								[\neg(\neg A \vee \neg B)]_1
+							}
+						}
+						&
+						\infer[RAA_3]{B}{
+							\infer[\neg E]{\bot}{
+								\infer[\vee I]{\neg A \vee \neg B}{
+									[\neg B]_3
+								}
+								&
+								[\neg(\neg A \vee \neg B)]_1
+							}
+						}
+					}
+					&
+					\neg (A \wedge B)
+				}
+			}
+		$$
+		
+		$$
+			\infer[RAA_1]{\forall x (\neg p(x) \vee \neg q(x))}{
+				\infer[\exists E_2]{\bot}{
+					\infer[\text{لم ۱}]{\exists x (\neg(\neg p(x) \vee \neg q(x)))}{
+						[\neg(\forall x (\neg p(x) \vee \neg q(x)))]_1
+					}
+					&
+					\infer[\neg E]{\bot}{
+						[\neg (\neg p(c) \vee \neg q(c))]_2
+						&
+						\infer[\text{لم ۲}]{\neg p(c) \vee \neg q(c)}{
+							\infer[\forall E]{\neg (p(x) \wedge q(x))}{
+								\forall x \neg(p(x) \wedge q(x))
+							}
+						}
+					}
+				}
+			}
+		$$
+		
+	\end{ans}
+	
