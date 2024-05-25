@@ -1,0 +1,34 @@
+
+	
+زبانی را که عالم سخن آن مجموعه همه انسان‌ها، و شامل روابط زیر است در نظر بگیرید.
+	$$
+		C(x, y) := \text{y بچه x است}
+	$$
+	$$
+		L(x, y) := \text{شخص x شخص y را دوست دارد.}
+	$$
+	جملات زیر را در آن بیان کنید.
+	\begin{enumerate}
+		\item هر مادری هر بچه‌ای را دوست دارد
+		\item اگر کسی بچه‌ای را دوست ندارد، هیچکسی را دوست ندارد
+		\item هیچ بچه‌ای مادری را دوست ندارد که یکی از بچه‌هایش را دوست ندارد.
+	\end{enumerate}
+	
+	\quad\vspace {0.5cm}
+	\begin{ans}
+		\begin{enumerate}
+			\item 
+			$$
+				\forall x, z(\exists y C(x,y) \wedge \exists t C(t, z) \to L(x, z)) 
+			$$
+			\item
+			$$
+				\forall x(\exists y ((\exists z C(z, y)) \wedge \neg L(x, y)) \to \forall z(\neg L(x, z)))
+			$$
+			\item 
+			$$
+				\forall x, z(((\exists y C(x, y) \wedge \exists s(C(x, s) \wedge \neg L(x, s))) \wedge \exists t C(t, z)) \to \neg L(z, x))
+			$$
+			
+		\end{enumerate}
+	\end{ans}
