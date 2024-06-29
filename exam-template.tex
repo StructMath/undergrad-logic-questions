@@ -2,6 +2,8 @@
 
 \input{preamble}
 
+\pagenumbering{gobble}
+
 % build script assumes the following lines are as they are
 % DO NOT MESS WITH THEM
 %TEMPLATE_ISANSWERED% \markversion{ans}
@@ -47,13 +49,17 @@
 \begin{flushleft}
 	\motdRef
 \end{flushleft}
-
+\hrule
+\hrule
 
 \vspace{0.5cm}
 \foreach \q in \qList{%
   \IfFileExists{question/\q.tex} {%
 		\exc \label{q\q} \input{question/\q.tex}%
+		\vspace*{5mm}
+		\hrule
   }%
 }%
+\hrule
 
 \end{document}
