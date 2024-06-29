@@ -4,4 +4,38 @@
   ~\marginpar[left]{\textbf{(۵ نمره)}}
   \item یا جمله‌ای مانند $\sigma$ در $\Delta$ وجود دارد که $T \not\vdash \sigma$، یا جمله‌ای مانند $\sigma$ در $T$ وجود دارد که $\Delta \not\vdash \sigma$.
   ~\marginpar[left]{\textbf{(۱۵ نمره)}}
-\end{enumerate}
+\end{enumerate}\quad
+\begin{ans}
+  \begin{enumerate}[label=(\alph*)]
+    \item فرض کنید $T\vdash\varphi$.
+    با توجه به آنکه مقدمات به‌کاررفته در استنتاج $\phi$ متناهی است $n$ای وجود دارد که تمام مقدمات استنتاج
+    $\varphi$
+    در
+    $T_n$
+    هستند. بنابراین
+    $T_n\vdash\varphi$
+    و طبق نظریه بودن $T_n$
+    داریم
+    $\varphi\in T_n\subset T$.
+    \item کافی است ثابت کنیم اگر برای هر
+    $\delta\in\Delta$ داشته باشیم
+    $T\vdash\delta$،
+    وجود دارد
+    $\sigma\in T$
+    چنانکه
+    $\Delta\not\vdash\sigma$. مشابه با بخش قبل استدلال می‌کنیم وجود دارد $n$ چنانکه برای هر
+    $\delta\in\Delta$
+    داریم
+    $T_n\vdash\delta$.
+    حال $\sigma\in T_{n+1}\setminus T_n\subset T$
+    را در نظر بگیرید. اگر
+    $\Delta\vdash\sigma$
+    خواهیم داشت
+    $T_n\vdash\sigma$
+    و از آنجا که
+    $T_n$
+    نظریه است،
+    $\sigma\in T_n$
+    که تناقض است.
+  \end{enumerate}
+\end{ans}
