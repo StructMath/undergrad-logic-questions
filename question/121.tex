@@ -4,4 +4,98 @@
   ~\marginpar[left]{\textbf{(۱۰ نمره)}}
   \item $\forall x (\neg (x \approx c) \to \varphi(x)) \to (\forall x \varphi(x) \vee \neg \varphi[c/x])$
   ~\marginpar[left]{\textbf{(۱۰ نمره)}}
-\end{enumerate}
+\end{enumerate} \quad
+\begin{ans}
+  \begin{enumerate}[label=(\alph*)]
+    \item \quad
+    \begin{LTR}
+    \begin{prooftree}
+          \AXC{$[\exists x \forall y (\varphi(x) \vee \psi(y))]^1$}
+
+          \AXC{$\mathcal{D}_1$}\noLine
+          \UIC{$\exists x \varphi(x) \vee \forall y \psi(y)$}
+        \exE[2]{$\exists x \varphi(x) \vee \forall y \psi(y)$}
+      \toI[1]{$\exists x \forall y (\varphi(x) \vee \psi(y)) \to (\exists x \varphi(x) \vee \forall y \psi(y))$}
+    \end{prooftree}
+    \begin{prooftree}
+        \AXC{$\varphi(a)$ \rl{طرد شق ثالث برای}}\noLine
+        \UIC{$\varphi(a) \vee \neg \varphi(a)$}
+
+            \AXC{$[\varphi(a)]^3$}
+          \exI{$\exists x \varphi(x)$}
+        \veeI{$\exists x \varphi(x) \vee \forall y \psi(y)$}
+
+            \AXC{$\mathcal{D}_2$}\noLine
+            \UIC{$\psi(b)$}
+          \faI{$\forall y \psi(y)$}
+        \veeI{$\exists x \varphi(x) \vee \forall y \psi(y)$}
+
+      \veeE[3]{$\exists x \varphi(x) \vee \forall y \psi(y)$}
+      \noLine\UIC{$\mathcal{D}_1$}
+    \end{prooftree}
+    \begin{prooftree}
+        \AXC{$[\forall y (\varphi(a) \vee \psi(y))]^2$}
+        \faE{$\varphi(a) \vee \psi(b)$}
+
+        \AXC{$[\varphi(a)]^4$}
+        \AXC{$[\neg \varphi(a)]^3$}
+        \negE
+        \botE{$\psi(b)$}
+
+        \AXC{$[\psi(b)]^4$}
+        
+      \veeE[4]{$\psi(b)$}
+      \noLine\UIC{$\mathcal{D}_2$}
+    \end{prooftree}
+    \item \quad
+    \begin{prooftree}
+          \AXC{$\varphi[c/x]$ \rl{طرد شق ثالث برای}}\noLine
+          \UIC{$\varphi[c/x] \vee \neg \varphi[c/x]$}
+
+          \AXC{$\mathcal{D}_1$}\noLine
+          \UIC{$\forall x \varphi(x) \vee \neg \varphi[c/x]$}
+
+          \AXC{$[\neg \varphi[c/x]]^2$}
+          \veeI{$\forall x \varphi(x) \vee \neg \varphi[c/x]$}
+        \veeE[2]{$\forall x \varphi(x) \vee \neg \varphi[c/x]$}
+      \toI[1]{$\forall x (\neg (x \approx c) \to \varphi(x)) \to (\forall x \varphi(x) \vee \neg \varphi[c/x])$}
+    \end{prooftree}
+    \begin{prooftree}
+        \AXC{$x \approx c$ \rl{طرد شق ثالث برای}}\noLine
+        \UIC{$x \approx c \vee \neg (x \approx c)$}
+
+          \AXC{$[x \approx c]^3$}
+          \AXC{$[\varphi[c/x]]^2$}
+        \eqSubst{$\varphi(x)$}
+
+        \AXC{$\mathcal{D}_2$}\noLine
+        \UIC{$\varphi(x)$}
+      \veeE[3]{$\varphi(x)$}
+      \faI{$\forall x \varphi(x)$}
+      \veeI{$\forall x \varphi(x) \vee \neg \varphi[c/x]$}
+      \noLine\UIC{$\mathcal{D}_1$}
+    \end{prooftree}
+    \begin{prooftree}
+        \AXC{$[\neg (x \approx c)]^3$}
+        \AXC{$[\forall x (\neg (x \approx c) \to \varphi(x))]^1$}
+        \faE{$\neg (x \approx c) \to \varphi(x)$}
+      \toE{$\varphi(x)$}
+      \noLine\UIC{$\mathcal{D}_2$}
+    \end{prooftree}
+    \end{LTR}
+    اثبات طرد شق ثالث برای گزارهٔ دل‌خواه $A$:
+    \begin{LTR}
+    \begin{prooftree}
+      \AxiomC{$[\neg (A \vee \neg A)]^1$}
+      \AxiomC{$[\neg (A \vee \neg A)]^1$}
+      \AxiomC{$[A]^2$}
+      \RightLabel{$\vee$\lr{I}}\UnaryInfC{$A \vee \neg A$}
+      \negE
+      \RightLabel{$\neg$\lr{I} $(2)$}\UnaryInfC{$\neg A$}
+      \RightLabel{$\vee$\lr{I}}\UnaryInfC{$A \vee \neg A$}
+      \negE
+      \RAA[1]{$A \vee \neg A$}
+    \end{prooftree}
+    \end{LTR}
+  \end{enumerate}
+\end{ans}
