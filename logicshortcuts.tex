@@ -1,5 +1,12 @@
 \newcommand*{\veeI}[1]{\RightLabel{$\vee$\lr I}\UnaryInfC{#1}}
-\newcommand*{\veeE}[2]{\RightLabel{$\vee$\lr{E} $(#1)$}\TrinaryInfC{#2}}
+
+\NewDocumentCommand{\veeE}{o m}{%
+  \IfNoValueTF{#1}{
+    \RightLabel{$\vee$\lr{E}}\TIC{#2}
+  }{
+    \RightLabel{$\vee$\lr{E} $(#1)$}\TIC{#2}
+  }
+}
 
 \newcommand*{\botE}[1]{\RightLabel{$\bot$\lr E}\UnaryInfC{#1}}
 
@@ -31,6 +38,22 @@
     \RightLabel{\lr{RAA} $(#1)$}\UnaryInfC{#2}
   }
 }
+
+\NewDocumentCommand{\exE}{o m}{%
+  \IfNoValueTF{#1}{
+    \RightLabel{$\exists$\lr{E}}\BIC{#2}
+  }{
+    \RightLabel{$\exists$\lr{E} $(#1)$}\BIC{#2}
+  }
+}
+
+\newcommand*{\exI}[1]{\RightLabel{$\exists$\lr{E}}\UIC{#1}}
+
+\newcommand*{\faE}[1]{\RightLabel{$\forall$\lr{E}}\UIC{#1}}
+
+\newcommand*{\faI}[1]{\RightLabel{$\forall$\lr{I}}\UIC{#1}}
+
+\newcommand*{\eqSubst}[1]{\RightLabel{$=$\lr{sub.}}\BIC{#1}}
 
 \newcommand*{\prop}{\textsc{\lr{Prop}}}
 
