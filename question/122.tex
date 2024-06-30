@@ -4,4 +4,10 @@
   ~\marginpar[left]{\textbf{(۱۰ نمره)}}
   \item $\exists x (\varphi(x) \to \forall x \neg \varphi(x)) \vDash \exists x \neg \varphi(x)$
   ~\marginpar[left]{\textbf{(۱۰ نمره)}}
-\end{enumerate}
+\end{enumerate} \quad
+\begin{ans}
+  \begin{enumerate}[label=(\alph*)]
+    \item برقرار نیست. به عنوان مثال نقض، ساختاری با عالم سخن $\{ a, b \}$ را در نظر بگیرید که تعبیر $\varphi$ در آن $\{ a \}$ باشد. در این ساختار $\neg \varphi(\bar{b})$ صادق است. در نتیجه $\exists x \neg \varphi(x)$ صادق است. چون تالی شرطی صادق است، پس $\varphi(\bar{a}) \to \exists x \neg \varphi(x)$ و $\varphi(\bar{b}) \to \exists x \neg \varphi(x)$ هر دو صادق هستند و در نتیجه $\forall x (\varphi(x) \to \exists x \neg \varphi(x))$ در ساختار صادق است. از سوی دیگر، $\varphi(\bar{a})$ صادق است. در نتیجه $\neg \varphi(\bar{a})$ صادق نیست. پس $\forall x \neg \varphi(x)$ صادق نیست.
+    \item فرض کنید برای ساختار دل‌خواه $\mathfrak{M}$ داریم $\mathfrak{M} \vDash \exists x (\varphi(x) \to \forall x \neg \varphi(x))$، که یعنی وجود دارد $a \in |\mathfrak{M}|$ که اگر $\mathfrak{M} \vDash \varphi(\bar{a})$ آن‌گاه $\mathfrak{M} \vDash \forall x \neg \varphi(x)$. می‌خواهیم نشان دهیم $\mathfrak{M} \vDash \exists x \neg \varphi(x)$. با برهان خلف، فرض کنید چنین نباشد، یعنی برای هر $b \in |\mathfrak{M}|$ داشته باشیم $\mathfrak{M} \vDash \varphi(\bar{b})$. از جمله برای $a$ داریم $\mathfrak{M} \vDash \varphi(\bar{a})$. از فرض قبل خواهیم داشت $\mathfrak{M} \vDash \forall x \neg \varphi(x)$، که یعنی برای هر $b \in |\mathfrak{M}|$ داریم $\mathfrak{M} \not\vDash \varphi(\bar{b})$. از جمله برای $a$ داریم $\mathfrak{M} \not\vDash \varphi(\bar{a})$، که تناقض است.
+  \end{enumerate}
+\end{ans}
